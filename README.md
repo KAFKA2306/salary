@@ -11,15 +11,17 @@
 | 主な作業時期 | 2024年2月 |
 | 継続収集workflow | なし |
 | 定期更新 | なし |
-| CI・自動test | なし |
-| 再現可能な実行環境 | 未整備 |
-| data source・取得日時の正準台帳 | なし |
+| archive integrity CI | あり |
+| 再現可能な取得・分析環境 | 未整備 |
+| data source・取得日時の正準台帳 | `archive-manifest.json`。不明値は`UNKNOWN` |
 | 現在値としての利用 | 不可 |
 
 ## repositoryに残っているもの
 
 | file | 内容 |
 |---|---|
+| `archive-manifest.json` | 全主要artifactの役割、Git blob SHA、size、利用状態、重複分類 |
+| `scripts/archive_integrity.py` | manifest、CSV、Notebook、重複、hashを検証する標準libraryのみの監査CLI |
 | `IR.ipynb` | 企業情報・給与情報を探索したNotebook |
 | `ticker.ipynb` | 上場企業listを加工したNotebook |
 | `visual00IR-TS.ipynb` | 取得dataの可視化試作 |
@@ -27,6 +29,26 @@
 | `note.md` | 調査時のURL、HTML selector、作業memo |
 
 Notebookには実行済みcell outputが含まれます。これらは取得時点、欠損処理、企業identity、source改訂を十分に追跡できる正準dataではありません。
+
+## archive integrityの確認
+
+```bash
+python scripts/archive_integrity.py --report archive-report.json
+python -m unittest discover -s tests -v
+```
+
+監査は次を確認します。
+
+- CSV、Notebook、memo、legacy scriptがmanifestへ登録されていること
+- 現在のfile contentから計算したGit blob SHAとsizeが台帳と一致すること
+- 同一内容の別名fileが分類されていること
+- CSVのencoding、delimiter、列、行数、完全重複行、空列
+- Notebookのcell数、output数、kernel、実行順、秘密情報候補、個人絶対path候補
+- 各artifactのSHA-256を含む`archive-report.json`の生成
+
+`SemiCon.csv`と`results.csv`は同一Git blobです。生成意図を復元できないため`unresolved`として登録し、別datasetとして二重集計してはいけません。
+
+新しいartifactを追加または既存artifactを変更した場合は、`archive-manifest.json`のGit blob SHAとsizeも更新します。CIは未登録file、hash差分、未分類の同一内容fileを失敗させます。
 
 ## 当時の試行
 
@@ -91,7 +113,7 @@ repository内のdataは2024年2月頃の作業snapshotです。現在値では�
 6. 法人番号・証券code・EDINET codeによる企業identity管理
 7. parser test、schema test、data freshness test、CI
 
-現行の企業開示・EDINET基盤へ統合する場合は、`KAFKA2306/investor`を候補とします。
+現行の企業開示・EDINET基盤へ統合する場合は、`KAFKA2306/investor`を候補とします。manifest上の`UNKNOWN_PROVENANCE` artifactを自動投入せず、source再取得、schema migration、人手reviewを必須にします。
 
 ## 既知の制約
 
@@ -99,9 +121,10 @@ repository内のdataは2024年2月頃の作業snapshotです。現在値では�
 - dataの完全性、正確性、最新性、比較可能性を保証しません。
 - 就職・転職・報酬交渉・投資判断の根拠として使用できる状態ではありません。
 - このrepositoryは履歴保存用の研究snapshotであり、現行製品ではありません。
+- manifestは既知の来歴を推測で補完せず、不明項目を`UNKNOWN`として保持します。
 
 ## 関連
 
 - README監査の正準: `KAFKA2306/com` Issue #3
-- 本repositoryの不一致記録: Issue #1
+- archive integrity: Issue #3
 - 現行の企業data基盤候補: `KAFKA2306/investor`
