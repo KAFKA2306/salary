@@ -30,3 +30,4 @@ jobs:
           name: archive-integrity-report
           path: archive-report.json
           if-no-files-found: error
+          retention-days: 7
