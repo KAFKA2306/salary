@@ -25,6 +25,7 @@ SECRET_PATTERNS = {
     "generic_secret": re.compile(r"(?i)(?:api[_-]?key|token|password)\s*[=:]\s*['\"][^'\"]{8,}"),
 }
 PERSONAL_PATH = re.compile(r"(?i)(?:[A-Z]:\\Users\\[^\\\s]+|/Users/[^/\s]+|/home/[^/\s]+)")
+NON_BLOCKING_NOTEBOOK_FINDINGS = {"personal_absolute_path"}
 
 
 def git_blob_sha(path: Path) -> str:
@@ -113,6 +114,15 @@ def inspect_notebook(path: Path) -> dict[str, Any]:
     }
 
 
+def blocking_notebook_findings(findings: list[str]) -> list[str]:
+    """Return credential-like findings that must fail CI.
+
+    Historical absolute paths remain visible in the audit report, but they are
+    provenance/reproducibility findings rather than evidence of a live secret.
+    """
+    return sorted(set(findings) - NON_BLOCKING_NOTEBOOK_FINDINGS)
+
+
 def load_manifest() -> dict[str, Any]:
     return json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
 
@@ -147,8 +157,9 @@ def audit() -> tuple[list[str], dict[str, Any]]:
             detail = inspect_csv(path)
         elif path.suffix.lower() == ".ipynb":
             detail = inspect_notebook(path)
-            if detail["security_findings"]:
-                errors.append(f"notebook security findings: {path_text}: {detail['security_findings']}")
+            blocking = blocking_notebook_findings(detail["security_findings"])
+            if blocking:
+                errors.append(f"notebook secret findings: {path_text}: {blocking}")
         report_entries.append(
             {
                 "path": path_text,
