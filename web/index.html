@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>salary archive explorer</title><link rel="stylesheet" href="./styles.css"></head>
+<body>
+<header id="snapshot-banner"><strong>2024年2月の研究snapshot</strong> — 現在値ではありません。</header>
+<main>
+<h1>研究archive explorer</h1>
+<p>archive-manifest.json 登録済みartifactだけを読み取り、外部siteの再取得は行いません。</p>
+<div id="summary">manifestを読み込み中…</div>
+<table><thead><tr><th>artifact</th><th>role</th><th>status</th><th>Git blob SHA</th><th>size</th><th>inspect</th></tr></thead><tbody id="catalog"></tbody></table>
+<h2>Python inspection</h2><div id="inspection-result">artifactを選択してください。</div>
+</main><script type="module" src="./app.mjs"></script>
+</body></html>
