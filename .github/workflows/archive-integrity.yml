@@ -6,28 +6,99 @@ on:
   pull_request:
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   audit:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Compile auditor
-        run: python -m py_compile scripts/archive_integrity.py tests/test_archive_integrity.py
+      - name: Compile auditors
+        run: python -m py_compile scripts/archive_integrity.py web/archive_inspection.py tests/test_archive_integrity.py tests/test_archive_web.py
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
       - name: Generate machine-readable audit report
         run: python scripts/archive_integrity.py --report archive-report.json
       - name: Upload audit report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: archive-integrity-report
           path: archive-report.json
           if-no-files-found: error
           retention-days: 7
+      - name: Verify clean checkout
+        run: |
+          rm -f archive-report.json
+          find . -type d -name __pycache__ -prune -exec rm -rf {} +
+          test -z "$(git status --porcelain --untracked-files=all)"
+
+  pages-build:
+    needs: audit
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build manifest-only static site
+        run: |
+          mkdir -p dist/artifacts
+          cp web/index.html web/app.mjs web/worker.mjs web/styles.css web/archive_inspection.py dist/
+          cp archive-manifest.json dist/
+          python - <<'PY'
+          import json, pathlib, shutil
+          root = pathlib.Path('.')
+          dist = root / 'dist' / 'artifacts'
+          manifest = json.loads((root / 'archive-manifest.json').read_text(encoding='utf-8'))
+          for item in manifest['artifacts']:
+              path = pathlib.Path(item['path'])
+              if path.suffix.lower() != '.csv':
+                  continue
+              target = dist / path
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(root / path, target)
+          PY
+          python -m http.server 8765 --directory dist >/tmp/salary-pages.log 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          sleep 1
+          python - <<'PY'
+          import json, urllib.request
+          with urllib.request.urlopen('http://127.0.0.1:8765/archive-manifest.json') as r:
+              manifest = json.load(r)
+          assert manifest['archive_as_of'] == '2024-02'
+          with urllib.request.urlopen('http://127.0.0.1:8765/') as r:
+              page = r.read().decode('utf-8')
+          assert '2024年2月の研究snapshot' in page
+          PY
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+      - name: Verify build residue can be removed cleanly
+        run: |
+          rm -rf dist
+          find . -type d -name __pycache__ -prune -exec rm -rf {} +
+          test -z "$(git status --porcelain --untracked-files=all)"
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: pages-build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
