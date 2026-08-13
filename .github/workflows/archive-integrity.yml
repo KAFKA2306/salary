@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile auditors
-        run: python -m py_compile scripts/archive_integrity.py web/archive_inspection.py tests/test_archive_integrity.py tests/test_archive_web.py
+        run: python -m py_compile scripts/archive_integrity.py scripts/browser_archive_inspection.py tests/test_archive_integrity.py tests/test_archive_web.py
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
       - name: Generate machine-readable audit report
@@ -50,7 +50,8 @@ jobs:
       - name: Build manifest-only static site
         run: |
           mkdir -p dist/artifacts
-          cp web/index.html web/app.mjs web/worker.mjs web/styles.css web/archive_inspection.py dist/
+          cp web/index.html web/app.mjs web/worker.mjs web/styles.css dist/
+          cp scripts/browser_archive_inspection.py dist/archive_inspection.py
           cp archive-manifest.json dist/
           python - <<'PY'
           import json, pathlib, shutil
