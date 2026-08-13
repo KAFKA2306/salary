@@ -4,7 +4,9 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location("archive_inspection", ROOT / "web" / "archive_inspection.py")
+SPEC = importlib.util.spec_from_file_location(
+    "archive_inspection", ROOT / "scripts" / "browser_archive_inspection.py"
+)
 MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC.loader is not None
 SPEC.loader.exec_module(MODULE)
