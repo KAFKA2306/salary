@@ -6,6 +6,27 @@
 
 現在稼働している給与data収集基盤、継続更新される企業比較service、公式統計databaseではありません。repository内の数値を現在の給与水準や企業評価へ使用しないでください。
 
+## Vision
+
+古い給与CSVを再利用可能な現在データに見せるのではなく、**何が残っていて、何が分からず、どこまで読んでよいかを迷わず判断できる研究archive**にします。
+
+このrepositoryの価値は、保存された数字を再ランキングすることではありません。各artifactについて「現在値として使えない」「来歴が不明」「同一blobを別datasetとして数えてはいけない」といった制約を、データと一緒に残すことです。
+
+## Design philosophy
+
+- 古さ・非再現性・`UNKNOWN` provenanceを隠さない
+- 同一blobを別datasetとして二重に数えない
+- archive integrityと元データの正確性を混同しない
+- 不明な来歴、単位、対象期間、生成経路を後付け推定しない
+- Notebook outputを正準dataへ昇格させない
+- 再開する場合は旧snapshotを正本化せず、一次情報から作り直す
+
+## Why / 差別化
+
+通常の放置repositoryでは、古いCSVが残っているだけでは「その数字をまだ使えるのか」「複製なのか別datasetなのか」「取得元を確認できるのか」を判断できません。
+
+`salary`は、**数字そのものより誤用リスクを保存するarchive**として扱います。`archive-manifest.json`は、artifactの役割、Git blob SHA、size、利用状態、重複分類を記録し、不明項目を`UNKNOWN`のまま保持します。CIがPASSしても証明されるのはarchiveの整合性であり、給与値の真実性・最新性・比較可能性ではありません。
+
 ## 現在の状態
 
 | 項目 | 状態 |
@@ -17,6 +38,22 @@
 | 再現可能な取得・分析環境 | 未整備 |
 | data source・取得日時の正準台帳 | `archive-manifest.json`。不明値は`UNKNOWN` |
 | 現在値としての利用 | 不可 |
+
+## 何を信頼できるか / できないか
+
+### 信頼できるもの
+
+- `archive-manifest.json`に登録されたartifactの現在のGit blob SHAとsize
+- manifestに明示された`ARCHIVE_ONLY` / `UNKNOWN_PROVENANCE`等の利用状態
+- `SemiCon.csv`と`results.csv`が同一Git blobであるという重複事実
+- `scripts/archive_integrity.py`とtestsが検証するarchive structure / hash / duplicate classification
+
+### 信頼できないもの
+
+- repository内の給与・残業・年齢別給与を2026年現在の企業値として扱うこと
+- `UNKNOWN_PROVENANCE`のCSVを一次情報・正準datasetとみなすこと
+- archive integrity PASSを、元データの正確性や現在のWeb表示の再現性の証明とみなすこと
+- 異なる企業・職種・年齢・雇用形態・期間の値を、定義確認なしで単純比較すること
 
 ## repositoryに残っているもの
 
