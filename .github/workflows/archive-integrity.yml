@@ -36,7 +36,7 @@ jobs:
           find . -type d -name __pycache__ -prune -exec rm -rf {} +
           test -z "$(git status --porcelain --untracked-files=all)"
 
-  pages-build:
+  static-site-build:
     needs: audit
     permissions:
       contents: read
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Build manifest-only static site
+      - name: Build and test static archive site
         run: |
           mkdir -p dist/artifacts
           cp web/index.html web/app.mjs web/worker.mjs web/styles.css dist/
@@ -66,7 +66,7 @@ jobs:
               target.parent.mkdir(parents=True, exist_ok=True)
               shutil.copy2(root / path, target)
           PY
-          python -m http.server 8765 --directory dist >/tmp/salary-pages.log 2>&1 &
+          python -m http.server 8765 --directory dist >/tmp/salary-static-site.log 2>&1 &
           server=$!
           trap 'kill "$server" 2>/dev/null || true' EXIT
           sleep 1
@@ -79,27 +79,8 @@ jobs:
               page = r.read().decode('utf-8')
           assert '2024年2月の研究snapshot' in page
           PY
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: dist
       - name: Verify build residue can be removed cleanly
         run: |
           rm -rf dist
           find . -type d -name __pycache__ -prune -exec rm -rf {} +
           test -z "$(git status --porcelain --untracked-files=all)"
-
-  deploy:
-    if: github.event_name != 'pull_request'
-    needs: pages-build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
