@@ -1,0 +1,26 @@
+{
+  "company_name": "トヨタ自動車株式会社",
+  "securities_code": "7203",
+  "edinet_code": "E02144",
+  "corporate_number": null,
+  "corporate_number_status": "unverified",
+  "fiscal_year_end": "2026-03-31",
+  "employee_count": 73133,
+  "average_age_years": 40.5,
+  "average_tenure_years": 15.1,
+  "average_annual_salary_jpy": 10060464,
+  "salary_year_over_year_change_percent": 2.4,
+  "scope": "reporting_company",
+  "source_document": {
+    "title": "有価証券報告書 2026年3月期",
+    "url": "https://global.toyota/pages/global_toyota/ir/library/securities-report/archives/archives_2026_03.pdf",
+    "submitted_at": "2026-06-10",
+    "page": 124
+  },
+  "verified_at": "2026-08-17",
+  "notes": [
+    "従業員数は提出会社の就業人員数。臨時従業員16,689人は外数のためemployee_countには含めない。",
+    "平均年間給与は賞与および基準外賃金を含む。",
+    "法人番号は国税庁の個別法人結果を今回確認できていないため未入力。"
+  ]
+}
