@@ -1,5 +1,7 @@
 # salary
 
+[![Archive integrity](https://github.com/KAFKA2306/salary/actions/workflows/archive-integrity.yml/badge.svg)](https://github.com/KAFKA2306/salary/actions/workflows/archive-integrity.yml)
+
 **給与データで危険なのは、古いことだけではない。出所や重複を見失った数字を「別の事実」として数えてしまうことだ。**
 
 `salary`は、企業の給与・残業・年齢別給与に関する公開Web情報を探索した、**2024年2月時点のNotebook・CSV snapshot**です。現在稼働している給与data収集基盤ではなく、`archive-manifest.json`とCIで来歴不明・hash差分・同一内容の重複を監査しながら保存する研究archiveです。
