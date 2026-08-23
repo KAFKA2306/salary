@@ -32,6 +32,16 @@ class OfficialCompensationTest(unittest.TestCase):
         self.assertEqual(source.scheme, "https")
         self.assertEqual(source.netloc, "global.toyota")
 
+    def test_current_observations_are_not_archive_artifacts(self):
+        manifest = json.loads((ROOT / "archive-manifest.json").read_text(encoding="utf-8"))
+        archive_paths = {item["path"] for item in manifest["artifacts"]}
+
+        self.assertFalse(manifest["policy"]["current_decision_use"])
+        self.assertNotIn(
+            DATA_PATH.relative_to(ROOT).as_posix(),
+            archive_paths,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
