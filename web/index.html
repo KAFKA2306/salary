@@ -8,6 +8,11 @@
 <h1 id="current-benchmark-heading">輸送用機器・給与上位20社の報酬比較</h1>
 <p>会社を選ぶと、提出会社の平均年間給与・平均年齢・平均勤続年数を、同じ20社比較群の中央値・四分位と比較できます。</p>
 <p><strong>注意:</strong> この20社は平均年間給与上位の比較群であり、輸送用機器業界全体の代表標本ではありません。</p>
+<dl aria-label="比較群の平均年間給与レンジ">
+<dt>第1四分位</dt><dd id="salary-q1">読み込み中…</dd>
+<dt>中央値</dt><dd id="salary-median">読み込み中…</dd>
+<dt>第3四分位</dt><dd id="salary-q3">読み込み中…</dd>
+</dl>
 <label for="company-select">会社</label>
 <select id="company-select"><option value="">読み込み中…</option></select>
 <div id="benchmark-status" role="status">一次資料確認済みデータを読み込み中…</div>
@@ -15,7 +20,7 @@
 <h2 id="company-name"></h2>
 <dl>
 <dt>平均年間給与</dt><dd id="salary-value"></dd>
-<dt>比較群中央値との差</dt><dd id="salary-vs-median"></dd>
+<dt>比較群平均との差</dt><dd id="salary-vs-median"></dd>
 <dt>比較群内の位置</dt><dd id="salary-band"></dd>
 <dt>平均年齢</dt><dd id="age-value"></dd>
 <dt>平均勤続年数</dt><dd id="tenure-value"></dd>
