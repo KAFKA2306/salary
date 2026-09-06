@@ -53,6 +53,7 @@ jobs:
           cp web/index.html web/app.mjs web/worker.mjs web/styles.css dist/
           cp scripts/browser_archive_inspection.py dist/archive_inspection.py
           cp archive-manifest.json dist/
+          cp data/official_compensation/transport-equipment-fy2026-salary-top20.json dist/
           python - <<'PY'
           import json, pathlib, shutil
           root = pathlib.Path('.')
@@ -75,8 +76,14 @@ jobs:
           with urllib.request.urlopen('http://127.0.0.1:8765/archive-manifest.json') as r:
               manifest = json.load(r)
           assert manifest['archive_as_of'] == '2024-02'
+          with urllib.request.urlopen('http://127.0.0.1:8765/transport-equipment-fy2026-salary-top20.json') as r:
+              benchmark = json.load(r)
+          assert len(benchmark['observations']) == 20
+          assert benchmark['cohort_definition']['scope'] == '提出会社'
           with urllib.request.urlopen('http://127.0.0.1:8765/') as r:
               page = r.read().decode('utf-8')
+          assert '輸送用機器・給与上位20社の報酬比較' in page
+          assert '業界全体の代表標本ではありません' in page
           assert '2024年2月の研究snapshot' in page
           PY
       - name: Verify build residue can be removed cleanly

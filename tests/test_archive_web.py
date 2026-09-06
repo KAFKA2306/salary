@@ -48,6 +48,15 @@ class ArchiveWebTests(unittest.TestCase):
         self.assertNotIn("requests.get", worker + app)
         self.assertNotIn("fetch('http", app)
 
+    def test_current_benchmark_is_a_separate_fail_loud_surface(self):
+        app = (ROOT / "web" / "app.mjs").read_text(encoding="utf-8")
+        page = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("transport-equipment-fy2026-salary-top20.json", app)
+        self.assertIn("expected 20 observations", app)
+        self.assertIn("EDINET一次資料を確認", page)
+        self.assertIn("業界全体の代表標本ではありません", page)
+        self.assertLess(page.index("輸送用機器・給与上位20社の報酬比較"), page.index("2024年2月の研究snapshot"))
+
 
 if __name__ == "__main__":
     unittest.main()

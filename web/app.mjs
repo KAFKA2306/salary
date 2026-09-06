@@ -27,7 +27,57 @@ function td(text) {
   return cell;
 }
 
-async function main() {
+function salaryBand(value, metrics) {
+  if (value < metrics.q1) return '第1四分位未満';
+  if (value < metrics.median) return '第1四分位〜中央値';
+  if (value < metrics.q3) return '中央値〜第3四分位';
+  return '第3四分位以上';
+}
+
+function formatYen(value) {
+  return `${Math.round(value).toLocaleString('ja-JP')}円`;
+}
+
+async function loadBenchmark() {
+  const status = document.querySelector('#benchmark-status');
+  const select = document.querySelector('#company-select');
+  const result = document.querySelector('#company-result');
+  const response = await fetch('./transport-equipment-fy2026-salary-top20.json', { cache: 'no-store' });
+  if (!response.ok) throw new Error(`current benchmark fetch failed: HTTP ${response.status}`);
+  const data = await response.json();
+  const observations = Array.isArray(data.observations) ? data.observations : [];
+  if (observations.length !== 20) throw new Error(`current benchmark expected 20 observations, got ${observations.length}`);
+  const salaryMetrics = data.benchmark?.metrics?.average_annual_salary_jpy;
+  if (!salaryMetrics) throw new Error('current benchmark salary metrics missing');
+
+  select.replaceChildren(new Option('会社を選択', ''));
+  observations.forEach((observation, index) => {
+    select.append(new Option(`${observation.company_name} (${observation.securities_code})`, String(index)));
+  });
+  status.textContent = `${data.verified_at}確認 / ${observations.length}社 / 比較群中央値 ${formatYen(salaryMetrics.median)}`;
+
+  select.addEventListener('change', () => {
+    if (select.value === '') {
+      result.hidden = true;
+      return;
+    }
+    const observation = observations[Number(select.value)];
+    const deltaPercent = ((observation.average_annual_salary_jpy / salaryMetrics.median) - 1) * 100;
+    document.querySelector('#company-name').textContent = observation.company_name;
+    document.querySelector('#salary-value').textContent = formatYen(observation.average_annual_salary_jpy);
+    document.querySelector('#salary-vs-median').textContent = `${deltaPercent >= 0 ? '+' : ''}${deltaPercent.toFixed(1)}%`;
+    document.querySelector('#salary-band').textContent = salaryBand(observation.average_annual_salary_jpy, salaryMetrics);
+    document.querySelector('#age-value').textContent = `${observation.average_age_years}歳`;
+    document.querySelector('#tenure-value').textContent = `${observation.average_tenure_years}年`;
+    document.querySelector('#fiscal-year').textContent = observation.fiscal_year_end;
+    const source = document.querySelector('#source-link');
+    source.href = observation.source_document.url;
+    source.textContent = `EDINET ${observation.source_document.doc_id} / ${observation.source_document.section}`;
+    result.hidden = false;
+  });
+}
+
+async function loadArchive() {
   const response = await fetch('./archive-manifest.json', { cache: 'no-store' });
   if (!response.ok) throw new Error(`manifest fetch failed: HTTP ${response.status}`);
   const manifest = await response.json();
@@ -68,6 +118,10 @@ async function main() {
   }
 }
 
-main().catch((error) => {
+loadBenchmark().catch((error) => {
+  document.querySelector('#benchmark-status').textContent = `読み込み失敗: ${error.message}`;
+  document.querySelector('#company-select').disabled = true;
+});
+loadArchive().catch((error) => {
   summary.textContent = `読み込み失敗: ${error.message}`;
 });
