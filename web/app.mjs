@@ -50,11 +50,15 @@ async function loadBenchmark() {
   const salaryMetrics = data.benchmark?.metrics?.average_annual_salary_jpy;
   if (!salaryMetrics) throw new Error('current benchmark salary metrics missing');
 
+  document.querySelector('#salary-q1').textContent = formatYen(salaryMetrics.q1);
+  document.querySelector('#salary-median').textContent = formatYen(salaryMetrics.median);
+  document.querySelector('#salary-q3').textContent = formatYen(salaryMetrics.q3);
+
   select.replaceChildren(new Option('会社を選択', ''));
   observations.forEach((observation, index) => {
     select.append(new Option(`${observation.company_name} (${observation.securities_code})`, String(index)));
   });
-  status.textContent = `${data.verified_at}確認 / ${observations.length}社 / 比較群中央値 ${formatYen(salaryMetrics.median)}`;
+  status.textContent = `${data.verified_at}確認 / ${observations.length}社`;
 
   select.addEventListener('change', () => {
     if (select.value === '') {
