@@ -14,6 +14,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -41,8 +43,7 @@ jobs:
           header_index = next(i for i, line in enumerate(lines) if "ＥＤＩＮＥＴコード" in line and "法人番号" in line)
           rows = list(csv.DictReader(io.StringIO("\n".join(lines[header_index:]))))
           by_edinet = {(row.get("ＥＤＩＮＥＴコード") or "").strip(): row for row in rows}
-          cohort_path = pathlib.Path("data/official_compensation/transport-equipment-fy2026-salary-top20.json")
-          cohort = json.loads(cohort_path.read_text(encoding="utf-8"))
+          cohort = json.loads(pathlib.Path("data/official_compensation/transport-equipment-fy2026-salary-top20.json").read_text(encoding="utf-8"))
           matches = []
           for observation in cohort["observations"]:
               code = observation["edinet_code"]
@@ -50,7 +51,7 @@ jobs:
               if row is None:
                   raise SystemExit(f"missing EDINET code: {code}")
               corporate_number = (row.get("法人番号") or "").strip()
-              if len(corporate_number) != 13 or not corporate_number.isdigit():
+              if corporate_number and (len(corporate_number) != 13 or not corporate_number.isdigit()):
                   raise SystemExit(f"invalid corporate number for {code}: {corporate_number!r}")
               securities_code = (row.get("証券コード") or "").strip()
               if securities_code and not securities_code.startswith(observation["securities_code"]):
@@ -58,17 +59,19 @@ jobs:
               matches.append({
                   "edinet_code": code,
                   "company_name": observation["company_name"],
-                  "corporate_number": corporate_number,
+                  "corporate_number": corporate_number or None,
                   "edinet_securities_code": securities_code,
               })
-          print("BULK_IDENTITY_EVIDENCE=" + json.dumps({
+          evidence = {
               "source_url": source,
               "source_metadata": lines[0],
               "matched_count": len(matches),
+              "corporate_number_count": sum(item["corporate_number"] is not None for item in matches),
               "matches": matches,
-          }, ensure_ascii=False, separators=(",", ":")))
+          }
+          print("BULK_IDENTITY_EVIDENCE=" + json.dumps(evidence, ensure_ascii=False, separators=(",", ":")))
           if len(matches) != 20:
-              raise SystemExit(f"expected 20 matches, got {len(matches)}")
+              raise SystemExit(f"expected 20 EDINET rows, got {len(matches)}")
           PY
       - name: Generate machine-readable audit report
         run: python scripts/archive_integrity.py --report archive-report.json
@@ -93,6 +96,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
