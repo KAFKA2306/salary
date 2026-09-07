@@ -27,11 +27,16 @@ function td(text) {
   return cell;
 }
 
-function salaryBand(value, metrics) {
+function benchmarkBand(value, metrics) {
   if (value < metrics.q1) return '第1四分位未満';
   if (value < metrics.median) return '第1四分位〜中央値';
   if (value < metrics.q3) return '中央値〜第3四分位';
   return '第3四分位以上';
+}
+
+function deltaFromMedian(value, metrics, digits = 1) {
+  const delta = ((value / metrics.median) - 1) * 100;
+  return `${delta >= 0 ? '+' : ''}${delta.toFixed(digits)}%`;
 }
 
 function formatYen(value) {
@@ -47,12 +52,17 @@ async function loadBenchmark() {
   const data = await response.json();
   const observations = Array.isArray(data.observations) ? data.observations : [];
   if (observations.length !== 20) throw new Error(`current benchmark expected 20 observations, got ${observations.length}`);
-  const salaryMetrics = data.benchmark?.metrics?.average_annual_salary_jpy;
-  if (!salaryMetrics) throw new Error('current benchmark salary metrics missing');
+  const metrics = data.benchmark?.metrics;
+  const salaryMetrics = metrics?.average_annual_salary_jpy;
+  const ageMetrics = metrics?.average_age_years;
+  const tenureMetrics = metrics?.average_tenure_years;
+  if (!salaryMetrics || !ageMetrics || !tenureMetrics) throw new Error('current benchmark three-axis metrics missing');
 
   document.querySelector('#salary-q1').textContent = formatYen(salaryMetrics.q1);
   document.querySelector('#salary-median').textContent = formatYen(salaryMetrics.median);
   document.querySelector('#salary-q3').textContent = formatYen(salaryMetrics.q3);
+  document.querySelector('#age-median').textContent = `${ageMetrics.median}歳`;
+  document.querySelector('#tenure-median').textContent = `${tenureMetrics.median}年`;
 
   select.replaceChildren(new Option('会社を選択', ''));
   observations.forEach((observation, index) => {
@@ -66,13 +76,16 @@ async function loadBenchmark() {
       return;
     }
     const observation = observations[Number(select.value)];
-    const deltaPercent = ((observation.average_annual_salary_jpy / salaryMetrics.median) - 1) * 100;
     document.querySelector('#company-name').textContent = observation.company_name;
     document.querySelector('#salary-value').textContent = formatYen(observation.average_annual_salary_jpy);
-    document.querySelector('#salary-vs-median').textContent = `${deltaPercent >= 0 ? '+' : ''}${deltaPercent.toFixed(1)}%`;
-    document.querySelector('#salary-band').textContent = salaryBand(observation.average_annual_salary_jpy, salaryMetrics);
+    document.querySelector('#salary-vs-median').textContent = deltaFromMedian(observation.average_annual_salary_jpy, salaryMetrics);
+    document.querySelector('#salary-band').textContent = benchmarkBand(observation.average_annual_salary_jpy, salaryMetrics);
     document.querySelector('#age-value').textContent = `${observation.average_age_years}歳`;
+    document.querySelector('#age-vs-median').textContent = deltaFromMedian(observation.average_age_years, ageMetrics);
+    document.querySelector('#age-band').textContent = benchmarkBand(observation.average_age_years, ageMetrics);
     document.querySelector('#tenure-value').textContent = `${observation.average_tenure_years}年`;
+    document.querySelector('#tenure-vs-median').textContent = deltaFromMedian(observation.average_tenure_years, tenureMetrics);
+    document.querySelector('#tenure-band').textContent = benchmarkBand(observation.average_tenure_years, tenureMetrics);
     document.querySelector('#fiscal-year').textContent = observation.fiscal_year_end;
     const source = document.querySelector('#source-link');
     source.href = observation.source_document.url;
