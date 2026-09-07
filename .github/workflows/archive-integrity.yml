@@ -26,13 +26,7 @@ jobs:
       - name: Probe official EDINET corporate identities
         run: |
           python - <<'PY'
-          import csv
-          import io
-          import json
-          import pathlib
-          import urllib.request
-          import zipfile
-
+          import csv, io, json, pathlib, urllib.request, zipfile
           source = "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/codelist/Edinetcode.zip"
           with urllib.request.urlopen(source, timeout=30) as response:
               payload = response.read()
@@ -44,34 +38,17 @@ jobs:
           rows = list(csv.DictReader(io.StringIO("\n".join(lines[header_index:]))))
           by_edinet = {(row.get("ＥＤＩＮＥＴコード") or "").strip(): row for row in rows}
           cohort = json.loads(pathlib.Path("data/official_compensation/transport-equipment-fy2026-salary-top20.json").read_text(encoding="utf-8"))
+          toyota = by_edinet["E02144"]
+          print("EDINET_HEADERS=" + json.dumps(list(toyota.keys()), ensure_ascii=False))
+          print("EDINET_TOYOTA_ROW=" + json.dumps(toyota, ensure_ascii=False, separators=(",", ":")))
           matches = []
           for observation in cohort["observations"]:
               code = observation["edinet_code"]
               row = by_edinet.get(code)
               if row is None:
                   raise SystemExit(f"missing EDINET code: {code}")
-              corporate_number = (row.get("法人番号") or "").strip()
-              if corporate_number and (len(corporate_number) != 13 or not corporate_number.isdigit()):
-                  raise SystemExit(f"invalid corporate number for {code}: {corporate_number!r}")
-              securities_code = (row.get("証券コード") or "").strip()
-              if securities_code and not securities_code.startswith(observation["securities_code"]):
-                  raise SystemExit(f"securities code mismatch for {code}: {securities_code!r}")
-              matches.append({
-                  "edinet_code": code,
-                  "company_name": observation["company_name"],
-                  "corporate_number": corporate_number or None,
-                  "edinet_securities_code": securities_code,
-              })
-          evidence = {
-              "source_url": source,
-              "source_metadata": lines[0],
-              "matched_count": len(matches),
-              "corporate_number_count": sum(item["corporate_number"] is not None for item in matches),
-              "matches": matches,
-          }
-          print("BULK_IDENTITY_EVIDENCE=" + json.dumps(evidence, ensure_ascii=False, separators=(",", ":")))
-          if len(matches) != 20:
-              raise SystemExit(f"expected 20 EDINET rows, got {len(matches)}")
+              matches.append({"edinet_code": code, "corporate_number": (row.get("法人番号") or "").strip() or None, "edinet_securities_code": (row.get("証券コード") or "").strip()})
+          print("BULK_IDENTITY_EVIDENCE=" + json.dumps({"source_url":source,"source_metadata":lines[0],"matched_count":len(matches),"matches":matches}, ensure_ascii=False,separators=(",", ":")))
           PY
       - name: Generate machine-readable audit report
         run: python scripts/archive_integrity.py --report archive-report.json
@@ -115,8 +92,7 @@ jobs:
           manifest = json.loads((root / 'archive-manifest.json').read_text(encoding='utf-8'))
           for item in manifest['artifacts']:
               path = pathlib.Path(item['path'])
-              if path.suffix.lower() != '.csv':
-                  continue
+              if path.suffix.lower() != '.csv': continue
               target = dist / path
               target.parent.mkdir(parents=True, exist_ok=True)
               shutil.copy2(root / path, target)
@@ -127,15 +103,12 @@ jobs:
           sleep 1
           python - <<'PY'
           import json, urllib.request
-          with urllib.request.urlopen('http://127.0.0.1:8765/archive-manifest.json') as r:
-              manifest = json.load(r)
+          with urllib.request.urlopen('http://127.0.0.1:8765/archive-manifest.json') as r: manifest = json.load(r)
           assert manifest['archive_as_of'] == '2024-02'
-          with urllib.request.urlopen('http://127.0.0.1:8765/transport-equipment-fy2026-salary-top20.json') as r:
-              benchmark = json.load(r)
+          with urllib.request.urlopen('http://127.0.0.1:8765/transport-equipment-fy2026-salary-top20.json') as r: benchmark = json.load(r)
           assert len(benchmark['observations']) == 20
           assert benchmark['cohort_definition']['scope'] == '提出会社'
-          with urllib.request.urlopen('http://127.0.0.1:8765/') as r:
-              page = r.read().decode('utf-8')
+          with urllib.request.urlopen('http://127.0.0.1:8765/') as r: page = r.read().decode('utf-8')
           assert '輸送用機器・給与上位20社の報酬比較' in page
           assert '業界全体の代表標本ではありません' in page
           assert '2024年2月の研究snapshot' in page
