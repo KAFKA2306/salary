@@ -44,8 +44,9 @@ class OfficialCompensationTest(unittest.TestCase):
             self.assertGreater(row["average_age_years"], 0)
             self.assertGreater(row["average_tenure_years"], 0)
             self.assertGreater(row["average_annual_salary_jpy"], 0)
-            self.assertIsNone(row["corporate_number"])
-            self.assertEqual(row["corporate_number_status"], "unverified")
+            self.assertEqual(len(row["corporate_number"]), 13)
+            self.assertTrue(row["corporate_number"].isdigit())
+            self.assertEqual(row["corporate_number_status"], "verified")
             self.assertEqual(row["verified_at"], "2026-09-06")
 
             source = row["source_document"]
@@ -56,10 +57,22 @@ class OfficialCompensationTest(unittest.TestCase):
             self.assertIn(source["doc_id"], source["url"])
             self.assertEqual(source["section"], "従業員の状況")
 
+    def test_corporate_identities_share_one_current_official_bulk_source(self):
+        source = self.dataset["identity_source"]
+        self.assertEqual(source["authority"], "金融庁 EDINET")
+        self.assertEqual(source["source_field"], "提出者法人番号")
+        self.assertEqual(source["source_as_of"], "2026-09-07")
+        self.assertEqual(source["matched_observations"], 20)
+        self.assertEqual(len({row["corporate_number"] for row in self.records}), 20)
+        parsed = urlparse(source["url"])
+        self.assertEqual(parsed.scheme, "https")
+        self.assertEqual(parsed.netloc, "disclosure2dl.edinet-fsa.go.jp")
+
     def test_toyota_observation_matches_2026_filing(self):
         toyota = next(row for row in self.records if row["edinet_code"] == "E02144")
         self.assertEqual(toyota["company_name"], "トヨタ自動車株式会社")
         self.assertEqual(toyota["securities_code"], "7203")
+        self.assertEqual(toyota["corporate_number"], "1180301018771")
         self.assertEqual(toyota["employee_count"], 73133)
         self.assertEqual(toyota["average_age_years"], 40.5)
         self.assertEqual(toyota["average_tenure_years"], 15.1)
