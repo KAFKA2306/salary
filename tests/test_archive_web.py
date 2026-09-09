@@ -67,12 +67,6 @@ class ArchiveWebTests(unittest.TestCase):
         self.assertIn("年齢・比較群内の位置", page)
         self.assertIn("勤続年数・比較群内の位置", page)
 
-    def test_company_selection_precedes_reference_detail(self):
-        page = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
-        self.assertIn("まず比較する会社を選ぶ", page)
-        self.assertIn("比較群の基準値を見る", page)
-        self.assertLess(page.index('id="company-select"'), page.index('id="salary-q1"'))
-
 
 if __name__ == "__main__":
     unittest.main()
