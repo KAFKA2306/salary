@@ -51,6 +51,10 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Install browser test runtime
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
       - name: Build and test static archive site
         run: |
           mkdir -p dist/artifacts
@@ -90,6 +94,7 @@ jobs:
           assert '業界全体の代表標本ではありません' in page
           assert '2024年2月の研究snapshot' in page
           PY
+          python scripts/browser_compensation_benchmark.py http://127.0.0.1:8765
       - name: Verify build residue can be removed cleanly
         run: |
           rm -rf dist
