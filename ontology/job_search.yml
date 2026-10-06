@@ -1,0 +1,44 @@
+version: 1
+name: kafka_job_search
+entities:
+  Company:
+    key: company_id
+    fields: [name, industry, company_type]
+  JobPosting:
+    key: job_id
+    fields: [company_id, title, employment_type, ownership_scope, customer_facing, outsourcing, consulting, source_url, verified]
+  Compensation:
+    key: job_id
+    fields: [base_salary_min_jpy, base_salary_max_jpy, fixed_overtime_annual_jpy, total_salary_min_jpy, salary_basis_verified]
+  WorkStyle:
+    key: job_id
+    fields: [remote_mode, location, fixed_overtime_hours, actual_overtime_hours]
+  RoleProfile:
+    key: job_id
+    fields: [data_platform_depth, implementation_ratio, ai_production, cross_company_scope, management_heavy, short_term_sales_kpi]
+  Evidence:
+    key: evidence_id
+    fields: [job_id, evidence_type, source_url, observed_at, excerpt_hash]
+  FitAssessment:
+    key: job_id
+    fields: [career_fit, manufacturing_bridge, technical_ownership, workstyle_fit, notes]
+  Application:
+    key: application_id
+    fields: [job_id, stage, applied_at, next_action_at, status]
+relations:
+  - [Company, OFFERS, JobPosting]
+  - [JobPosting, HAS_COMPENSATION, Compensation]
+  - [JobPosting, HAS_WORK_STYLE, WorkStyle]
+  - [JobPosting, HAS_ROLE, RoleProfile]
+  - [Evidence, SUPPORTS, JobPosting]
+  - [FitAssessment, EVALUATES, JobPosting]
+  - [Application, TARGETS, JobPosting]
+hard_gates:
+  employment_type: permanent
+  base_salary_min_jpy: 8000000
+  customer_facing: false
+  outsourcing: false
+  consulting: false
+  allowed_ownership_scope: [internal_ai, internal_data_platform, own_product]
+  require_salary_basis_verified: true
+  require_verified_job: true

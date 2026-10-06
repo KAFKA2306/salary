@@ -1,0 +1,7 @@
+job_search:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: warehouse/job_search.duckdb
+      threads: 4

@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: stg_jobs
+    columns:
+      - name: job_id
+        tests: [not_null, unique]
+  - name: int_job_eligibility
+    columns:
+      - name: eligible
+        tests: [not_null]
+  - name: job_ranking
+    columns:
+      - name: job_id
+        tests: [not_null, unique]
+      - name: score
+        tests: [not_null]
