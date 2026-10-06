@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile auditors
-        run: python -m py_compile scripts/archive_integrity.py scripts/browser_archive_inspection.py tests/test_archive_integrity.py tests/test_archive_web.py
+        run: python -m py_compile scripts/archive_integrity.py scripts/browser_archive_inspection.py scripts/browser_job_dashboard.py tests/test_archive_integrity.py tests/test_archive_web.py
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
       - name: Generate machine-readable audit report
@@ -101,6 +101,7 @@ jobs:
           assert '業界全体の代表標本ではありません' in archive_page
           assert '2024年2月の研究snapshot' in archive_page
           PY
+          python scripts/browser_job_dashboard.py http://127.0.0.1:8765
           python scripts/browser_compensation_benchmark.py http://127.0.0.1:8765/archive.html
       - name: Verify build residue can be removed cleanly
         run: |
