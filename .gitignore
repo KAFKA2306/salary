@@ -5,3 +5,4 @@ warehouse/*.duckdb*
 artifacts/job_ranking.csv
 __pycache__/
 *.pyc
+config/dbt/.user.yml
