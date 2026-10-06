@@ -1,0 +1,19 @@
+name: job_search
+version: "1.0.0"
+config-version: 2
+profile: job_search
+model-paths: ["models"]
+seed-paths: ["seeds"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+models:
+  job_search:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+seeds:
+  job_search:
+    +quote_columns: false
