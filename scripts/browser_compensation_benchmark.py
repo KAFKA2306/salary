@@ -114,7 +114,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("base_url")
     args = parser.parse_args()
-    base_url = args.base_url.rstrip("/") + "/"
+    base_url = args.base_url if args.base_url.endswith(".html") else args.base_url.rstrip("/") + "/"
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
