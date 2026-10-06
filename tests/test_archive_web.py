@@ -66,6 +66,10 @@ class ArchiveWebTests(unittest.TestCase):
         self.assertNotIn("応募状態", page + app)
         self.assertEqual(payload["summary"]["eligible_count"], 3)
         self.assertEqual(payload["summary"]["rejected_count"], 2)
+        all_jobs = payload["eligible"] + payload["rejected"]
+        self.assertTrue(all("exit_entries" in job for job in all_jobs))
+        ntt = next(job for job in payload["eligible"] if job["company_name"] == "NTTドコモ")
+        self.assertGreaterEqual(len(ntt["exit_entries"]), 2)
 
     def test_current_benchmark_exposes_three_peer_decisions(self):
         app = (ROOT / "web" / "archive-app.mjs").read_text(encoding="utf-8")
