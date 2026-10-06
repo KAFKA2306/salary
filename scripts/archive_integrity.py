@@ -50,7 +50,7 @@ def tracked_artifacts() -> list[str]:
     paths = []
     for raw in result.stdout.splitlines():
         path = Path(raw)
-        if raw in EXCLUDED or raw.startswith(("scripts/", "tests/", ".github/")):
+        if raw in EXCLUDED or raw.startswith(("scripts/", "tests/", ".github/", "dags/")):
             continue
         if path.suffix.lower() in ARTIFACT_SUFFIXES:
             paths.append(raw)
