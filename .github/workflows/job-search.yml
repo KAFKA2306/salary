@@ -54,7 +54,7 @@ jobs:
         run: |
           rm -rf target logs dbt_packages
           rm -f artifacts/job_ranking.csv
-          rm -f warehouse/job_search.duckdb*
+          rm -f warehouse/job_search.duckdb* config/dbt/.user.yml
           find . -type d -name __pycache__ -prune -exec rm -rf {} +
           status="$(git status --porcelain --untracked-files=all)"
           printf '%s\n' "$status"
