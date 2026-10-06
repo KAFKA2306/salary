@@ -51,6 +51,8 @@ def main() -> int:
     """)
     exit_by_company = {}
     for entry in exit_entries:
+        for key in ("job_id", "author", "former_role"):
+            entry[key] = entry[key] or ""
         exit_by_company.setdefault(entry["company_name"], []).append(entry)
 
     rejected = fetch_dicts(con, """
