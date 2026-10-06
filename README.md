@@ -50,6 +50,7 @@ decision surface
 - WorkStyle
 - RoleProfile
 - Evidence
+- ExitEntry
 - FitAssessment
 
 重要なrelation:
@@ -57,6 +58,7 @@ decision surface
 - JobPosting HAS_COMPENSATION Compensation
 - JobPosting HAS_ROLE RoleProfile
 - Evidence SUPPORTS JobPosting / Compensation / RoleProfile
+- ExitEntry INFORMS Company
 - FitAssessment EVALUATES JobPosting
 
 ### dbt
@@ -108,6 +110,8 @@ python scripts/export_job_rankings.py
 ## Current seed
 
 `seeds/job_candidates.csv` は探索中求人のcurrent入力用。給与や職務条件が未確認なら、推測で埋めず `verified=false` とする。
+
+`seeds/exit_entries.csv` は退職者・元社員の公開情報。企業単位で求人カードへ紐付けるが、hard gateやランキング点数には使わない。見つからない場合も `status=not_found` として探索済みであることだけ残す。
 
 ## Archive lane
 

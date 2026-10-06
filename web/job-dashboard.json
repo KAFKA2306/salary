@@ -40,7 +40,23 @@
       "technical_ownership": 5,
       "workstyle_fit": 5,
       "short_term_sales_kpi": false,
-      "management_heavy": false
+      "management_heavy": false,
+      "exit_entries": [
+        {
+          "exit_entry_id": "EXIT-BC-001",
+          "company_name": "バフェットコード",
+          "job_id": "JOB-BC-SDE",
+          "kind": "search_status",
+          "author": "",
+          "former_role": "",
+          "published_at": "2026-10-06",
+          "relevance": "unknown",
+          "summary": "信頼できる個人の退職エントリを公開検索では確認できず。会社レビュー投稿も非常に少ない。",
+          "implication": "面談でデータエンジニアの平均在籍期間、直近2年の退職人数・主な理由、属人化を確認する。",
+          "source_url": "https://jobtalk.jp/companies/10079316",
+          "status": "not_found"
+        }
+      ]
     },
     {
       "rank": 2,
@@ -66,7 +82,37 @@
       "technical_ownership": 5,
       "workstyle_fit": 4,
       "short_term_sales_kpi": false,
-      "management_heavy": false
+      "management_heavy": false,
+      "exit_entries": [
+        {
+          "exit_entry_id": "EXIT-NTT-001",
+          "company_name": "NTTドコモ",
+          "job_id": "JOB-NTT-GDS",
+          "kind": "exit_entry",
+          "author": "野宮すず",
+          "former_role": "営業部 営業戦略担当",
+          "published_at": "2026-04-21",
+          "relevance": "medium",
+          "summary": "会社・人・研修・リモート環境は好意的。一方、100枚超の会議資料や大人数会議が多く、仕事が誰に届き何が変わったかを実感しづらかった。",
+          "implication": "GDS004で実装・意思決定に直接持てる範囲、会議/資料作成比率、意思決定速度を確認する。",
+          "source_url": "https://note.com/nomiya_suzu/n/n273129fcb334",
+          "status": "verified"
+        },
+        {
+          "exit_entry_id": "EXIT-NTT-002",
+          "company_name": "NTTドコモ",
+          "job_id": "JOB-NTT-GDS",
+          "kind": "exit_review",
+          "author": "匿名",
+          "former_role": "データサイエンティスト・在籍3〜5年未満",
+          "published_at": "2025-06-18",
+          "relevance": "very_high",
+          "summary": "検索公開部分でプロパー社員・管理職登用に関する記述を確認。本文はログイン制限のため退職理由全容は未確認。",
+          "implication": "職種一致のため、中途入社者の昇格・権限・評価制度を選考で確認する。",
+          "source_url": "https://openmoney.jp/career_path_reports/M5bh2L/resignation_reason",
+          "status": "limited"
+        }
+      ]
     },
     {
       "rank": 3,
@@ -92,7 +138,8 @@
       "technical_ownership": 4,
       "workstyle_fit": 4,
       "short_term_sales_kpi": false,
-      "management_heavy": false
+      "management_heavy": false,
+      "exit_entries": []
     }
   ],
   "rejected": [
@@ -110,6 +157,50 @@
       "source_url": "https://jp.corp-sansan.com/recruit/",
       "failed_gates": [
         "固定残業を除く基本給が800万円未満"
+      ],
+      "exit_entries": [
+        {
+          "exit_entry_id": "EXIT-SANSAN-001",
+          "company_name": "Sansan",
+          "job_id": "JOB-SANSAN-DM",
+          "kind": "exit_entry",
+          "author": "yag-ays",
+          "former_role": "DSOC R&D・機械学習エンジニア",
+          "published_at": "2020-05-24",
+          "relevance": "very_high",
+          "summary": "R&Dの人材密度、研究者・開発・インフラ・オペレーションの連携、教師データ作成環境を高く評価。約2年半在籍後、次の機会として転職。",
+          "implication": "データ組織・データ生成基盤の文化は強い正材料。現在のデータ戦略組織への継承を確認する。",
+          "source_url": "https://yag-ays.github.io/article/ubie/",
+          "status": "verified"
+        },
+        {
+          "exit_entry_id": "EXIT-SANSAN-002",
+          "company_name": "Sansan",
+          "job_id": "JOB-SANSAN-DM",
+          "kind": "exit_entry",
+          "author": "ばんくし",
+          "former_role": "R&D・機械学習エンジニア",
+          "published_at": "2017-09-30",
+          "relevance": "very_high",
+          "summary": "技術環境、データ、インフラ、学習環境、会社を変えられる文化を高評価。一方、当時の給与テーブルへの不満も転職理由に含む。",
+          "implication": "技術面は正材料。給与制度の話は古いので、現在求人の固定残業込み下限を別途厳密に確認する。",
+          "source_url": "https://vaaaaaanquish.hatenadiary.jp/entry/2017/09/30/202953",
+          "status": "verified"
+        },
+        {
+          "exit_entry_id": "EXIT-SANSAN-003",
+          "company_name": "Sansan",
+          "job_id": "JOB-SANSAN-DM",
+          "kind": "exit_entry",
+          "author": "佐藤 恒",
+          "former_role": "CPO室データアナリスト → UXリサーチ",
+          "published_at": "2022-06-15",
+          "relevance": "high",
+          "summary": "行動ログ分析、KPI設計、機能改善・新機能提案、中長期プロダクト戦略に関与。会社・同僚を好意的に評価し、起業のため退職。",
+          "implication": "データを意思決定へつなげる文化の正材料。現求人で基盤設計の所有権がどこまであるか確認する。",
+          "source_url": "https://note.com/rips_gh/n/n734bd68c4bea",
+          "status": "verified"
+        }
       ]
     },
     {
@@ -126,7 +217,8 @@
       "source_url": "https://herp.careers/v1/ubiehr/MExdfj2UgARV",
       "failed_gates": [
         "固定残業を除く基本給が800万円未満"
-      ]
+      ],
+      "exit_entries": []
     }
   ]
 }

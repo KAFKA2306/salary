@@ -22,6 +22,9 @@ entities:
   FitAssessment:
     key: job_id
     fields: [career_fit, manufacturing_bridge, technical_ownership, workstyle_fit, notes]
+  ExitEntry:
+    key: exit_entry_id
+    fields: [company_name, job_id, kind, author, former_role, published_at, relevance, summary, implication, source_url, status]
 relations:
   - [Company, OFFERS, JobPosting]
   - [JobPosting, HAS_COMPENSATION, Compensation]
@@ -29,6 +32,7 @@ relations:
   - [JobPosting, HAS_ROLE, RoleProfile]
   - [Evidence, SUPPORTS, JobPosting]
   - [FitAssessment, EVALUATES, JobPosting]
+  - [ExitEntry, INFORMS, Company]
 hard_gates:
   employment_type: permanent
   base_salary_min_jpy: 8000000

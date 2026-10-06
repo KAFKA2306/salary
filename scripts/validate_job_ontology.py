@@ -8,7 +8,7 @@ PATH = ROOT / "ontology" / "job_search.yml"
 
 REQUIRED_ENTITIES = {
     "Company", "JobPosting", "Compensation", "WorkStyle",
-    "RoleProfile", "Evidence", "FitAssessment",
+    "RoleProfile", "Evidence", "FitAssessment", "ExitEntry",
 }
 FORBIDDEN_ENTITIES = {"Application"}
 REQUIRED_GATES = {

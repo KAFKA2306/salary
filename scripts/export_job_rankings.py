@@ -42,6 +42,19 @@ def main() -> int:
         join int_job_eligibility e using (job_id)
         order by r.rank
     """)
+    exit_entries = fetch_dicts(con, """
+        select
+          exit_entry_id, company_name, job_id, kind, author, former_role,
+          published_at, relevance, summary, implication, source_url, status
+        from exit_entries
+        order by company_name, exit_entry_id
+    """)
+    exit_by_company = {}
+    for entry in exit_entries:
+        for key in ("job_id", "author", "former_role"):
+            entry[key] = entry[key] or ""
+        exit_by_company.setdefault(entry["company_name"], []).append(entry)
+
     rejected = fetch_dicts(con, """
         select
           job_id, company_name, title,
@@ -68,6 +81,9 @@ def main() -> int:
         row["failed_gates"] = [label for gate, label in GATE_LABELS.items() if row.get(gate) is False]
         for gate in GATE_LABELS:
             row.pop(gate, None)
+
+    for row in ranking + rejected:
+        row["exit_entries"] = exit_by_company.get(row["company_name"], [])
 
     dashboard = {
         "policy": {
