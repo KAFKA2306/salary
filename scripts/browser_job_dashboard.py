@@ -21,6 +21,7 @@ def main() -> int:
             assert page.locator("body").inner_text().find("応募状態") == -1
             assert "バフェットコード" in page.locator(".job-card").first.inner_text()
             assert "基本給" in page.locator(".job-card").first.inner_text()
+            assert "退職者" in page.locator("body").inner_text()
 
             page.locator('button[data-filter="ai"]').click()
             page.wait_for_function("document.querySelectorAll('.job-card').length === 2")
