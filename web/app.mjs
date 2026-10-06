@@ -1,144 +1,132 @@
-const summary = document.querySelector('#summary');
-const catalog = document.querySelector('#catalog');
-const resultBox = document.querySelector('#inspection-result');
-const worker = new Worker('./worker.mjs', { type: 'module' });
-let requestId = 0;
-const pending = new Map();
+const jobList = document.querySelector('#job-list');
+const rejectedList = document.querySelector('#rejected-list');
+const filters = [...document.querySelectorAll('.filter')];
+let data;
+let active = 'all';
 
-worker.addEventListener('message', (event) => {
-  const { id, result, error } = event.data ?? {};
-  const resolve = pending.get(id);
-  if (!resolve) return;
-  pending.delete(id);
-  resolve({ result, error });
-});
+const ownership = {
+  internal_ai: '社内AI',
+  internal_data_platform: '社内データ基盤',
+  own_product: '自社プロダクト',
+};
 
-function inspect(path) {
-  const id = ++requestId;
-  return new Promise((resolve) => {
-    pending.set(id, resolve);
-    worker.postMessage({ id, selectedPath: path });
+function man(value) {
+  return `${Math.round(Number(value) / 10000).toLocaleString('ja-JP')}万円`;
+}
+
+function remoteLabel(value) {
+  return ({ full_remote:'フルリモート', remote:'リモート', hybrid:'ハイブリッド', onsite:'出社' })[value] ?? value;
+}
+
+function elem(tag, cls, text) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+
+function scoreRow(label, value) {
+  const row = elem('div','score-row');
+  row.append(elem('span','',label));
+  const meter = elem('div','meter');
+  const bar = elem('i');
+  bar.style.width = `${Number(value) * 20}%`;
+  meter.append(bar);
+  row.append(meter, elem('b','',`${value}/5`));
+  return row;
+}
+
+function card(job) {
+  const article = elem('article','job-card');
+
+  const head = elem('div','job-head');
+  const company = elem('div','company');
+  company.append(elem('span','rank',`#${job.rank}`), elem('strong','',job.company_name));
+  head.append(company, elem('strong','score',String(job.score)));
+
+  const title = elem('h3','',job.title);
+
+  const tags = elem('div','tags');
+  [
+    ownership[job.ownership_scope] ?? job.ownership_scope,
+    remoteLabel(job.remote_mode),
+    Number(job.ai_production) >= 4 ? 'AI本番利用' : null,
+    Number(job.cross_company_scope) >= 4 ? '全社横断' : null,
+    Number(job.fixed_overtime_hours) === 0 ? '固定残業なし' : `固定残業${job.fixed_overtime_hours}h`,
+  ].filter(Boolean).forEach(t => tags.append(elem('span','tag',t)));
+
+  const pay = elem('div','pay');
+  pay.append(
+    elem('span','', '基本給'),
+    elem('strong','', `${man(job.base_salary_min_jpy)}〜${man(job.base_salary_max_jpy)}`),
+    elem('small','', Number(job.fixed_overtime_hours) > 0 ? '固定残業代は800万円判定に不算入' : '固定残業代なし')
+  );
+
+  const location = elem('div','meta');
+  location.append(elem('span','',remoteLabel(job.remote_mode)), elem('span','',job.location || '—'));
+
+  const detail = elem('div','scores');
+  detail.append(
+    scoreRow('技術裁量',job.technical_ownership),
+    scoreRow('実装',job.implementation_ratio),
+    scoreRow('AI',job.ai_production),
+    scoreRow('全社性',job.cross_company_scope),
+    scoreRow('経歴接続',job.career_fit)
+  );
+
+  const link = elem('a','open-job','求人を見る');
+  link.href = job.source_url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+
+  article.append(head,title,tags,pay,location,detail,link);
+  return article;
+}
+
+function rejectCard(job) {
+  const article = elem('article','reject-card');
+  const top = elem('div','reject-top');
+  const name = elem('div');
+  name.append(elem('strong','',job.company_name),elem('span','',job.title));
+  top.append(name,elem('span','reject-mark','対象外'));
+  const reasons = elem('div','reasons');
+  (job.failed_gates || []).forEach(r => reasons.append(elem('span','reason',r)));
+  const salary = elem('p','reject-salary',`基本給下限 ${man(job.base_salary_min_jpy)} / 想定年収下限 ${man(job.total_salary_min_jpy)}`);
+  article.append(top,reasons,salary);
+  return article;
+}
+
+function matches(job) {
+  if (active === 'remote') return ['full_remote','remote','hybrid'].includes(job.remote_mode);
+  if (active === 'platform') return Number(job.data_platform_depth) >= 4;
+  if (active === 'ai') return Number(job.ai_production) >= 4;
+  return true;
+}
+
+function renderJobs() {
+  jobList.replaceChildren();
+  const rows = data.eligible.filter(matches);
+  if (!rows.length) return jobList.append(elem('p','state','該当求人なし'));
+  rows.forEach(job => jobList.append(card(job)));
+}
+
+function render() {
+  document.querySelector('#eligible-count').textContent = data.summary.eligible_count;
+  document.querySelector('#top-salary').textContent = man(data.summary.top_base_salary_min_jpy);
+  document.querySelector('#remote-count').textContent = data.summary.remote_friendly_count;
+  document.querySelector('#rejected-count').textContent = data.summary.rejected_count;
+  renderJobs();
+  rejectedList.replaceChildren();
+  data.rejected.forEach(job => rejectedList.append(rejectCard(job)));
+}
+
+filters.forEach(button => button.addEventListener('click', () => {
+  active = button.dataset.filter;
+  filters.forEach(x => x.classList.toggle('active',x === button));
+  renderJobs();
+}));
+
+fetch('./job-dashboard.json',{cache:'no-store'})
+  .then(r => { if(!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(json => { data = json; render(); })
+  .catch(error => {
+    jobList.replaceChildren(elem('p','state error',`読み込み失敗: ${error.message}`));
   });
-}
-
-function td(text) {
-  const cell = document.createElement('td');
-  cell.textContent = text;
-  return cell;
-}
-
-function benchmarkBand(value, metrics) {
-  if (value < metrics.q1) return '第1四分位未満';
-  if (value < metrics.median) return '第1四分位〜中央値';
-  if (value < metrics.q3) return '中央値〜第3四分位';
-  return '第3四分位以上';
-}
-
-function deltaFromMedian(value, metrics, digits = 1) {
-  const delta = ((value / metrics.median) - 1) * 100;
-  return `${delta >= 0 ? '+' : ''}${delta.toFixed(digits)}%`;
-}
-
-function formatYen(value) {
-  return `${Math.round(value).toLocaleString('ja-JP')}円`;
-}
-
-async function loadBenchmark() {
-  const status = document.querySelector('#benchmark-status');
-  const select = document.querySelector('#company-select');
-  const result = document.querySelector('#company-result');
-  const response = await fetch('./transport-equipment-fy2026-salary-top20.json', { cache: 'no-store' });
-  if (!response.ok) throw new Error(`current benchmark fetch failed: HTTP ${response.status}`);
-  const data = await response.json();
-  const observations = Array.isArray(data.observations) ? data.observations : [];
-  if (observations.length !== 20) throw new Error(`current benchmark expected 20 observations, got ${observations.length}`);
-  const metrics = data.benchmark?.metrics;
-  const salaryMetrics = metrics?.average_annual_salary_jpy;
-  const ageMetrics = metrics?.average_age_years;
-  const tenureMetrics = metrics?.average_tenure_years;
-  if (!salaryMetrics || !ageMetrics || !tenureMetrics) throw new Error('current benchmark three-axis metrics missing');
-
-  document.querySelector('#salary-q1').textContent = formatYen(salaryMetrics.q1);
-  document.querySelector('#salary-median').textContent = formatYen(salaryMetrics.median);
-  document.querySelector('#salary-q3').textContent = formatYen(salaryMetrics.q3);
-  document.querySelector('#age-median').textContent = `${ageMetrics.median}歳`;
-  document.querySelector('#tenure-median').textContent = `${tenureMetrics.median}年`;
-
-  select.replaceChildren(new Option('会社を選択', ''));
-  observations.forEach((observation, index) => {
-    select.append(new Option(`${observation.company_name} (${observation.securities_code})`, String(index)));
-  });
-  status.textContent = `${data.verified_at}確認 / ${observations.length}社`;
-
-  select.addEventListener('change', () => {
-    if (select.value === '') {
-      result.hidden = true;
-      return;
-    }
-    const observation = observations[Number(select.value)];
-    document.querySelector('#company-name').textContent = observation.company_name;
-    document.querySelector('#salary-value').textContent = formatYen(observation.average_annual_salary_jpy);
-    document.querySelector('#salary-vs-median').textContent = deltaFromMedian(observation.average_annual_salary_jpy, salaryMetrics);
-    document.querySelector('#salary-band').textContent = benchmarkBand(observation.average_annual_salary_jpy, salaryMetrics);
-    document.querySelector('#age-value').textContent = `${observation.average_age_years}歳`;
-    document.querySelector('#age-vs-median').textContent = deltaFromMedian(observation.average_age_years, ageMetrics);
-    document.querySelector('#age-band').textContent = benchmarkBand(observation.average_age_years, ageMetrics);
-    document.querySelector('#tenure-value').textContent = `${observation.average_tenure_years}年`;
-    document.querySelector('#tenure-vs-median').textContent = deltaFromMedian(observation.average_tenure_years, tenureMetrics);
-    document.querySelector('#tenure-band').textContent = benchmarkBand(observation.average_tenure_years, tenureMetrics);
-    document.querySelector('#fiscal-year').textContent = observation.fiscal_year_end;
-    const source = document.querySelector('#source-link');
-    source.href = observation.source_document.url;
-    source.textContent = `EDINET ${observation.source_document.doc_id} / ${observation.source_document.section}`;
-    result.hidden = false;
-  });
-}
-
-async function loadArchive() {
-  const response = await fetch('./archive-manifest.json', { cache: 'no-store' });
-  if (!response.ok) throw new Error(`manifest fetch failed: HTTP ${response.status}`);
-  const manifest = await response.json();
-  const artifacts = Array.isArray(manifest.artifacts) ? manifest.artifacts : [];
-  summary.textContent = `${manifest.archive_as_of ?? 'UNKNOWN'} snapshot / ${artifacts.length} manifest artifacts`;
-
-  for (const artifact of artifacts) {
-    const row = document.createElement('tr');
-    row.append(td(artifact.path));
-    row.append(td(artifact.role ?? 'UNKNOWN'));
-    const status = td(artifact.current_use_status ?? 'UNKNOWN');
-    if (artifact.current_use_status === 'UNKNOWN_PROVENANCE') status.className = 'warning';
-    row.append(status);
-    row.append(td(artifact.git_blob_sha ?? 'UNKNOWN'));
-    row.append(td(Number.isFinite(artifact.size_bytes) ? `${artifact.size_bytes.toLocaleString()} B` : 'UNKNOWN'));
-    const action = document.createElement('td');
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.textContent = 'inspect';
-    button.addEventListener('click', async () => {
-      resultBox.textContent = 'Pyodideで検査中…';
-      const { result, error } = await inspect(artifact.path);
-      if (error) {
-        resultBox.textContent = `検査失敗: ${error}`;
-        return;
-      }
-      const duplicateNote = result.same_blob_paths.length > 1
-        ? `同一blob: ${result.same_blob_paths.join(', ')}（別datasetとして二重計上しません）`
-        : '同一blob aliasなし';
-      const eligibility = result.aggregate_eligible
-        ? '集計適格: manifest status上は除外対象ではありません。'
-        : '集計対象外: UNKNOWN_PROVENANCE / ARCHIVE_ONLY は現在値・正準値として扱いません。';
-      resultBox.textContent = `${artifact.path}\n${eligibility}\n${duplicateNote}\n${JSON.stringify(result.detail, null, 2)}`;
-    });
-    action.append(button);
-    row.append(action);
-    catalog.append(row);
-  }
-}
-
-loadBenchmark().catch((error) => {
-  document.querySelector('#benchmark-status').textContent = `読み込み失敗: ${error.message}`;
-  document.querySelector('#company-select').disabled = true;
-});
-loadArchive().catch((error) => {
-  summary.textContent = `読み込み失敗: ${error.message}`;
-});
