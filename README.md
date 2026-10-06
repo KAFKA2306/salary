@@ -2,7 +2,7 @@
 
 このrepositoryの主用途を、給与調査archiveから**自分専用の就活意思決定基盤**へ変更する。
 
-旧CSV / Notebook / official compensation dataは provenance を失わないため archive lane として保持する。新しいcurrent laneでは、求人を「企業名の一覧」ではなく、**求人・給与・働き方・職務所有範囲・証拠・応募状態を結んだOntology**として扱う。
+旧CSV / Notebook / official compensation dataは provenance を失わないため archive lane として保持する。新しいcurrent laneでは、求人を「企業名の一覧」ではなく、**求人・給与・働き方・職務所有範囲・証拠を結んだOntology**として扱う。
 
 ## Hard gates
 
@@ -49,7 +49,6 @@ decision surface
 - RoleProfile
 - Evidence
 - FitAssessment
-- Application
 
 重要なrelation:
 - Company OFFERS JobPosting
@@ -57,7 +56,6 @@ decision surface
 - JobPosting HAS_ROLE RoleProfile
 - Evidence SUPPORTS JobPosting / Compensation / RoleProfile
 - FitAssessment EVALUATES JobPosting
-- Application TARGETS JobPosting
 
 ### dbt
 
