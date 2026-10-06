@@ -36,6 +36,35 @@ function scoreRow(label, value) {
   return row;
 }
 
+function exitEvidence(job) {
+  const rows = job.exit_entries || [];
+  const found = rows.filter(row => row.status !== 'not_found');
+  const searchedNoHit = rows.some(row => row.status === 'not_found');
+  const box = elem('details','exit-evidence');
+  const label = found.length
+    ? `退職者の声 ${found.length}件`
+    : searchedNoHit ? '退職者エントリ未発見' : '退職者エントリ未収集';
+  box.append(elem('summary','',label));
+
+  if (!found.length) {
+    box.append(elem('p','exit-empty', searchedNoHit
+      ? '公開検索では有力な退職エントリを確認できていません。'
+      : 'まだ退職者エントリを紐付けていません。'));
+    return box;
+  }
+
+  found.forEach(row => {
+    const item = elem('article','exit-item');
+    const meta = [row.author || '匿名', row.former_role, row.published_at, row.relevance].filter(Boolean).join(' / ');
+    item.append(elem('strong','',meta), elem('p','',row.summary), elem('p','exit-implication',`確認: ${row.implication}`));
+    const link = elem('a','','元記事');
+    link.href = row.source_url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+    item.append(link);
+    box.append(item);
+  });
+  return box;
+}
+
 function card(job) {
   const article = elem('article','job-card');
 
@@ -77,7 +106,7 @@ function card(job) {
   const link = elem('a','open-job','求人を見る');
   link.href = job.source_url; link.target = '_blank'; link.rel = 'noopener noreferrer';
 
-  article.append(head,title,tags,pay,location,detail,link);
+  article.append(head,title,tags,pay,location,detail,exitEvidence(job),link);
   return article;
 }
 
@@ -90,7 +119,7 @@ function rejectCard(job) {
   const reasons = elem('div','reasons');
   (job.failed_gates || []).forEach(r => reasons.append(elem('span','reason',r)));
   const salary = elem('p','reject-salary',`基本給下限 ${man(job.base_salary_min_jpy)} / 想定年収下限 ${man(job.total_salary_min_jpy)}`);
-  article.append(top,reasons,salary);
+  article.append(top,reasons,salary,exitEvidence(job));
   return article;
 }
 
