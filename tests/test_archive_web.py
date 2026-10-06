@@ -39,8 +39,8 @@ class ArchiveWebTests(unittest.TestCase):
 
     def test_worker_is_module_pyodide_and_no_external_scrape_logic(self):
         worker = (ROOT / "web" / "worker.mjs").read_text(encoding="utf-8")
-        app = (ROOT / "web" / "app.mjs").read_text(encoding="utf-8")
-        page = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
+        app = (ROOT / "web" / "archive-app.mjs").read_text(encoding="utf-8")
+        page = (ROOT / "web" / "archive.html").read_text(encoding="utf-8")
         self.assertIn("pyodide/v314.0.2/full/pyodide.mjs", worker)
         self.assertIn("new Worker('./worker.mjs', { type: 'module' })", app)
         self.assertIn("archive-manifest.json", app)
@@ -49,17 +49,27 @@ class ArchiveWebTests(unittest.TestCase):
         self.assertNotIn("fetch('http", app)
 
     def test_current_benchmark_is_a_separate_fail_loud_surface(self):
-        app = (ROOT / "web" / "app.mjs").read_text(encoding="utf-8")
-        page = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
+        app = (ROOT / "web" / "archive-app.mjs").read_text(encoding="utf-8")
+        page = (ROOT / "web" / "archive.html").read_text(encoding="utf-8")
         self.assertIn("transport-equipment-fy2026-salary-top20.json", app)
         self.assertIn("expected 20 observations", app)
         self.assertIn("EDINET一次資料を確認", page)
         self.assertIn("業界全体の代表標本ではありません", page)
         self.assertLess(page.index("輸送用機器・給与上位20社の報酬比較"), page.index("2024年2月の研究snapshot"))
 
-    def test_current_benchmark_exposes_three_peer_decisions(self):
-        app = (ROOT / "web" / "app.mjs").read_text(encoding="utf-8")
+    def test_decision_home_is_job_only_and_has_no_application_tracking(self):
         page = (ROOT / "web" / "index.html").read_text(encoding="utf-8")
+        app = (ROOT / "web" / "app.mjs").read_text(encoding="utf-8")
+        payload = json.loads((ROOT / "web" / "job-dashboard.json").read_text(encoding="utf-8"))
+        self.assertIn("条件を通った求人だけ表示", page)
+        self.assertIn("job-dashboard.json", app)
+        self.assertNotIn("応募状態", page + app)
+        self.assertEqual(payload["summary"]["eligible_count"], 3)
+        self.assertEqual(payload["summary"]["rejected_count"], 2)
+
+    def test_current_benchmark_exposes_three_peer_decisions(self):
+        app = (ROOT / "web" / "archive-app.mjs").read_text(encoding="utf-8")
+        page = (ROOT / "web" / "archive.html").read_text(encoding="utf-8")
         for metric_id in ("salary-band", "age-band", "tenure-band"):
             self.assertIn(f'id="{metric_id}"', page)
             self.assertIn(f"#{metric_id}", app)

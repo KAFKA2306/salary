@@ -1,0 +1,132 @@
+{
+  "policy": {
+    "base_salary_floor_jpy": 8000000,
+    "salary_excludes_fixed_overtime": true,
+    "customer_facing_allowed": false,
+    "allowed_ownership_scope": [
+      "internal_ai",
+      "internal_data_platform",
+      "own_product"
+    ]
+  },
+  "summary": {
+    "eligible_count": 3,
+    "rejected_count": 2,
+    "top_base_salary_min_jpy": 10000000,
+    "remote_friendly_count": 3
+  },
+  "eligible": [
+    {
+      "rank": 1,
+      "job_id": "JOB-BC-SDE",
+      "company_name": "バフェットコード",
+      "title": "シニアデータエンジニア",
+      "score": 94,
+      "base_salary_min_jpy": 10000000,
+      "base_salary_max_jpy": 14000000,
+      "total_salary_min_jpy": 10000000,
+      "fixed_overtime_annual_jpy": 0,
+      "fixed_overtime_hours": 0,
+      "remote_mode": "full_remote",
+      "location": "Japan",
+      "source_url": "https://career.buffett-code.com/hiring/data_engineer_senior.html",
+      "ownership_scope": "own_product",
+      "data_platform_depth": 5,
+      "implementation_ratio": 5,
+      "ai_production": 4,
+      "cross_company_scope": 4,
+      "career_fit": 5,
+      "manufacturing_bridge": 2,
+      "technical_ownership": 5,
+      "workstyle_fit": 5,
+      "short_term_sales_kpi": false,
+      "management_heavy": false
+    },
+    {
+      "rank": 2,
+      "job_id": "JOB-NTT-GDS",
+      "company_name": "NTTドコモ",
+      "title": "グループデータ戦略統括部 データ基盤",
+      "score": 91,
+      "base_salary_min_jpy": 8900000,
+      "base_salary_max_jpy": 9800000,
+      "total_salary_min_jpy": 8900000,
+      "fixed_overtime_annual_jpy": 0,
+      "fixed_overtime_hours": 0,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://recruit.nttdocomo-fresh.jp/career/position/",
+      "ownership_scope": "internal_data_platform",
+      "data_platform_depth": 5,
+      "implementation_ratio": 4,
+      "ai_production": 4,
+      "cross_company_scope": 5,
+      "career_fit": 5,
+      "manufacturing_bridge": 2,
+      "technical_ownership": 5,
+      "workstyle_fit": 4,
+      "short_term_sales_kpi": false,
+      "management_heavy": false
+    },
+    {
+      "rank": 3,
+      "job_id": "JOB-LEGALON-SDAE",
+      "company_name": "LegalOn Technologies",
+      "title": "Senior Data Analytics Engineer",
+      "score": 77,
+      "base_salary_min_jpy": 8170000,
+      "base_salary_max_jpy": 12000000,
+      "total_salary_min_jpy": 10300000,
+      "fixed_overtime_annual_jpy": 2532696,
+      "fixed_overtime_hours": 40,
+      "remote_mode": "remote",
+      "location": "Japan",
+      "source_url": "https://herp.careers/careers/companies/legalforce/jobs",
+      "ownership_scope": "internal_data_platform",
+      "data_platform_depth": 5,
+      "implementation_ratio": 4,
+      "ai_production": 3,
+      "cross_company_scope": 4,
+      "career_fit": 4,
+      "manufacturing_bridge": 1,
+      "technical_ownership": 4,
+      "workstyle_fit": 4,
+      "short_term_sales_kpi": false,
+      "management_heavy": false
+    }
+  ],
+  "rejected": [
+    {
+      "job_id": "JOB-SANSAN-DM",
+      "company_name": "Sansan",
+      "title": "データマネジャー",
+      "base_salary_min_jpy": 5256000,
+      "base_salary_max_jpy": 9000000,
+      "total_salary_min_jpy": 8035000,
+      "fixed_overtime_annual_jpy": 1440000,
+      "fixed_overtime_hours": 35,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://jp.corp-sansan.com/recruit/",
+      "failed_gates": [
+        "固定残業を除く基本給が800万円未満"
+      ]
+    },
+    {
+      "job_id": "JOB-UBIE-DE",
+      "company_name": "Ubie",
+      "title": "データエンジニア",
+      "base_salary_min_jpy": 7438296,
+      "base_salary_max_jpy": 11160000,
+      "total_salary_min_jpy": 10000000,
+      "fixed_overtime_annual_jpy": 2561712,
+      "fixed_overtime_hours": 45,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://herp.careers/v1/ubiehr/MExdfj2UgARV",
+      "failed_gates": [
+        "固定残業を除く基本給が800万円未満"
+      ]
+    }
+  ]
+}

@@ -8,8 +8,9 @@ PATH = ROOT / "ontology" / "job_search.yml"
 
 REQUIRED_ENTITIES = {
     "Company", "JobPosting", "Compensation", "WorkStyle",
-    "RoleProfile", "Evidence", "FitAssessment", "Application",
+    "RoleProfile", "Evidence", "FitAssessment",
 }
+FORBIDDEN_ENTITIES = {"Application"}
 REQUIRED_GATES = {
     "employment_type", "base_salary_min_jpy", "customer_facing",
     "outsourcing", "consulting", "allowed_ownership_scope",
@@ -20,11 +21,14 @@ def main() -> int:
     data = yaml.safe_load(PATH.read_text(encoding="utf-8"))
     entities = set(data.get("entities", {}))
     gates = data.get("hard_gates", {})
-    missing_entities = REQUIRED_ENTITIES - entities
-    missing_gates = REQUIRED_GATES - set(gates)
     errors = []
+    missing_entities = REQUIRED_ENTITIES - entities
+    forbidden_entities = FORBIDDEN_ENTITIES & entities
+    missing_gates = REQUIRED_GATES - set(gates)
     if missing_entities:
         errors.append(f"missing entities: {sorted(missing_entities)}")
+    if forbidden_entities:
+        errors.append(f"out-of-scope entities: {sorted(forbidden_entities)}")
     if missing_gates:
         errors.append(f"missing hard gates: {sorted(missing_gates)}")
     if gates.get("base_salary_min_jpy") != 8_000_000:
