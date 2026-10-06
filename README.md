@@ -1,3 +1,5 @@
+[▶ ビューを開く](https://salary-job-view.vercel.app)
+
 # salary → Job Search Decision Platform
 
 このrepositoryの主用途を、給与調査archiveから**自分専用の就活意思決定基盤**へ変更する。
