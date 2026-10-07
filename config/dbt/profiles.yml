@@ -2,6 +2,11 @@ job_search:
   target: dev
   outputs:
     dev:
-      type: duckdb
-      path: warehouse/job_search.duckdb
+      type: postgres
+      host: "{{ env_var('JOB_SEARCH_DB_HOST', 'localhost') }}"
+      port: "{{ env_var('JOB_SEARCH_DB_PORT', '5432') | int }}"
+      user: "{{ env_var('JOB_SEARCH_DB_USER', 'job_search') }}"
+      password: "{{ env_var('JOB_SEARCH_DB_PASSWORD', 'job_search') }}"
+      dbname: "{{ env_var('JOB_SEARCH_DB_NAME', 'job_search') }}"
+      schema: analytics
       threads: 4
