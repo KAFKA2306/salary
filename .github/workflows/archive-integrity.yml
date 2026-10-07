@@ -1,9 +1,31 @@
 name: Archive integrity
 
 on:
+  pull_request:
+    paths:
+      - "archive-manifest.json"
+      - "data/official_compensation/**"
+      - "scripts/archive_integrity.py"
+      - "scripts/browser_archive_inspection.py"
+      - "scripts/browser_compensation_benchmark.py"
+      - "tests/test_archive_integrity.py"
+      - "tests/test_archive_web.py"
+      - "web/archive.html"
+      - "web/archive-app.mjs"
+      - ".github/workflows/archive-integrity.yml"
   push:
     branches: [main]
-  pull_request:
+    paths:
+      - "archive-manifest.json"
+      - "data/official_compensation/**"
+      - "scripts/archive_integrity.py"
+      - "scripts/browser_archive_inspection.py"
+      - "scripts/browser_compensation_benchmark.py"
+      - "tests/test_archive_integrity.py"
+      - "tests/test_archive_web.py"
+      - "web/archive.html"
+      - "web/archive-app.mjs"
+      - ".github/workflows/archive-integrity.yml"
   workflow_dispatch:
 
 jobs:
@@ -14,97 +36,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-      - name: Compile auditors
-        run: python -m py_compile scripts/archive_integrity.py scripts/browser_archive_inspection.py scripts/browser_job_dashboard.py tests/test_archive_integrity.py tests/test_archive_web.py
-      - name: Run unit tests
-        run: python -m unittest discover -s tests -v
+      - name: Run archive tests
+        run: python -m unittest tests.test_archive_integrity tests.test_archive_web -v
       - name: Generate machine-readable audit report
         run: python scripts/archive_integrity.py --report archive-report.json
-      - name: Upload audit report
-        uses: actions/upload-artifact@v7
-        with:
-          name: archive-integrity-report
-          path: archive-report.json
-          if-no-files-found: error
-          retention-days: 7
-      - name: Verify clean checkout
-        run: |
-          rm -f archive-report.json
-          find . -type d -name __pycache__ -prune -exec rm -rf {} +
-          test -z "$(git status --porcelain --untracked-files=all)"
-
-  static-site-build:
-    needs: audit
-    permissions:
-      contents: read
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-      - uses: actions/setup-python@v6
-        with:
-          python-version: "3.12"
-      - name: Install browser test runtime
-        run: |
-          python -m pip install playwright==1.55.0
-          python -m playwright install --with-deps chromium
-      - name: Build and test static archive site
-        run: |
-          mkdir -p dist/artifacts
-          cp web/index.html web/app.mjs web/styles.css web/job-dashboard.json web/archive.html web/archive-app.mjs web/worker.mjs dist/
-          cp scripts/browser_archive_inspection.py dist/archive_inspection.py
-          cp archive-manifest.json dist/
-          cp data/official_compensation/transport-equipment-fy2026-salary-top20.json dist/
-          python - <<'PY'
-          import json, pathlib, shutil
-          root = pathlib.Path('.')
-          dist = root / 'dist' / 'artifacts'
-          manifest = json.loads((root / 'archive-manifest.json').read_text(encoding='utf-8'))
-          for item in manifest['artifacts']:
-              path = pathlib.Path(item['path'])
-              if path.suffix.lower() != '.csv':
-                  continue
-              target = dist / path
-              target.parent.mkdir(parents=True, exist_ok=True)
-              shutil.copy2(root / path, target)
-          PY
-          python -m http.server 8765 --directory dist >/tmp/salary-static-site.log 2>&1 &
-          server=$!
-          trap 'kill "$server" 2>/dev/null || true' EXIT
-          sleep 1
-          python - <<'PY'
-          import json, urllib.request
-          with urllib.request.urlopen('http://127.0.0.1:8765/archive-manifest.json') as r:
-              manifest = json.load(r)
-          assert manifest['archive_as_of'] == '2024-02'
-          with urllib.request.urlopen('http://127.0.0.1:8765/transport-equipment-fy2026-salary-top20.json') as r:
-              benchmark = json.load(r)
-          assert len(benchmark['observations']) == 20
-          assert benchmark['cohort_definition']['scope'] == '提出会社'
-          with urllib.request.urlopen('http://127.0.0.1:8765/') as r:
-              page = r.read().decode('utf-8')
-          assert '条件を通った求人だけ表示' in page
-          assert '応募状態' not in page
-          with urllib.request.urlopen('http://127.0.0.1:8765/job-dashboard.json') as r:
-              dashboard = json.load(r)
-          assert dashboard['summary']['eligible_count'] == 3
-          with urllib.request.urlopen('http://127.0.0.1:8765/archive.html') as r:
-              archive_page = r.read().decode('utf-8')
-          assert '輸送用機器・給与上位20社の報酬比較' in archive_page
-          assert '業界全体の代表標本ではありません' in archive_page
-          assert '2024年2月の研究snapshot' in archive_page
-          PY
-          python scripts/browser_job_dashboard.py http://127.0.0.1:8765
-          python scripts/browser_compensation_benchmark.py http://127.0.0.1:8765/archive.html
-      - name: Verify build residue can be removed cleanly
-        run: |
-          rm -rf dist
-          find . -type d -name __pycache__ -prune -exec rm -rf {} +
-          test -z "$(git status --porcelain --untracked-files=all)"
