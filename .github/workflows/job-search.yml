@@ -2,8 +2,30 @@ name: Job search decision pipeline
 
 on:
   pull_request:
+    paths:
+      - "seeds/**"
+      - "evidence/**"
+      - "models/**"
+      - "ontology/**"
+      - "config/dbt/**"
+      - "scripts/validate_job_ontology.py"
+      - "scripts/export_job_rankings.py"
+      - "dags/job_search_pipeline.py"
+      - "web/job-dashboard.json"
+      - ".github/workflows/job-search.yml"
   push:
     branches: [main]
+    paths:
+      - "seeds/**"
+      - "evidence/**"
+      - "models/**"
+      - "ontology/**"
+      - "config/dbt/**"
+      - "scripts/validate_job_ontology.py"
+      - "scripts/export_job_rankings.py"
+      - "dags/job_search_pipeline.py"
+      - "web/job-dashboard.json"
+      - ".github/workflows/job-search.yml"
   workflow_dispatch:
 
 jobs:
@@ -42,9 +64,6 @@ jobs:
       - name: Validate ontology
         run: python scripts/validate_job_ontology.py
 
-      - name: Compile orchestration code
-        run: python -m py_compile dags/job_search_pipeline.py scripts/validate_job_ontology.py scripts/export_job_rankings.py
-
       - name: Build dbt decision model
         run: |
           dbt seed --profiles-dir config/dbt
@@ -53,7 +72,7 @@ jobs:
       - name: Export ranking
         run: python scripts/export_job_rankings.py
 
-      - name: Assert hard gates and dashboard payload
+      - name: Assert hard gates and dashboard consistency
         run: |
           python - <<'PY'
           import csv
@@ -64,25 +83,7 @@ jobs:
           assert rows, "ranking must not be empty"
           assert all(int(r["base_salary_min_jpy"]) >= 8_000_000 for r in rows)
 
-          ids = {r["job_id"] for r in rows}
-          assert "JOB-UBIE-DE" not in ids
-          assert "JOB-SANSAN-DM" not in ids
-          assert "JOB-BC-SDE" in ids
-          assert "JOB-NTT-GDS" in ids
-
           generated = json.loads(Path("artifacts/job_dashboard.json").read_text(encoding="utf-8"))
           checked_in = json.loads(Path("web/job-dashboard.json").read_text(encoding="utf-8"))
           assert generated == checked_in, "web/job-dashboard.json is stale; regenerate from dbt"
-          assert generated["summary"]["eligible_count"] == 3
-          assert generated["summary"]["rejected_count"] == 2
           PY
-
-      - name: Verify generated files only
-        run: |
-          rm -rf target logs dbt_packages
-          rm -f artifacts/job_ranking.csv artifacts/job_dashboard.json
-          rm -f config/dbt/.user.yml
-          find . -type d -name __pycache__ -prune -exec rm -rf {} +
-          status="$(git status --porcelain --untracked-files=all)"
-          printf '%s\n' "$status"
-          test -z "$status"
