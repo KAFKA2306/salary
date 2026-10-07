@@ -10,14 +10,41 @@
     ]
   },
   "summary": {
-    "eligible_count": 4,
+    "eligible_count": 5,
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
-    "remote_friendly_count": 4
+    "remote_friendly_count": 5
   },
   "eligible": [
     {
       "rank": 1,
+      "job_id": "JOB-ENEXIA-MLOPS",
+      "company_name": "ENEXIA",
+      "title": "MLOps Engineer",
+      "score": 97,
+      "base_salary_min_jpy": 8000000,
+      "base_salary_max_jpy": 15000000,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": 0,
+      "fixed_overtime_hours": 0,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://herp.careers/v1/enexia/dIwOr4bGkq2f",
+      "ownership_scope": "internal_data_platform",
+      "data_platform_depth": 5,
+      "implementation_ratio": 5,
+      "ai_production": 5,
+      "cross_company_scope": 4,
+      "career_fit": 5,
+      "manufacturing_bridge": 3,
+      "technical_ownership": 5,
+      "workstyle_fit": 5,
+      "short_term_sales_kpi": false,
+      "management_heavy": false,
+      "exit_entries": []
+    },
+    {
+      "rank": 2,
       "job_id": "JOB-BC-SDE",
       "company_name": "バフェットコード",
       "title": "シニアデータエンジニア",
@@ -59,7 +86,7 @@
       ]
     },
     {
-      "rank": 2,
+      "rank": 3,
       "job_id": "JOB-NTT-GDS",
       "company_name": "NTTドコモ",
       "title": "グループデータ戦略統括部 データ基盤",
@@ -115,7 +142,7 @@
       ]
     },
     {
-      "rank": 3,
+      "rank": 4,
       "job_id": "JOB-PAYPAYCARD-DSLEAD",
       "company_name": "PayPayカード",
       "title": "データサイエンティスト/リーダー候補（ビジネスグロース領域）",
@@ -142,7 +169,7 @@
       "exit_entries": []
     },
     {
-      "rank": 4,
+      "rank": 5,
       "job_id": "JOB-LEGALON-SDAE",
       "company_name": "LegalOn Technologies",
       "title": "Senior Data Analytics Engineer",

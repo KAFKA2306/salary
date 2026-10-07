@@ -1,0 +1,19 @@
+{
+  "evidence_id": "EVID-ENEXIA-MLOPS-20261008",
+  "job_id": "JOB-ENEXIA-MLOPS",
+  "observed_at": "2026-10-08",
+  "job_url": "https://herp.careers/v1/enexia/dIwOr4bGkq2f",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 8000000,
+    "annual_salary_max_jpy": 15000000,
+    "salary_type": "年俸制（16分割）",
+    "fixed_overtime": "求人票に固定残業代の記載なし"
+  },
+  "workstyle": "リモート中心のハイブリッド。週1〜2回出社を基本、フルリモートは個別相談。",
+  "ownership": "再エネ発電量予測のMLプラットフォーム。特徴量パイプライン、モデル検証、監視、自動学習・再学習・デプロイ・ロールバック、モデルバージョン管理を設計・運用。",
+  "stack": ["Python","SQL","Airflow","Metaflow","Kubeflow","GCP","Vertex AI","Docker","Terraform","Terragrunt","GitHub Actions"],
+  "career_fit": "Python/ML/Optuna系の分析経験から、MLflow・オーケストレーション・本番MLOpsへ接続しやすい。ユーザーが既に扱うPython、MLflow、GitHub Actionsとも近い。",
+  "caveats": ["ビジネスレベル英語が必須", "MLOps/データ/ML本番運用の実務4年以上が必須", "フルリモートは一律保証ではない"],
+  "verification": "2026-10-08にHERP公開求人で給与、雇用形態、職務、技術スタックを確認。"
+}
