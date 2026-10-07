@@ -2,10 +2,13 @@
 from pathlib import Path
 import csv
 import json
-import duckdb
+import os
+from decimal import Decimal
+
+import psycopg
+from psycopg.rows import dict_row
 
 ROOT = Path(__file__).resolve().parents[1]
-DB = ROOT / "warehouse" / "job_search.duckdb"
 CSV_OUT = ROOT / "artifacts" / "job_ranking.csv"
 JSON_OUT = ROOT / "artifacts" / "job_dashboard.json"
 
@@ -20,54 +23,74 @@ GATE_LABELS = {
     "gate_job_verified": "求人条件が未検証",
 }
 
+
+def connect():
+    return psycopg.connect(
+        host=os.getenv("JOB_SEARCH_DB_HOST", "localhost"),
+        port=int(os.getenv("JOB_SEARCH_DB_PORT", "5432")),
+        dbname=os.getenv("JOB_SEARCH_DB_NAME", "job_search"),
+        user=os.getenv("JOB_SEARCH_DB_USER", "job_search"),
+        password=os.getenv("JOB_SEARCH_DB_PASSWORD", "job_search"),
+        options="-c search_path=analytics",
+        row_factory=dict_row,
+    )
+
+
 def fetch_dicts(con, sql):
-    cursor = con.execute(sql)
-    columns = [item[0] for item in cursor.description]
-    return [dict(zip(columns, row)) for row in cursor.fetchall()]
+    with con.cursor() as cursor:
+        cursor.execute(sql)
+        return list(cursor.fetchall())
+
+
+def json_default(value):
+    if isinstance(value, Decimal):
+        return float(value)
+    return str(value)
+
 
 def main() -> int:
     CSV_OUT.parent.mkdir(parents=True, exist_ok=True)
-    con = duckdb.connect(str(DB), read_only=True)
-    ranking = fetch_dicts(con, """
-        select
-          r.rank, r.job_id, r.company_name, r.title, r.score,
-          r.base_salary_min_jpy, r.base_salary_max_jpy,
-          e.total_salary_min_jpy, e.fixed_overtime_annual_jpy,
-          e.fixed_overtime_hours, r.remote_mode, r.location, r.source_url,
-          e.ownership_scope, e.data_platform_depth, e.implementation_ratio,
-          e.ai_production, e.cross_company_scope, e.career_fit,
-          e.manufacturing_bridge, e.technical_ownership, e.workstyle_fit,
-          e.short_term_sales_kpi, e.management_heavy
-        from job_ranking r
-        join int_job_eligibility e using (job_id)
-        order by r.rank
-    """)
-    exit_entries = fetch_dicts(con, """
-        select
-          exit_entry_id, company_name, job_id, kind, author, former_role,
-          published_at, relevance, summary, implication, source_url, status
-        from exit_entries
-        order by company_name, exit_entry_id
-    """)
+    with connect() as con:
+        ranking = fetch_dicts(con, """
+            select
+              r.rank, r.job_id, r.company_name, r.title, r.score,
+              r.base_salary_min_jpy, r.base_salary_max_jpy,
+              e.total_salary_min_jpy, e.fixed_overtime_annual_jpy,
+              e.fixed_overtime_hours, r.remote_mode, r.location, r.source_url,
+              e.ownership_scope, e.data_platform_depth, e.implementation_ratio,
+              e.ai_production, e.cross_company_scope, e.career_fit,
+              e.manufacturing_bridge, e.technical_ownership, e.workstyle_fit,
+              e.short_term_sales_kpi, e.management_heavy
+            from job_ranking r
+            join int_job_eligibility e using (job_id)
+            order by r.rank
+        """)
+        exit_entries = fetch_dicts(con, """
+            select
+              exit_entry_id, company_name, job_id, kind, author, former_role,
+              published_at, relevance, summary, implication, source_url, status
+            from exit_entries
+            order by company_name, exit_entry_id
+        """)
+        rejected = fetch_dicts(con, """
+            select
+              job_id, company_name, title,
+              base_salary_min_jpy, base_salary_max_jpy,
+              total_salary_min_jpy, fixed_overtime_annual_jpy, fixed_overtime_hours,
+              remote_mode, location, source_url,
+              gate_permanent, gate_base_salary, gate_salary_verified,
+              gate_no_customer_facing, gate_no_outsourcing, gate_no_consulting,
+              gate_ownership, gate_job_verified
+            from int_job_eligibility
+            where not eligible
+            order by company_name, title
+        """)
+
     exit_by_company = {}
     for entry in exit_entries:
         for key in ("job_id", "author", "former_role"):
             entry[key] = entry[key] or ""
         exit_by_company.setdefault(entry["company_name"], []).append(entry)
-
-    rejected = fetch_dicts(con, """
-        select
-          job_id, company_name, title,
-          base_salary_min_jpy, base_salary_max_jpy,
-          total_salary_min_jpy, fixed_overtime_annual_jpy, fixed_overtime_hours,
-          remote_mode, location, source_url,
-          gate_permanent, gate_base_salary, gate_salary_verified,
-          gate_no_customer_facing, gate_no_outsourcing, gate_no_consulting,
-          gate_ownership, gate_job_verified
-        from int_job_eligibility
-        where not eligible
-        order by company_name, title
-    """)
 
     if ranking:
         with CSV_OUT.open("w", newline="", encoding="utf-8") as handle:
@@ -101,10 +124,11 @@ def main() -> int:
         "eligible": ranking,
         "rejected": rejected,
     }
-    JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, default=json_default) + "\n", encoding="utf-8")
     print(f"wrote {len(ranking)} ranked jobs to {CSV_OUT}")
     print(f"wrote dashboard with {len(rejected)} rejected jobs to {JSON_OUT}")
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())

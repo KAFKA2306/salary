@@ -1,5 +1,5 @@
 PyYAML>=6,<7
-duckdb>=1.1,<2
 dbt-core>=1.9,<2
-dbt-duckdb>=1.9,<2
+dbt-postgres>=1.9,<2
+psycopg[binary]>=3.2,<4
 apache-airflow>=2.10,<3
