@@ -1,0 +1,20 @@
+{
+  "evidence_id": "EVID-PAYPAYCARD-DSLEAD-20261007",
+  "job_id": "JOB-PAYPAYCARD-DSLEAD",
+  "observed_at": "2026-10-07",
+  "job_url": "https://job-boards.greenhouse.io/paypaycard/jobs/5368269008",
+  "compensation_source_url": "https://doda.jp/DodaFront/View/JobSearchDetail/j_jid__3015765064/",
+  "employment_type": "正社員",
+  "compensation": {
+    "base_salary_min_jpy": 8000000,
+    "base_salary_max_jpy": 15000000,
+    "fixed_overtime_annual_jpy": 0,
+    "overtime_pay": "別途支給"
+  },
+  "workstyle": "Hybrid Workstyle（東京・福岡オフィス＋自宅）",
+  "ownership": "PayPayカード/PayPayグループの自社データを用い、分析テーマ設定、機械学習モデル開発・運用、施策実装、効果検証まで一気通貫で担当",
+  "stack": ["Python", "SQL", "BigQuery", "Google Cloud", "Vertex AI Pipelines", "Optuna", "Docker", "CI/CD"],
+  "career_fit": "Python・Optuna・AI分析経験との接続が強い。大規模データとML運用へ広げられる。",
+  "caveats": ["リーダー/マネージャー候補のため育成・技術レビュー・品質保証を含む", "事業KPIへの関与が強く純粋なデータ基盤職ではない"],
+  "verification": "doda掲載で年額基本給8,000,000〜15,000,000円、残業手当有を確認。公式採用ボードで現在募集・職務内容を確認。"
+}
