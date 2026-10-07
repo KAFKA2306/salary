@@ -31,7 +31,7 @@ Airflow
    ├─ dbt build
    └─ publish ranking
         ↓
-DuckDB / dbt
+PostgreSQL 15 / dbt
    ├─ staging
    ├─ hard-gate eligibility
    └─ scored ranking
@@ -95,7 +95,10 @@ Hard gateを通過した求人だけ100点満点で比較する。
 
 ## Local run
 
+PostgreSQL 15 はDocker Composeでローカル起動する。外部クラウド契約は不要。
+
 ```bash
+docker compose up -d postgres
 python -m pip install -r requirements-job-search.txt
 python scripts/validate_job_ontology.py
 dbt seed --profiles-dir config/dbt
@@ -103,8 +106,12 @@ dbt build --profiles-dir config/dbt
 python scripts/export_job_rankings.py
 ```
 
+接続先は `JOB_SEARCH_DB_HOST` / `JOB_SEARCH_DB_PORT` / `JOB_SEARCH_DB_NAME` /
+`JOB_SEARCH_DB_USER` / `JOB_SEARCH_DB_PASSWORD` で上書きできる。未指定時は
+Composeの `job_search@localhost:5432/job_search` を使う。
+
 生成物:
-- `warehouse/job_search.duckdb`
+- PostgreSQL schema `analytics`
 - `artifacts/job_ranking.csv`
 
 ## Current seed
