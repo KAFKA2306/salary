@@ -10,10 +10,10 @@
     ]
   },
   "summary": {
-    "eligible_count": 3,
+    "eligible_count": 4,
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
-    "remote_friendly_count": 3
+    "remote_friendly_count": 4
   },
   "eligible": [
     {
@@ -116,6 +116,33 @@
     },
     {
       "rank": 3,
+      "job_id": "JOB-PAYPAYCARD-DSLEAD",
+      "company_name": "PayPayカード",
+      "title": "データサイエンティスト/リーダー候補（ビジネスグロース領域）",
+      "score": 78,
+      "base_salary_min_jpy": 8000000,
+      "base_salary_max_jpy": 15000000,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": 0,
+      "fixed_overtime_hours": 0,
+      "remote_mode": "hybrid",
+      "location": "Tokyo/Fukuoka",
+      "source_url": "https://job-boards.greenhouse.io/paypaycard/jobs/5368269008",
+      "ownership_scope": "own_product",
+      "data_platform_depth": 4,
+      "implementation_ratio": 4,
+      "ai_production": 5,
+      "cross_company_scope": 4,
+      "career_fit": 4,
+      "manufacturing_bridge": 1,
+      "technical_ownership": 4,
+      "workstyle_fit": 4,
+      "short_term_sales_kpi": false,
+      "management_heavy": true,
+      "exit_entries": []
+    },
+    {
+      "rank": 4,
       "job_id": "JOB-LEGALON-SDAE",
       "company_name": "LegalOn Technologies",
       "title": "Senior Data Analytics Engineer",
