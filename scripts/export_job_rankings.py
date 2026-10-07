@@ -3,6 +3,7 @@ from pathlib import Path
 import csv
 import json
 import os
+from decimal import Decimal
 
 import psycopg
 from psycopg.rows import dict_row
@@ -39,6 +40,12 @@ def fetch_dicts(con, sql):
     with con.cursor() as cursor:
         cursor.execute(sql)
         return list(cursor.fetchall())
+
+
+def json_default(value):
+    if isinstance(value, Decimal):
+        return float(value)
+    return str(value)
 
 
 def main() -> int:
@@ -117,7 +124,7 @@ def main() -> int:
         "eligible": ranking,
         "rejected": rejected,
     }
-    JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, default=str) + "\n", encoding="utf-8")
+    JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, default=json_default) + "\n", encoding="utf-8")
     print(f"wrote {len(ranking)} ranked jobs to {CSV_OUT}")
     print(f"wrote dashboard with {len(rejected)} rejected jobs to {JSON_OUT}")
     return 0
