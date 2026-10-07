@@ -1,0 +1,20 @@
+{
+  "evidence_id": "EVID-ENEXIA-MLOPS-20261008",
+  "job_id": "JOB-ENEXIA-MLOPS",
+  "observed_at": "2026-10-08",
+  "job_url": "https://herp.careers/v1/enexia/dIwOr4bGkq2f",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 8000000,
+    "annual_salary_max_jpy": 15000000,
+    "salary_system": "年俸制・16分割",
+    "fixed_overtime_annual_jpy": 0,
+    "fixed_overtime_note": "公開求人に固定残業代の組込み記載なし。所定労働時間を超える労働は有りと別途記載。"
+  },
+  "workstyle": "東京本社／リモート中心。週1〜2回出社を基本、フルリモートは個別相談。",
+  "ownership": "MLプラットフォーム、特徴量パイプライン、モデル検証、監視、自動学習・再学習・デプロイ・ロールバック・モデルバージョン管理を設計・構築・運用。",
+  "stack": ["Python", "SQL", "Airflow", "Metaflow", "Kubeflow", "GCP", "Docker", "Cloud Run", "Vertex AI", "Terraform", "Terragrunt", "GitHub Actions"],
+  "career_fit": "Python/ML/Optuna/MLflowとデータ分析経験を、MLOps・データ基盤・本番運用へ拡張できる。製造業での時系列・プロセスデータ経験とも接続しやすい。",
+  "caveats": ["ビジネスレベル英語が必須", "通常は週1〜2回の東京出社", "設立約2年の小規模組織で基盤を作るフェーズ"],
+  "verification": "2026-10-08時点のHERP公開求人で給与、雇用形態、勤務体系、職務、技術スタックを確認。"
+}
