@@ -151,6 +151,7 @@ The existing dbt eligibility view stays the **sole source of gate decisions**. E
 - Dimensions: run (actor, UTC time, source/policy hashes), rule, job (source URL).
 - Facts: decision, guard, requested action, observed before/after local CSV state,
   rank change, successful readback, feedback, and recovery instruction.
+- Metrics distinguish all checked actions from actual ranked and withheld local jobs.
 - If the earlier local CSV does not exist, the before-state is **UNKNOWN**, never
   interpreted as an improvement. A mismatch with the dbt-authorized ranking
   fails the export rather than publishing a success claim.
