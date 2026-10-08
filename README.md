@@ -140,3 +140,26 @@ Composeの `job_search@localhost:5432/job_search` を使う。
 A reported job URL is **not** proof of live re-verification. An unavailable input or unresolved gate cannot authorize ranking. A verified hard-gate failure yields FAIL, missing evidence with no known failures yields REVIEW. A disagreement between dbt, the published ranking and the trace fails the export.
 
 GitHub Actions runs actual gate/trace tests and retains the generated trace as a 30-day run artifact. No applications are sent, and the published dashboard format stays unchanged. This is an execution trace, **not** a measured improvement in job-search success.
+
+
+## Operational action facts (local export only)
+
+The existing dbt eligibility view stays the **sole source of gate decisions**. Each
+`python scripts/export_job_rankings.py` run now also writes
+`artifacts/job_operation_star.json`, with **one fact per job and export run**.
+
+- Dimensions: run (actor, UTC time, source/policy hashes), rule, job (source URL).
+- Facts: decision, guard, requested action, observed before/after local CSV state,
+  rank change, successful readback, feedback, and recovery instruction.
+- If the earlier local CSV does not exist, the before-state is **UNKNOWN**, never
+  interpreted as an improvement. A mismatch with the dbt-authorized ranking
+  fails the export rather than publishing a success claim.
+- This measures **local export consistency only**, not live website deployment,
+  employer vacancy verification, applications, interviews, revenue, or causal ROI.
+  Business outcomes remain `NOT_MEASURED`.
+- CI tests the readback contract and keeps the trace plus operation-star JSON as
+  GitHub Actions artifacts for **30 days**. This is a rolling audit window,
+  not a permanent historical warehouse or cross-repository Control Tower.
+
+To check guards without PostgreSQL:
+`python -m unittest discover -s tests -p "test_job_*.py" -v`
