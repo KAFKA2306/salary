@@ -4,15 +4,19 @@ import csv
 import json
 import os
 from decimal import Decimal
+from datetime import datetime, timezone
+from uuid import uuid4
 
 import psycopg
 from psycopg.rows import dict_row
 from job_decision_trace import build_decision_trace, file_sha256
+from job_operation_star import build_operation_star, read_ranked_export
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_OUT = ROOT / "artifacts" / "job_ranking.csv"
 JSON_OUT = ROOT / "artifacts" / "job_dashboard.json"
 TRACE_OUT = ROOT / "artifacts" / "job_decision_trace.json"
+STAR_OUT = ROOT / "artifacts" / "job_operation_star.json"
 
 GATE_LABELS = {
     "gate_permanent": "正社員ではない",
@@ -52,6 +56,7 @@ def json_default(value):
 
 def main() -> int:
     CSV_OUT.parent.mkdir(parents=True, exist_ok=True)
+    before_local_export = read_ranked_export(CSV_OUT)
     with connect() as con:
         ranking = fetch_dicts(con, """
             select
@@ -144,9 +149,24 @@ def main() -> int:
         "rejected": rejected,
     }
     JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, default=json_default) + "\n", encoding="utf-8")
+
+    run_id = (
+        f"github-{os.environ['GITHUB_RUN_ID']}-{os.getenv('GITHUB_RUN_ATTEMPT', '1')}"
+        if os.getenv("GITHUB_RUN_ID") else f"local-{uuid4()}"
+    )
+    operation_star = build_operation_star(
+        decision_trace, before_local_export, read_ranked_export(CSV_OUT),
+        run_id=run_id,
+        executed_at_utc=datetime.now(timezone.utc).isoformat(),
+        actor="github-actions" if os.getenv("GITHUB_RUN_ID") else "local-export",
+    )
+    STAR_OUT.write_text(
+        json.dumps(operation_star, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     print(f"wrote {len(ranking)} ranked jobs to {CSV_OUT}")
     print(f"wrote dashboard with {len(rejected)} rejected jobs to {JSON_OUT}")
     print("wrote evidence-bound decisions to", TRACE_OUT)
+    print("wrote verified local-export operation facts to", STAR_OUT)
     return 0
 
 
