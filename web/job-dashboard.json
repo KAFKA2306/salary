@@ -10,10 +10,10 @@
     ]
   },
   "summary": {
-    "eligible_count": 5,
+    "eligible_count": 6,
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
-    "remote_friendly_count": 5
+    "remote_friendly_count": 6
   },
   "eligible": [
     {
@@ -143,6 +143,33 @@
     },
     {
       "rank": 4,
+      "job_id": "JOB-MUFG-EMUTTO-DATA-PLATFORM",
+      "company_name": "三菱UFJエムット銀行",
+      "title": "データ基盤スペシャリスト",
+      "score": 86,
+      "base_salary_min_jpy": 8000000,
+      "base_salary_max_jpy": 12500000,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": 0,
+      "fixed_overtime_hours": 0,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://hrmos.co/pages/mudb/jobs/2200004",
+      "ownership_scope": "internal_data_platform",
+      "data_platform_depth": 5,
+      "implementation_ratio": 5,
+      "ai_production": 3,
+      "cross_company_scope": 4,
+      "career_fit": 4,
+      "manufacturing_bridge": 2,
+      "technical_ownership": 5,
+      "workstyle_fit": 4,
+      "short_term_sales_kpi": false,
+      "management_heavy": false,
+      "exit_entries": []
+    },
+    {
+      "rank": 5,
       "job_id": "JOB-PAYPAYCARD-DSLEAD",
       "company_name": "PayPayカード",
       "title": "データサイエンティスト/リーダー候補（ビジネスグロース領域）",
@@ -169,7 +196,7 @@
       "exit_entries": []
     },
     {
-      "rank": 5,
+      "rank": 6,
       "job_id": "JOB-LEGALON-SDAE",
       "company_name": "LegalOn Technologies",
       "title": "Senior Data Analytics Engineer",

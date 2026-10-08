@@ -1,0 +1,34 @@
+{
+  "evidence_id": "EVID-MUFG-EMUTTO-DATA-PLATFORM-20261008",
+  "job_id": "JOB-MUFG-EMUTTO-DATA-PLATFORM",
+  "observed_at": "2026-10-08",
+  "job_url": "https://hrmos.co/pages/mudb/jobs/2200004",
+  "compensation_source_url": "https://doda.jp/DodaFront/View/JobSearchDetail/j_jid__3015478213/",
+  "employment_type": "正社員",
+  "compensation": {
+    "base_salary_min_jpy": 8000000,
+    "base_salary_max_jpy": 12500000,
+    "fixed_overtime_annual_jpy": 0,
+    "overtime_pay": "別途支給"
+  },
+  "workstyle": "ハイブリッド勤務（出社と在宅を併用）。勤務地は東京都品川区西五反田。",
+  "ownership": "Google Cloud上のデータ基盤を設計・開発・運用。BigQuery/Dataflowによる大規模データ処理、収集・加工・可視化基盤、データアクセス/権限管理、バックエンド・アプリとのデータ連携設計を担当。",
+  "stack": [
+    "Google Cloud",
+    "BigQuery",
+    "Dataflow",
+    "Kafka",
+    "Google Spanner",
+    "Go",
+    "Java",
+    "Python",
+    "SQL"
+  ],
+  "career_fit": "データ基盤・ETL/ELT・SQL・分散処理を中核に、将来はデータ基盤領域全体の統括/アーキテクトへ伸ばせる。AIは中核サービス側で活用されるが、この求人自体はデータ基盤実装が主。",
+  "caveats": [
+    "2027年1〜3月頃の開業を目指す新設デジタルバンクで立ち上げ局面",
+    "配属部署により三菱UFJ銀行またはウェルスナビとの兼務の可能性あり",
+    "給与レンジと残業手当別途支給はdoda掲載で確認"
+  ],
+  "verification": "公式HRMOSで正社員、職務、技術スタック、ハイブリッド勤務を確認。doda掲載で予定年収/年額基本給8,000,000〜12,500,000円、残業手当有を確認。"
+}
