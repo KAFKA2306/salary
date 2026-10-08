@@ -76,7 +76,7 @@ def build_decision_trace(gate_rows, ranking, source_hash: str, policy_hash: str)
             "rank": rank_by_job.get(job_id),
             "action": "publish_ranked_job" if status == "PASS" else "withhold_ranking",
         })
-    if seen != set(rank_by_job):
+    if not set(rank_by_job).issubset(seen):
         raise ValueError("ranking contains a job absent from gate decisions")
     return {
         "schema_version": 1,
