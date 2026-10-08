@@ -10,10 +10,10 @@
     ]
   },
   "summary": {
-    "eligible_count": 7,
+    "eligible_count": 8,
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
-    "remote_friendly_count": 7
+    "remote_friendly_count": 8
   },
   "eligible": [
     {
@@ -170,6 +170,33 @@
     },
     {
       "rank": 5,
+      "job_id": "JOB-FINDY-AI-DATA-STRATEGY-LEAD",
+      "company_name": "ファインディ",
+      "title": "シニアテックリード_AI & Data Strategy",
+      "score": 83,
+      "base_salary_min_jpy": 9560676,
+      "base_salary_max_jpy": 13659144,
+      "total_salary_min_jpy": 14000000,
+      "fixed_overtime_annual_jpy": 3362400,
+      "fixed_overtime_hours": 45,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://herp.careers/v1/findy/A-9fjEjfb71U",
+      "ownership_scope": "own_product",
+      "data_platform_depth": 4,
+      "implementation_ratio": 3,
+      "ai_production": 5,
+      "cross_company_scope": 5,
+      "career_fit": 4,
+      "manufacturing_bridge": 1,
+      "technical_ownership": 5,
+      "workstyle_fit": 2,
+      "short_term_sales_kpi": false,
+      "management_heavy": false,
+      "exit_entries": []
+    },
+    {
+      "rank": 6,
       "job_id": "JOB-PAYPAYCARD-DSLEAD",
       "company_name": "PayPayカード",
       "title": "データサイエンティスト/リーダー候補（ビジネスグロース領域）",
@@ -196,7 +223,7 @@
       "exit_entries": []
     },
     {
-      "rank": 6,
+      "rank": 7,
       "job_id": "JOB-LEGALON-SDAE",
       "company_name": "LegalOn Technologies",
       "title": "Senior Data Analytics Engineer",
@@ -223,7 +250,7 @@
       "exit_entries": []
     },
     {
-      "rank": 7,
+      "rank": 8,
       "job_id": "JOB-MUFG-EMUTTO-AI-STRATEGY-LEAD",
       "company_name": "三菱UFJエムット銀行",
       "title": "AI戦略推進 / リードメンバー",
