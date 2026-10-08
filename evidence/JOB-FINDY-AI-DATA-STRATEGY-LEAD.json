@@ -1,0 +1,32 @@
+{
+  "evidence_id": "EVID-FINDY-AI-DATA-STRATEGY-LEAD-20261009",
+  "job_id": "JOB-FINDY-AI-DATA-STRATEGY-LEAD",
+  "observed_at": "2026-10-09",
+  "job_url": "https://herp.careers/v1/findy/A-9fjEjfb71U",
+  "compensation_source_url": "https://herp.careers/v1/findy/A-9fjEjfb71U",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 14000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1076923,
+    "monthly_total_max_jpy": 1538462,
+    "monthly_base_min_jpy": 796723,
+    "monthly_base_max_jpy": 1138262,
+    "base_salary_min_jpy": 9560676,
+    "base_salary_max_jpy": 13659144,
+    "monthly_fixed_overtime_min_jpy": 280200,
+    "monthly_fixed_overtime_max_jpy": 400200,
+    "fixed_overtime_annual_jpy": 3362400,
+    "fixed_overtime_hours": 45,
+    "bonus_note": "想定年収には賞与を含む。賞与は基本年収下限の算定に含めない。"
+  },
+  "workstyle": "東京都品川区大崎本社。リモート可能だがフルリモート不可。10:00〜19:00、時差出勤制度あり。",
+  "ownership": "自社複数プロダクトと新規事業のAI/データ技術リード。アーキテクチャ、全社データ戦略、LLM/RAG・MLのPoC・実装推進、データガバナンス。",
+  "ownership_scope": "own_product",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "主業務は自社プロダクトの設計・開発、全社データ戦略。顧客課題の整理や社外パートナー協働の記載はあるが、外部顧客向け受託開発や導入支援が主業務との記載はない。面談時に比率を再確認。",
+  "stack": ["Python","SQL","LLM","RAG","AI Agents","Machine Learning","Data Architecture","MLOps","Data Governance"],
+  "career_fit": "社内AI分析、Python、MLflow、LLMエージェント、dbt、全社データ基盤構築との接続が強い。技術戦略・事業構想の経験は確認必要。",
+  "caveats": ["技術戦略と関係者調整の比率が高く、純粋な実装専任ではない","東京本社勤務、フルリモート不可","固定残業45時間","直接顧客対応の割合は面談確認","賞与は基本年収下限に含めていない"],
+  "verification": "2026-10-09にHERP公式の公開中の具体求人で正社員・給与内訳・職務・働き方を確認。"
+}
