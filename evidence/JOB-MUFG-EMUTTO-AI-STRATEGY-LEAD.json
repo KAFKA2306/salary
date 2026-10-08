@@ -1,0 +1,29 @@
+{
+  "evidence_id": "EVID-MUFG-EMUTTO-AI-STRATEGY-LEAD-20261008",
+  "job_id": "JOB-MUFG-EMUTTO-AI-STRATEGY-LEAD",
+  "observed_at": "2026-10-08",
+  "job_url": "https://hrmos.co/pages/mudb/jobs/1200004",
+  "compensation_source_url": "https://tenshoku-ex.jp/job_40983264",
+  "employment_type": "正社員",
+  "compensation": {
+    "base_salary_min_jpy": 8000000,
+    "base_salary_max_jpy": 13500000,
+    "fixed_overtime_annual_jpy": 0,
+    "overtime_pay": "有。年額基本給とは別記"
+  },
+  "workstyle": "東京・五反田、ハイブリッド、フレックス",
+  "ownership": "全社AI・AIエージェント共通基盤の企画・開発推進・運用改善",
+  "stack": [
+    "生成AI",
+    "AIエージェント",
+    "Google Cloud",
+    "Python（歓迎）"
+  ],
+  "career_fit": "全社AI分析経験と親和性",
+  "caveats": [
+    "企画・調整中心で実装比率は低め",
+    "生成AI共通基盤の企画からリリースまで主導した経験が必須",
+    "グループ内兼務可能性"
+  ],
+  "verification": "2026-10-08公式HRMOSと転職EX掲載情報に基づく"
+}
