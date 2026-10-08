@@ -11,7 +11,7 @@ select
     not consulting as gate_no_consulting,
     ownership_scope in ('internal_ai','internal_data_platform','own_product') as gate_ownership,
     verified as gate_job_verified,
-    (
+    coalesce((
       employment_type = 'permanent'
       and base_salary_min_jpy >= 8000000
       and salary_basis_verified
@@ -20,5 +20,5 @@ select
       and not consulting
       and ownership_scope in ('internal_ai','internal_data_platform','own_product')
       and verified
-    ) as eligible
+    ), false) as eligible
 from jobs
