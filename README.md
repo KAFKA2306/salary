@@ -128,3 +128,7 @@ Composeの `job_search@localhost:5432/job_search` を使う。
 ## Principle
 
 このrepositoryは「高そうな会社リスト」ではなく、**自分が応募すべき求人を根拠付きで機械判定するシステム**にする。
+
+## Operational ontology
+
+[Project ontology](ontology/project.yaml) maps domain objects, relationships, evidence rules, guarded actions and outcome metrics to the shared [Causal–Evidence Core](https://github.com/KAFKA2306/know/blob/main/ontology/causal-evidence-core.yaml). The manifest documents the intended decision boundary; it does not by itself implement or authorize new real-world actions.
