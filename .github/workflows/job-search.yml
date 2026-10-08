@@ -11,7 +11,9 @@ on:
       - "scripts/validate_job_ontology.py"
       - "scripts/export_job_rankings.py"
       - "scripts/job_decision_trace.py"
+      - "scripts/job_operation_star.py"
       - "tests/test_job_decision_trace.py"
+      - "tests/test_job_operation_star.py"
       - "dags/job_search_pipeline.py"
       - "web/job-dashboard.json"
       - ".github/workflows/job-search.yml"
@@ -25,6 +27,10 @@ on:
       - "config/dbt/**"
       - "scripts/validate_job_ontology.py"
       - "scripts/export_job_rankings.py"
+      - "scripts/job_decision_trace.py"
+      - "scripts/job_operation_star.py"
+      - "tests/test_job_decision_trace.py"
+      - "tests/test_job_operation_star.py"
       - "dags/job_search_pipeline.py"
       - "web/job-dashboard.json"
       - ".github/workflows/job-search.yml"
@@ -67,7 +73,7 @@ jobs:
         run: python scripts/validate_job_ontology.py
 
       - name: Verify decision-trace safety rules
-        run: python -m unittest discover -s tests -p "test_job_decision_trace.py" -v
+        run: python -m unittest discover -s tests -p "test_job_*.py" -v
 
       - name: Build dbt decision model
         run: |
@@ -97,12 +103,19 @@ jobs:
           assert {r["job_id"] for r in trace["decisions"] if r["status"] == "PASS"} == {r["job_id"] for r in rows}
           assert all(r["source_url"] for r in trace["decisions"] if r["status"] == "PASS")
           assert all(r["action"] == "withhold_ranking" for r in trace["decisions"] if r["status"] != "PASS")
+          star = json.loads(Path("artifacts/job_operation_star.json").read_text(encoding="utf-8"))
+          assert star["metrics"]["decision_count"] == trace["summary"]["total"]
+          assert star["metrics"]["allow_count"] == trace["summary"]["pass"]
+          assert star["metrics"]["business_outcome_measured_count"] == 0
+          assert all(f["execution_status"] == "CONFIRMED_LOCAL_EXPORT" for f in star["facts"])
           PY
 
       - name: Retain decision lineage for review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: job-decision-trace
-          path: artifacts/job_decision_trace.json
+          path: |
+            artifacts/job_decision_trace.json
+            artifacts/job_operation_star.json
           if-no-files-found: error
           retention-days: 30

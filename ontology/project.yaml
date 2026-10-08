@@ -75,8 +75,8 @@ validation:
   publication: "Publish only validated eligible rankings, without automatically submitting applications."
 
 operational_model:
-  implementation_status: "aligned_to_existing_job_search_pipeline"
-  canonical_sources: ["ontology/job_search.yml","dags/job_search_pipeline.py","dbt_project.yml"]
+  implementation_status: "local_ranking_export_action_facts_with_readback_business_outcomes_unmeasured"
+  canonical_sources: ["ontology/job_search.yml","dags/job_search_pipeline.py","dbt_project.yml","scripts/job_decision_trace.py","scripts/job_operation_star.py"]
   objects: ["Company","JobPosting","Compensation","RoleProfile","Evidence","EligibilityDecision"]
   links:
     - ["Company","OFFERS","JobPosting"]
@@ -85,6 +85,6 @@ operational_model:
   actions:
     - id: "publish_validated_ranking"
       preconditions: "All hard gates PASS, verified sources and reproducible dbt result"
-      recorded_effect: "Ranking export is updated"
-      rollback_or_recovery: "Previous export is retained and invalid results are suppressed"
-  outcome_metrics: ["eligible_posting_count","unverified_pay_count","source_coverage_ratio"]
+      recorded_effect: "Local ranking CSV is written, read back and linked to observed operation facts; website publication and business outcomes are unmeasured"
+      rollback_or_recovery: "Mismatched export fails validation; rebuild from dbt and rerun, without claiming an external rollback"
+  outcome_metrics: ["eligible_posting_count","unverified_pay_count","source_coverage_ratio","confirmed_local_exports","known_changed_local_export_count","business_outcome_measured_count"]
