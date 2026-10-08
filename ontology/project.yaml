@@ -1,0 +1,90 @@
+project:
+  id: "kafka:salary"
+  name: "Job Search Decision Platform"
+  repository: "https://github.com/KAFKA2306/salary"
+  version: "0.1.0"
+  updated: "2026-10-08"
+  core_ontology: "https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/causal-evidence-core.yaml"
+  schema: "https://raw.githubusercontent.com/KAFKA2306/know/main/ontology/project.schema.json"
+
+purpose:
+  problem: "Turn source-backed job, salary and role observations into reproducible eligibility and ranking decisions."
+  intended_decisions: ["PASS","REVIEW","FAIL","rank","request_reverification"]
+  success_conditions:
+    - "The salary gate uses base compensation excluding fixed overtime pay."
+    - "Every PASS or ranking has source-linked salary and role evidence."
+    - "Unknown compensation or customer-facing duties remain REVIEW, not PASS."
+  falsification_conditions:
+    - "Fixed overtime is counted toward the JPY 8,000,000 minimum."
+    - "A stale or unverified posting is presented as eligible."
+    - "Ranking is produced before hard-gate checks."
+
+scope:
+  included: ["company","job posting","compensation","work style","role profile","source evidence","eligibility","ranking","exit entry"]
+  excluded: ["automatic job applications","invented pay breakdowns","unverified salary claims","external paid services"]
+  temporal: "Posting observation, source publication, salary version and assessment timestamp are distinct."
+  abstraction_level: "Read-backed job evaluation with dbt and Airflow; no automatic applications."
+
+competency_questions:
+  - "Which job and compensation components are supported by exact sources?"
+  - "Does base salary excluding fixed overtime meet the hard gate?"
+  - "Which role duties violate the customer-facing or outsourcing exclusions?"
+  - "What evidence or rule caused PASS, FAIL or REVIEW?"
+
+domain_mapping:
+  System: "JobSearchDecisionPlatform"
+  State: ["posting state","salary verification state","eligibility state","ranking state"]
+  Action: ["snapshot posting","validate evidence","evaluate hard gates","rank eligible jobs","request review"]
+  Process: ["source snapshot","ontology validation","dbt eligibility calculation","ranking publication"]
+  Observation: ["job posting","compensation breakdown","role description","publication date"]
+  Model: ["job_search.yml ontology","dbt eligibility model","dbt scoring model"]
+  Requirement: ["permanent employment","base pay at least JPY 8000000","no primary external client service","source traceability"]
+  Claim: ["job eligible","salary floor met","internal role ownership"]
+  Evidence: ["source URL","job evidence record","pay breakdown","eligibility calculation"]
+  Decision: ["PASS","FAIL","REVIEW","rank"]
+
+claims_and_evidence:
+  assertion_types: ["ReportedFact","CalculatedValue","RequirementAssertion","DecisionAssertion"]
+  required_evidence:
+    JobPosting: ["source URL","observed_at","employment type"]
+    Compensation: ["base salary lower bound","fixed overtime separated","source URL"]
+    Eligibility: ["gate versions","job identity","supporting evidence IDs"]
+  unknown_policy: "Missing or ambiguous pay basis or duties remains REVIEW; do not infer eligibility."
+
+decision_rules:
+  - id: "salary-floor"
+    when: "Base salary excluding fixed overtime is at least JPY 8000000 and salary basis is source verified."
+    result: "salary_gate_pass"
+  - id: "source-gap"
+    when: "Compensation basis, role duties, or source evidence is missing."
+    result: "REVIEW"
+  - id: "rank-only-pass"
+    when: "All hard gates pass and the scored inputs have recorded evidence."
+    result: "rank"
+
+provenance:
+  sources: ["official recruitment postings","employer compensation statements","documented exit entries"]
+  generated_artifacts: ["dbt job_ranking","eligibility audit","ranking export"]
+  agents: ["Airflow DAG","dbt Core","local PostgreSQL","human reviewer"]
+  lineage: "Source snapshot -> normalized posting and pay -> versioned gate -> ranking export."
+
+validation:
+  structural: "Validate ontology/job_search.yml plus schema keys, job identifiers and dbt build outputs."
+  semantic: "Treat base pay, total pay and fixed overtime as separate quantities; do not mix jobs and companies."
+  evidence: "Gate outcome must identify exact job ID, source and compensation basis."
+  publication: "Publish only validated eligible rankings, without automatically submitting applications."
+
+operational_model:
+  implementation_status: "aligned_to_existing_job_search_pipeline"
+  canonical_sources: ["ontology/job_search.yml","dags/job_search_pipeline.py","dbt_project.yml"]
+  objects: ["Company","JobPosting","Compensation","RoleProfile","Evidence","EligibilityDecision"]
+  links:
+    - ["Company","OFFERS","JobPosting"]
+    - ["JobPosting","HAS_COMPENSATION","Compensation"]
+    - ["Evidence","SUPPORTS","EligibilityDecision"]
+  actions:
+    - id: "publish_validated_ranking"
+      preconditions: "All hard gates PASS, verified sources and reproducible dbt result"
+      recorded_effect: "Ranking export is updated"
+      rollback_or_recovery: "Previous export is retained and invalid results are suppressed"
+  outcome_metrics: ["eligible_posting_count","unverified_pay_count","source_coverage_ratio"]
