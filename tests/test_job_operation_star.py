@@ -36,6 +36,8 @@ class OperationStarTests(unittest.TestCase):
         self.assertEqual(event["feedback"], "BASELINE_UNKNOWN")
         self.assertEqual(event["business_outcome"], "NOT_MEASURED")
         self.assertEqual(star["metrics"]["business_outcome_measured_count"], 0)
+        self.assertEqual(star["metrics"]["confirmed_local_action_checks"], 1)
+        self.assertEqual(star["metrics"]["ranked_local_jobs"], 1)
 
     def test_withheld_fail_and_review_both_have_verified_absence(self):
         trace = trace_for([
@@ -47,6 +49,8 @@ class OperationStarTests(unittest.TestCase):
         self.assertTrue(all(f["guard"] == "DENY" and f["after_local_export"] == "WITHHELD"
                             for f in star["facts"]))
         self.assertEqual(star["metrics"]["denied_count"], 2)
+        self.assertEqual(star["metrics"]["withheld_local_jobs"], 2)
+        self.assertEqual(star["metrics"]["ranked_local_jobs"], 0)
 
     def test_export_drift_is_rejected(self):
         trace = trace_for([job("JOB-A")], [{"job_id": "JOB-A", "rank": 1}])
