@@ -10,6 +10,8 @@ on:
       - "config/dbt/**"
       - "scripts/validate_job_ontology.py"
       - "scripts/export_job_rankings.py"
+      - "scripts/job_decision_trace.py"
+      - "tests/test_job_decision_trace.py"
       - "dags/job_search_pipeline.py"
       - "web/job-dashboard.json"
       - ".github/workflows/job-search.yml"
@@ -64,6 +66,9 @@ jobs:
       - name: Validate ontology
         run: python scripts/validate_job_ontology.py
 
+      - name: Verify decision-trace safety rules
+        run: python -m unittest discover -s tests -p "test_job_decision_trace.py" -v
+
       - name: Build dbt decision model
         run: |
           dbt seed --profiles-dir config/dbt
@@ -86,4 +91,18 @@ jobs:
           generated = json.loads(Path("artifacts/job_dashboard.json").read_text(encoding="utf-8"))
           checked_in = json.loads(Path("web/job-dashboard.json").read_text(encoding="utf-8"))
           assert generated == checked_in, "web/job-dashboard.json is stale; regenerate from dbt"
+          trace = json.loads(Path("artifacts/job_decision_trace.json").read_text(encoding="utf-8"))
+          assert trace["summary"]["pass"] == len(rows)
+          assert trace["summary"]["total"] == len(generated["eligible"]) + len(generated["rejected"])
+          assert {r["job_id"] for r in trace["decisions"] if r["status"] == "PASS"} == {r["job_id"] for r in rows}
+          assert all(r["source_url"] for r in trace["decisions"] if r["status"] == "PASS")
+          assert all(r["action"] == "withhold_ranking" for r in trace["decisions"] if r["status"] != "PASS")
           PY
+
+      - name: Retain decision lineage for review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: job-decision-trace
+          path: artifacts/job_decision_trace.json
+          if-no-files-found: error
+          retention-days: 30

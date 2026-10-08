@@ -132,3 +132,11 @@ Composeの `job_search@localhost:5432/job_search` を使う。
 ## Operational ontology
 
 [Project ontology](ontology/project.yaml) maps domain objects, relationships, evidence rules, guarded actions and outcome metrics to the shared [Causal–Evidence Core](https://github.com/KAFKA2306/know/blob/main/ontology/causal-evidence-core.yaml). The manifest documents the intended decision boundary; it does not by itself implement or authorize new real-world actions.
+
+## Decision lineage (runnable)
+
+`python scripts/export_job_rankings.py` writes `artifacts/job_decision_trace.json` from the **existing dbt `int_job_eligibility` decisions**. For every job it records the PASS/FAIL/UNKNOWN result of each hard gate, the overall PASS/FAIL/REVIEW outcome, source URL (when supplied), ranking action and rank. The input CSV and ontology are identified by SHA-256; the output is deterministic for identical inputs.
+
+A reported job URL is **not** proof of live re-verification. An unavailable input or unresolved gate cannot authorize ranking. A verified hard-gate failure yields FAIL, missing evidence with no known failures yields REVIEW. A disagreement between dbt, the published ranking and the trace fails the export.
+
+GitHub Actions runs actual gate/trace tests and retains the generated trace as a 30-day run artifact. No applications are sent, and the published dashboard format stays unchanged. This is an execution trace, **not** a measured improvement in job-search success.
