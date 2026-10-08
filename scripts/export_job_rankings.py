@@ -7,10 +7,12 @@ from decimal import Decimal
 
 import psycopg
 from psycopg.rows import dict_row
+from job_decision_trace import build_decision_trace, file_sha256
 
 ROOT = Path(__file__).resolve().parents[1]
 CSV_OUT = ROOT / "artifacts" / "job_ranking.csv"
 JSON_OUT = ROOT / "artifacts" / "job_dashboard.json"
+TRACE_OUT = ROOT / "artifacts" / "job_decision_trace.json"
 
 GATE_LABELS = {
     "gate_permanent": "正社員ではない",
@@ -86,6 +88,23 @@ def main() -> int:
             order by company_name, title
         """)
 
+        gate_rows = fetch_dicts(con, """
+            select job_id, eligible, source_url,
+              gate_permanent, gate_base_salary, gate_salary_verified,
+              gate_no_customer_facing, gate_no_outsourcing, gate_no_consulting,
+              gate_ownership, gate_job_verified
+            from int_job_eligibility order by job_id
+        """)
+
+    decision_trace = build_decision_trace(
+        gate_rows, ranking,
+        file_sha256(ROOT / "seeds" / "job_candidates.csv"),
+        file_sha256(ROOT / "ontology" / "job_search.yml"),
+    )
+    TRACE_OUT.write_text(
+        json.dumps(decision_trace, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+
     exit_by_company = {}
     for entry in exit_entries:
         for key in ("job_id", "author", "former_role"):
@@ -127,6 +146,7 @@ def main() -> int:
     JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, default=json_default) + "\n", encoding="utf-8")
     print(f"wrote {len(ranking)} ranked jobs to {CSV_OUT}")
     print(f"wrote dashboard with {len(rejected)} rejected jobs to {JSON_OUT}")
+    print("wrote evidence-bound decisions to", TRACE_OUT)
     return 0
 
 
