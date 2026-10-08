@@ -106,6 +106,9 @@ jobs:
           star = json.loads(Path("artifacts/job_operation_star.json").read_text(encoding="utf-8"))
           assert star["metrics"]["decision_count"] == trace["summary"]["total"]
           assert star["metrics"]["allow_count"] == trace["summary"]["pass"]
+          assert star["metrics"]["confirmed_local_action_checks"] == trace["summary"]["total"]
+          assert star["metrics"]["ranked_local_jobs"] == len(rows)
+          assert star["metrics"]["withheld_local_jobs"] == trace["summary"]["total"] - len(rows)
           assert star["metrics"]["business_outcome_measured_count"] == 0
           assert all(f["execution_status"] == "CONFIRMED_LOCAL_EXPORT" for f in star["facts"])
           PY

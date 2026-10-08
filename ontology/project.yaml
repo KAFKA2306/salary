@@ -87,4 +87,4 @@ operational_model:
       preconditions: "All hard gates PASS, verified sources and reproducible dbt result"
       recorded_effect: "Local ranking CSV is written, read back and linked to observed operation facts; website publication and business outcomes are unmeasured"
       rollback_or_recovery: "Mismatched export fails validation; rebuild from dbt and rerun, without claiming an external rollback"
-  outcome_metrics: ["eligible_posting_count","unverified_pay_count","source_coverage_ratio","confirmed_local_exports","known_changed_local_export_count","business_outcome_measured_count"]
+  outcome_metrics: ["eligible_posting_count","unverified_pay_count","source_coverage_ratio","confirmed_local_action_checks","ranked_local_jobs","withheld_local_jobs","known_changed_local_export_count","business_outcome_measured_count"]
