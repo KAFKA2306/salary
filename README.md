@@ -116,7 +116,7 @@ Composeの `job_search@localhost:5432/job_search` を使う。
 
 ## Current seed
 
-`seeds/job_candidates.csv` は探索中求人のcurrent入力用。給与や職務条件が未確認なら、推測で埋めず `verified=false` とする。
+`seeds/job_candidates.csv` は探索中求人のcurrent入力用。給与や職務条件が未確認なら、推測で埋めず該当欄と `verified` を空欄（NULL）で保持する。未確定の候補は `REVIEW` として画面の「要確認」に表示し、ランキングには含めない。調査根拠は `evidence/pending/` に残す。
 
 `seeds/exit_entries.csv` は退職者・元社員の公開情報。企業単位で求人カードへ紐付けるが、hard gateやランキング点数には使わない。見つからない場合も `status=not_found` として探索済みであることだけ残す。
 

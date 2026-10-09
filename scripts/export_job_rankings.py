@@ -18,6 +18,17 @@ JSON_OUT = ROOT / "artifacts" / "job_dashboard.json"
 TRACE_OUT = ROOT / "artifacts" / "job_decision_trace.json"
 STAR_OUT = ROOT / "artifacts" / "job_operation_star.json"
 
+REVIEW_GATE_LABELS = {
+    "gate_permanent": "雇用形態",
+    "gate_base_salary": "固定残業代を除く基本年収下限",
+    "gate_salary_verified": "給与内訳の一次情報",
+    "gate_no_customer_facing": "外部顧客伴走が主業務でないこと",
+    "gate_no_outsourcing": "受託開発ではないこと",
+    "gate_no_consulting": "コンサル業務が主業務でないこと",
+    "gate_ownership": "自社側の職務所有範囲",
+    "gate_job_verified": "求人条件の検証完了",
+}
+
 GATE_LABELS = {
     "gate_permanent": "正社員ではない",
     "gate_base_salary": "固定残業を除く基本給が800万円未満",
@@ -79,7 +90,7 @@ def main() -> int:
             from exit_entries
             order by company_name, exit_entry_id
         """)
-        rejected = fetch_dicts(con, """
+        unranked = fetch_dicts(con, """
             select
               job_id, company_name, title,
               base_salary_min_jpy, base_salary_max_jpy,
@@ -90,7 +101,7 @@ def main() -> int:
               gate_ownership, gate_job_verified
             from int_job_eligibility
             where not eligible
-            order by company_name, title
+            order by job_id
         """)
 
         gate_rows = fetch_dicts(con, """
@@ -124,12 +135,20 @@ def main() -> int:
     else:
         CSV_OUT.write_text("", encoding="utf-8")
 
-    for row in rejected:
+    decision_by_job = {row["job_id"]: row["status"] for row in decision_trace["decisions"]}
+    for row in unranked:
+        status = decision_by_job[row["job_id"]]
         row["failed_gates"] = [label for gate, label in GATE_LABELS.items() if row.get(gate) is False]
+        if status == "REVIEW":
+            row["pending_gates"] = [
+                label for gate, label in REVIEW_GATE_LABELS.items() if row.get(gate) is None
+            ]
         for gate in GATE_LABELS:
             row.pop(gate, None)
 
-    for row in ranking + rejected:
+    rejected = [row for row in unranked if decision_by_job[row["job_id"]] == "FAIL"]
+    review = [row for row in unranked if decision_by_job[row["job_id"]] == "REVIEW"]
+    for row in ranking + rejected + review:
         row["exit_entries"] = exit_by_company.get(row["company_name"], [])
 
     dashboard = {
@@ -142,11 +161,13 @@ def main() -> int:
         "summary": {
             "eligible_count": len(ranking),
             "rejected_count": len(rejected),
+            "review_count": len(review),
             "top_base_salary_min_jpy": max((row["base_salary_min_jpy"] for row in ranking), default=0),
             "remote_friendly_count": sum(row["remote_mode"] in {"full_remote", "remote", "hybrid"} for row in ranking),
         },
         "eligible": ranking,
         "rejected": rejected,
+        "review": review,
     }
     JSON_OUT.write_text(json.dumps(dashboard, ensure_ascii=False, indent=2, default=json_default) + "\n", encoding="utf-8")
 
