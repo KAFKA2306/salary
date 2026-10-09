@@ -387,8 +387,8 @@
       "total_salary_min_jpy": 12000000,
       "fixed_overtime_annual_jpy": null,
       "fixed_overtime_hours": null,
-      "remote_mode": "",
-      "location": "",
+      "remote_mode": null,
+      "location": null,
       "source_url": "https://herp.careers/v1/varietas/sqYgOhb9gBeA",
       "failed_gates": [],
       "pending_gates": [
