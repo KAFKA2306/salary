@@ -1,0 +1,34 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-09",
+  "job_id": "REVIEW-VARIETAS-DATA-ENGINEER",
+  "company_name": "VARIETAS",
+  "title": "データエンジニア",
+  "official_job_url": "https://herp.careers/v1/varietas/sqYgOhb9gBeA",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 12000000,
+    "annual_total_max_jpy": 20000000,
+    "secondary_source_base_annual_min_jpy": 8878608,
+    "fixed_overtime_hours": 45
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "base_salary_excluding_fixed_overtime": "provisionally_pass_secondary_source",
+    "current_public_salary_breakdown": "needs_primary_source",
+    "customer_facing_primary": "unresolved"
+  },
+  "stack": [
+    "Python",
+    "SQL",
+    "Snowflake",
+    "Ontology"
+  ],
+  "review_reason": "公式求人の理想像に顧客CxOとの戦略対話・共創が含まれ、外部顧客伴走が主業務でないことを確定できない。給与内訳も一次情報で再確認が必要。",
+  "next_verification": [
+    "client-facing duty ratio",
+    "first-party base/fixed-overtime breakdown"
+  ]
+}
