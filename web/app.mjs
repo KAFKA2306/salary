@@ -123,6 +123,23 @@ function rejectCard(job) {
   return article;
 }
 
+function reviewCard(job) {
+  const article = elem('article','reject-card review-card');
+  const top = elem('div','reject-top');
+  const name = elem('div');
+  name.append(elem('strong','',job.company_name),elem('span','',job.title));
+  top.append(name,elem('span','review-mark','要確認'));
+  const reasons = elem('div','reasons');
+  (job.pending_gates || []).forEach(r => reasons.append(elem('span','pending-reason',r)));
+  const salary = elem('p','reject-salary',job.total_salary_min_jpy
+    ? `想定年収下限 ${man(job.total_salary_min_jpy)}（基本給内訳は未確認）`
+    : '基本年収下限は未確認');
+  const link = elem('a','open-job','公式求人を見る');
+  link.href = job.source_url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+  article.append(top,reasons,salary,link);
+  return article;
+}
+
 function matches(job) {
   if (active === 'remote') return ['full_remote','remote','hybrid'].includes(job.remote_mode);
   if (active === 'platform') return Number(job.data_platform_depth) >= 4;
@@ -142,7 +159,11 @@ function render() {
   document.querySelector('#top-salary').textContent = man(data.summary.top_base_salary_min_jpy);
   document.querySelector('#remote-count').textContent = data.summary.remote_friendly_count;
   document.querySelector('#rejected-count').textContent = data.summary.rejected_count;
+  document.querySelector('#review-count').textContent = `（${data.summary.review_count || 0}件）`;
   renderJobs();
+  const reviewList = document.querySelector('#review-list');
+  reviewList.replaceChildren();
+  (data.review || []).forEach(job => reviewList.append(reviewCard(job)));
   rejectedList.replaceChildren();
   data.rejected.forEach(job => rejectedList.append(rejectCard(job)));
 }

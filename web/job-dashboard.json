@@ -13,7 +13,8 @@
     "eligible_count": 8,
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
-    "remote_friendly_count": 8
+    "remote_friendly_count": 8,
+    "review_count": 2
   },
   "eligible": [
     {
@@ -352,6 +353,51 @@
       "source_url": "https://herp.careers/v1/ubiehr/MExdfj2UgARV",
       "failed_gates": [
         "固定残業を除く基本給が800万円未満"
+      ],
+      "exit_entries": []
+    }
+  ],
+  "review": [
+    {
+      "job_id": "REVIEW-TIMEE-SENIOR-MLOPS",
+      "company_name": "タイミー",
+      "title": "シニアMLOpsエンジニア",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 11000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "full_remote",
+      "location": "Tokyo",
+      "source_url": "https://hrmos.co/pages/timee/jobs/16822514041183191756",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-VARIETAS-DATA-ENGINEER",
+      "company_name": "VARIETAS",
+      "title": "データエンジニア",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 12000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": null,
+      "location": null,
+      "source_url": "https://herp.careers/v1/varietas/sqYgOhb9gBeA",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "外部顧客伴走が主業務でないこと",
+        "受託開発ではないこと",
+        "コンサル業務が主業務でないこと",
+        "求人条件の検証完了"
       ],
       "exit_entries": []
     }
