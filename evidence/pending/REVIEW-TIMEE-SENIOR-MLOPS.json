@@ -1,0 +1,37 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-09",
+  "job_id": "REVIEW-TIMEE-SENIOR-MLOPS",
+  "company_name": "タイミー",
+  "title": "シニアMLOpsエンジニア",
+  "official_job_url": "https://hrmos.co/pages/timee/jobs/16822514041183191756",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 11000000,
+    "annual_total_max_jpy": 15000000
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "workstyle": "full remote possible; flex",
+  "stack": [
+    "Python",
+    "MLflow",
+    "dbt",
+    "Feature Store",
+    "LLMOps",
+    "Terraform",
+    "CI/CD"
+  ],
+  "review_reason": "公開情報では年収総額に変動賞与を含むため、固定残業・賞与を除いた基本年収下限800万円以上を確定できない。",
+  "next_verification": [
+    "minimum monthly base salary",
+    "fixed overtime/discretionary allowance",
+    "guaranteed vs variable bonus"
+  ]
+}
