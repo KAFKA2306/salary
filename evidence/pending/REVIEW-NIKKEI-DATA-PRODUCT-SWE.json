@@ -1,0 +1,56 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-10",
+  "job_id": "REVIEW-NIKKEI-DATA-PRODUCT-SWE",
+  "company_name": "日本経済新聞社",
+  "title": "シニアソフトウェアエンジニア（データプロダクト開発）",
+  "official_job_url": "https://herp.careers/v1/nikkei/H1WiO9mjDtb8",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 12000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "notes": "年収総額には住居費補助・子手当等を含む。基本給は経験・能力により決定。専門業務型裁量労働制。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区大手町1-3-7（東京本社）",
+  "workstyle": "hybrid; job header says full remote but employer states zero office attendance is not permitted",
+  "responsibilities": [
+    "BigQuery上の社内向けWeb UI/APIを要件定義・設計・開発・運用",
+    "LLM/AIエージェントの組み込み・評価・運用",
+    "プロダクト向けデータパイプラインの設計・実装"
+  ],
+  "stack": [
+    "TypeScript",
+    "Python",
+    "Go",
+    "Node.js",
+    "BigQuery",
+    "Airflow",
+    "Dataform",
+    "DataHub",
+    "Terraform",
+    "AWS",
+    "Google Cloud",
+    "LLM"
+  ],
+  "review_reason": "想定年収800万〜1200万円には各種手当が含まれる。固定残業・各種手当を除く基本年収の下限が公開されていないため800万円以上と確認できない。",
+  "next_verification": [
+    "minimum annual base salary excluding fixed overtime and allowances",
+    "salary breakdown and guaranteed bonus components"
+  ],
+  "sources": [
+    "https://herp.careers/v1/nikkei/H1WiO9mjDtb8",
+    "https://herp.careers/careers/companies/nikkei/jobs/H1WiO9mjDtb8"
+  ]
+}
