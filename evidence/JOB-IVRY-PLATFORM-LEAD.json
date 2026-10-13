@@ -1,0 +1,49 @@
+{
+  "evidence_id": "EVID-IVRY-PLATFORM-LEAD-20261014",
+  "job_id": "JOB-IVRY-PLATFORM-LEAD",
+  "observed_at": "2026-10-14",
+  "job_url": "https://herp.careers/v1/ivry/BMcVddyxZm0C",
+  "compensation_source_url": "https://herp.careers/v1/ivry/BMcVddyxZm0C",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 12000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1000000,
+    "monthly_total_max_jpy": 1666000,
+    "monthly_base_min_jpy": 715000,
+    "monthly_base_max_jpy": 1191070,
+    "base_salary_min_jpy": 8580000,
+    "base_salary_max_jpy": 14292840,
+    "monthly_fixed_overtime_min_jpy": 285000,
+    "monthly_fixed_overtime_max_jpy": 474930,
+    "fixed_overtime_annual_jpy": 3420000,
+    "fixed_overtime_hours": 45,
+    "notes": "月給100万円から固定残業代28.5万円を除外。基本年収下限は715,000円×12か月。賞与・ストックオプションは算入しない。"
+  },
+  "workstyle": "東京（三田）または大阪（西天満）。ハイブリッド／リモート、フレックスタイム制（コア10時〜15時）。",
+  "ownership": "自社の対話AI複数プロダクト向け共通基盤の設計・開発・運用。認証・バッチ・ログ基盤、LLMOps、データエンジニアリング。",
+  "ownership_scope": "own_product",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "主業務は自社プロダクト共通基盤。受託開発・外部顧客向け導入支援・コンサルが主業務との記載なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Ruby",
+    "Python",
+    "TypeScript",
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "GitHub Actions",
+    "Datadog",
+    "Sentry",
+    "Databricks",
+    "LLMOps"
+  ],
+  "caveats": [
+    "AWS実務経験とサービス共通基盤3年以上が必須",
+    "固定残業45時間（うち深夜30時間）",
+    "MLモデル開発よりプラットフォーム技術リード中心"
+  ],
+  "verification": "2026-10-14 HERP公式求人の掲載継続、給与内訳、雇用形態、勤務地、職務、技術を確認。"
+}
