@@ -52,5 +52,11 @@
   "sources": [
     "https://herp.careers/v1/nikkei/H1WiO9mjDtb8",
     "https://herp.careers/careers/companies/nikkei/jobs/H1WiO9mjDtb8"
-  ]
+  ],
+  "employment_restrictions": {
+    "source": "https://herp.careers/v1/nikkei/H1WiO9mjDtb8",
+    "note": "株式や投機性の高い金融商品の取引には制限がある（就業規則で規定）。制限の具体的範囲は公開求人から確認できない。",
+    "verification_date": "2026-10-15",
+    "status": "needs_detail"
+  }
 }
