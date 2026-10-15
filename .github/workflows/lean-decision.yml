@@ -1,0 +1,41 @@
+name: Lean 4 job eligibility
+
+on:
+  pull_request:
+    paths:
+      - 'proofs/**'
+      - 'scripts/job_decision_trace.py'
+      - 'scripts/check_lean_decision_bridge.py'
+      - 'tests/test_job_decision_trace.py'
+      - '.github/workflows/lean-decision.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'proofs/**'
+      - 'scripts/job_decision_trace.py'
+      - 'scripts/check_lean_decision_bridge.py'
+      - 'tests/test_job_decision_trace.py'
+      - '.github/workflows/lean-decision.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  decision-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Verify three-way decision proof
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          lake-package-directory: proofs
+          build: 'true'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'false'
+      - name: Compare production decision trace to Lean
+        run: python scripts/check_lean_decision_bridge.py

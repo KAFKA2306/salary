@@ -1,0 +1,6 @@
+name = "job_decision_proofs"
+version = "0.1.0"
+defaultTargets = ["JobDecision"]
+
+[[lean_lib]]
+name = "JobDecision"
