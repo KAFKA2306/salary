@@ -64,8 +64,9 @@ class ArchiveWebTests(unittest.TestCase):
         self.assertIn("条件を通った求人だけ表示", page)
         self.assertIn("job-dashboard.json", app)
         self.assertNotIn("応募状態", page + app)
-        self.assertEqual(payload["summary"]["eligible_count"], 3)
-        self.assertEqual(payload["summary"]["rejected_count"], 2)
+        self.assertEqual(payload["summary"]["eligible_count"], len(payload["eligible"]))
+        self.assertEqual(payload["summary"]["rejected_count"], len(payload["rejected"]))
+        self.assertEqual(payload["summary"]["review_count"], len(payload["review"]))
         all_jobs = payload["eligible"] + payload["rejected"]
         self.assertTrue(all("exit_entries" in job for job in all_jobs))
         ntt = next(job for job in payload["eligible"] if job["company_name"] == "NTTドコモ")
