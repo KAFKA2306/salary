@@ -93,6 +93,10 @@ Hard gateを通過した求人だけ100点満点で比較する。
 
 短期売上KPI責任、固定残業の大きさ、管理職専任は減点情報として保持する。
 
+## Compute-scaling boundary
+
+The ranking and hard-gate SQL are deterministic and must not be replaced by an LLM. More compute is useful only for candidate discovery, job-description extraction and conflicting-source verification. Compare each local OSS model/search budget against a frozen, labeled set of job postings for correct salary-base classification, customer-facing duty detection, evidence link fidelity, unsupported claims, elapsed time and memory. Ambiguity stays REVIEW and historical evidence cannot be labeled current. Promote only measured improvements with versioned snapshots, respecting the 8,000,000 JPY salary-floor and no-new-paid-API constraints.
+
 ## Local run
 
 PostgreSQL 15 はDocker Composeでローカル起動する。外部クラウド契約は不要。
