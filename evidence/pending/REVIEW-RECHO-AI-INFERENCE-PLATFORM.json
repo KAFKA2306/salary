@@ -1,0 +1,59 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-26",
+  "job_id": "REVIEW-RECHO-AI-INFERENCE-PLATFORM",
+  "company_name": "株式会社Recho",
+  "title": "AI推論基盤エンジニア（シニア／LLM／音声モデル）",
+  "official_job_url": "https://herp.careers/v1/recho/xnMhEqvhlKpo",
+  "listing_status": "open_on_official_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年俸制1,000万〜2,000万円。専門業務型裁量労働制（みなし労働時間1日9時間）。固定残業手当の有無と内訳、年俸全額が基本給かは明示なし。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区麹町2-3-2 半蔵門PREX North（半蔵門WeWork）",
+  "workstyle": "出社推奨・一部リモート可（遠方からのフルリモートは相談可）。専門業務型裁量労働制。",
+  "responsibilities": [
+    "音声モデル・LLMの社内共通推論フレームワーク設計実装",
+    "モデル開発チーム向けAPI/SDKとバッチ推論パイプライン開発",
+    "GPU推論のスループット・コスト最適化、スケジューリング・キャパシティ設計"
+  ],
+  "stack": [
+    "Python",
+    "PyTorch",
+    "vLLM",
+    "SGLang",
+    "TensorRT-LLM",
+    "Triton Inference Server",
+    "Kubernetes",
+    "Slurm",
+    "Ray",
+    "C++",
+    "CUDA"
+  ],
+  "scope_note": "会社全体は顧客向けAI導入支援も実施するが、当該R&D職の中心は自社共通推論基盤の設計・実装。顧客伴走・受託・商談・導入支援を主務とする記載はない。英語による技術議論とGPU推論基盤の実務経験は必須。",
+  "review_reason": "年俸下限1,000万円は確認できるが、固定残業代・基本給の内訳が公式求人にないため、固定残業代を除く基本年収下限800万円以上を確認できない。",
+  "next_verification": [
+    "年俸1,000万円の基本給と固定残業代・裁量労働手当の内訳",
+    "賞与・変動報酬が年俸に含まれるか",
+    "顧客向け実装・導入支援が主務に含まれないこと"
+  ],
+  "sources": [
+    "https://herp.careers/v1/recho/xnMhEqvhlKpo",
+    "https://herp.careers/careers/companies/recho/jobs/xnMhEqvhlKpo"
+  ]
+}
