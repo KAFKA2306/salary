@@ -1,0 +1,53 @@
+{
+  "evidence_id": "EVID-IVRY-STAFF-SWE-SAAS-PLATFORM-20261026",
+  "job_id": "JOB-IVRY-STAFF-SWE-SAAS-PLATFORM",
+  "observed_at": "2026-10-26",
+  "job_url": "https://herp.careers/v1/ivry/6ifS5UDvzxhv",
+  "compensation_source_url": "https://herp.careers/v1/ivry/6ifS5UDvzxhv",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 12000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1000000,
+    "monthly_total_max_jpy": 1666000,
+    "monthly_base_min_jpy": 715000,
+    "monthly_base_max_jpy": 1191070,
+    "base_salary_min_jpy": 8580000,
+    "base_salary_max_jpy": 14292840,
+    "monthly_fixed_overtime_min_jpy": 285000,
+    "monthly_fixed_overtime_max_jpy": 474930,
+    "fixed_overtime_annual_jpy": 3420000,
+    "fixed_overtime_hours": 45,
+    "notes": "月給100万円から固定残業代28.5万円を除外し、715,000円×12か月=8,580,000円。賞与・ストックオプションは算入しない。"
+  },
+  "workstyle": "東京（三田）または大阪（西天満）。リモート／ハイブリッド、フレックスタイム制（コア10時〜15時）。",
+  "ownership": "自社SaaS共通基盤（認証・認可、ユーザー管理、契約・課金）およびAgentic Coding・AI前提SDLCの社内開発者プラットフォームを設計・実装・展開。技術ICであり人員管理は主務でない。",
+  "ownership_scope": "own_product",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "主業務は自社複数プロダクトの共通基盤と社内開発者プラットフォーム。外部顧客への商談・伴走・導入支援・受託開発が主業務との記載なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Ruby",
+    "Python",
+    "TypeScript",
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "GitHub Actions",
+    "Datadog",
+    "Sentry",
+    "Databricks",
+    "Codex",
+    "Claude Code",
+    "CI/CD",
+    "Agentic Coding"
+  ],
+  "caveats": [
+    "Web/SaaSシステム設計・運用のリード経験とクラウド本番運用が必須",
+    "固定残業45時間（うち深夜30時間）",
+    "AIモデル研究開発よりAgentic Coding・開発基盤・SaaS共通基盤の技術リード中心",
+    "同社の既存プラットフォームエンジニア（リードクラス）とは別求人URL・別職務"
+  ],
+  "verification": "2026-10-26 公式HERP求人で掲載継続、給与内訳、雇用形態、勤務地、技術・職務を確認。"
+}
