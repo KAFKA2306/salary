@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-BALLAS-AI-PLATFORM-BACKEND",
+  "company_name": "株式会社BALLAS",
+  "title": "Backend Engineer, AI Platform（AI/ML）",
+  "official_job_url": "https://herp.careers/v1/ballas/dWRRuVFUDsmm",
+  "listing_status": "open_on_employer_official_HERP_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 12000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は想定年収800万〜1,200万円・月給制・専門業務型裁量労働制。基本給と固定残業代/裁量労働手当の金額・有無が不明。総額下限を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区神田須田町2-1-1 または大阪府大阪市中央区平野町3-1-6（希望に応じて配属）",
+  "workstyle": "週1回程度出社のハイブリッド。専門業務型裁量労働制（1日8時間みなし）。試用期間3か月（最大6か月）に『有機雇用契約』との原文があり、有期雇用を意味するか要確認。",
+  "responsibilities": [
+    "自社の建設・製造サプライチェーン向けAIプロダクトでAI/MLモデル推論APIとFastAPIマイクロサービスを実装",
+    "LLM・マルチモーダルAIをプロダクトへ組み込み、Vertex AI・GeminiによるAI基盤を構築",
+    "推論基盤の性能改善、スケーリング、GraphQL API設計、SREと連携した運用・監視基盤整備"
+  ],
+  "stack": [
+    "Python",
+    "FastAPI",
+    "TypeScript",
+    "NestJS",
+    "GraphQL",
+    "Vertex AI",
+    "Gemini",
+    "Google Cloud",
+    "Firebase",
+    "Docker",
+    "Terraform",
+    "PostgreSQL",
+    "GitHub"
+  ],
+  "scope_note": "自社プロダクトBALLAS SCM/BALLAS LINKS向けのAI基盤・バックエンド実装が主業務。外部顧客向けの個別受託開発・導入支援・商談が主業務との記載はない。建設業・製造業の業務データを扱う。",
+  "review_reason": "正社員求人として掲載されているが基本年収下限800万円を給与内訳から証明できない。試用期間の『有機雇用契約』表記も雇用契約の種類を確認する必要がある。",
+  "next_verification": [
+    "年収下限800万円の月額基本給、固定残業代・裁量労働手当の内訳",
+    "試用期間の『有機雇用契約』が有期雇用を指すか、正社員雇用の開始時期",
+    "掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/ballas/dWRRuVFUDsmm",
+    "https://herp.careers/careers/companies/ballas/jobs/dWRRuVFUDsmm"
+  ]
+}
