@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-RECHO-LLM-POSTTRAIN",
+  "company_name": "株式会社Recho",
+  "title": "LLMトレーニングエンジニア（シニア / Post-training）",
+  "official_job_url": "https://herp.careers/v1/recho/FEJXzxJrE7bD",
+  "listing_status": "open_on_employer_official_HERP_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "年俸制1,000万〜2,000万円。専門業務型裁量労働制（みなし労働時間1日9時間）。月額基本給、固定残業代・裁量労働手当の有無と金額が未掲載。年俸下限を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区麹町2-3-2 半蔵門PREX North（半蔵門WeWork）",
+  "workstyle": "出社推奨、一部リモート可。遠方からのフルリモート相談可（保証なし）。専門業務型裁量労働制。",
+  "responsibilities": [
+    "自社LLMポストトレーニング（SFT・DPO・RLHF）の設計・実装・運用",
+    "報酬モデル・RLVR・LLM-as-a-Judgeによる評価基盤の内製化",
+    "合成・選好データ生成、品質管理、学習アルゴリズム改良"
+  ],
+  "stack": [
+    "Python",
+    "PyTorch",
+    "TRL",
+    "verl",
+    "OpenRLHF",
+    "FSDP",
+    "DeepSpeed",
+    "Megatron-LM",
+    "vLLM",
+    "SGLang",
+    "Slurm",
+    "Kubernetes"
+  ],
+  "scope_note": "R&Dで自社モデルの学習と評価を担当。求人に顧客導入支援・受託・商談が主務との記載はない。企業自体は顧客デリバリーも行うため職務の切り分けを継続確認。",
+  "review_reason": "年俸下限1,000万円は確認できるが、固定残業代・裁量労働手当を除く基本年収下限800万円以上は未証明。",
+  "next_verification": [
+    "月額基本給と固定残業代・裁量労働手当の有無・金額",
+    "賞与や変動報酬の有無",
+    "R&D職が顧客伴走・受託主体でないこと",
+    "掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/recho/FEJXzxJrE7bD",
+    "https://herp.careers/careers/companies/recho/jobs/FEJXzxJrE7bD"
+  ]
+}
