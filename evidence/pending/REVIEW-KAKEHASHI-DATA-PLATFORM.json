@@ -1,0 +1,59 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-26",
+  "job_id": "REVIEW-KAKEHASHI-DATA-PLATFORM",
+  "company_name": "株式会社カケハシ",
+  "title": "データプラットフォームエンジニア（データ基盤チーム）",
+  "official_job_url": "https://herp.careers/v1/kakehashiinc/019bd552-7b13-700c-ba08-4bed3228f0b6",
+  "listing_status": "open_on_employer_official_HERP_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 9000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年収900万〜1500万円。専門業務型裁量労働制（みなし労働時間1日10時間15分）。基本給・固定残業相当手当・裁量労働手当・賞与の内訳は明示なし。年収下限900万円を基本年収下限とは扱わない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区西新橋2-8-6 住友不動産日比谷ビル5F",
+  "workstyle": "リモート勤務可（フルリモートの保証なし）。専門業務型裁量労働制、1日10時間15分のみなし労働時間。",
+  "responsibilities": [
+    "自社医療SaaSのデータプラットフォーム設計・開発・運用",
+    "データメッシュ、データ取り込み・加工パイプライン構築",
+    "運用改善・自動化、社内プロダクト開発者と分析担当者の支援"
+  ],
+  "stack": [
+    "Databricks",
+    "AWS RDS",
+    "DynamoDB",
+    "AWS Glue Data Catalog",
+    "S3",
+    "Kinesis Streams",
+    "Terraform",
+    "GitHub Actions",
+    "Databricks Asset Bundles",
+    "OpenAI",
+    "Gemini",
+    "Claude (Bedrock)"
+  ],
+  "scope_note": "主業務は自社データプラットフォームの内製。求人には外部顧客への商談・導入支援・受託開発・コンサルを主務とする記載なし。医療データのガバナンスと開発を担う。",
+  "review_reason": "公式年収下限900万円は確認できるが、専門業務型裁量労働制における基本給とみなし労働相当手当の内訳が不明。固定残業代を除く基本年収下限800万円以上を証明できない。",
+  "next_verification": [
+    "年収下限900万円に含まれる基本給・みなし残業相当手当・裁量労働手当の内訳",
+    "賞与や変動報酬が年収下限に含まれるか",
+    "社内データ基盤実装の比率と外部顧客対応の有無"
+  ],
+  "sources": [
+    "https://herp.careers/v1/kakehashiinc/019bd552-7b13-700c-ba08-4bed3228f0b6"
+  ]
+}
