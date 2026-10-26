@@ -1,0 +1,63 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-TIMEE-SENIOR-DATA-ANALYTICS-ENGINEER",
+  "company_name": "株式会社タイミー",
+  "title": "シニアデータエンジニア / シニアアナリティクスエンジニア",
+  "official_job_url": "https://hrmos.co/pages/timee/jobs/16822514041183192052",
+  "listing_status": "open_on_employer_official_HRMOS_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": null,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式HRMOSの公開テキストには年収額・月額基本給・固定残業代の内訳が表示されず、年2回の変動賞与を含むとの注記のみ確認。転職仲介サイトは年収900万〜1400万円と掲載するが、企業公式で数値を検証できないため正本の給与金額欄は空欄とする。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区東新橋1-5-2 汐留シティセンター35階（国内フルリモート勤務可）",
+  "workstyle": "フルリモート可、フレックスタイム制（コアタイム11:00〜15:30）、試用期間3か月",
+  "responsibilities": [
+    "BigQuery上のDWH・データマートを設計し、dbtでデータモデルと共通レイヤーを実装",
+    "複数の自社新規事業向けにデータ基盤を共通化し、Data Contract・品質監視・セルフサービス提供経路を整備",
+    "社内AIエージェントや自然言語インターフェースが利用できるデータ基盤を開発"
+  ],
+  "stack": [
+    "Python",
+    "Google Cloud",
+    "BigQuery",
+    "dbt",
+    "Cloud Composer",
+    "Fivetran",
+    "trocco",
+    "Hightouch",
+    "Terraform",
+    "GitHub Actions",
+    "Vertex AI",
+    "MLflow",
+    "LiteLLM",
+    "Looker"
+  ],
+  "scope_note": "自社AI・データ本部のDRE 1Gに所属し社内事業・プロダクト向けデータ基盤を設計実装。外部顧客への個別受託・商談・導入支援・コンサルを主業務とする記載なし。",
+  "review_reason": "公式求人では年収下限と基本給、固定残業代の有無・内訳が非表示。賞与が変動するため基本年収800万円以上を証明できない。",
+  "next_verification": [
+    "公式の年収総額下限・上限",
+    "月額基本給の下限と固定残業代の有無・内訳",
+    "変動賞与を除いた保証基本年収",
+    "求人掲載継続"
+  ],
+  "sources": [
+    "https://hrmos.co/pages/timee/jobs/16822514041183192052"
+  ],
+  "secondary_reference_only": "https://career-x.co.jp/recruiting/job_info/cmtiv38yo034y4n0knxa9xctm/"
+}
