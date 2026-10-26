@@ -1,0 +1,62 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-26",
+  "job_id": "REVIEW-GO-DATA-ML-PLATFORM",
+  "company_name": "GO株式会社",
+  "title": "データエンジニア（MLエンジニア）／フルリモートOK",
+  "official_job_url": "https://hrmos.co/pages/goinc/jobs/9903627",
+  "listing_status": "open_on_employer_official_hrmos_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": null,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 45,
+    "notes": "2026-10-26時点、雇用主のHRMOS公式求人には年収金額が表示されず、月45時間分の固定残業手当を含む旨のみ確認。HERP Careerの二次掲載は総年収800万〜1200万円と表示するが、公式給与金額としては未検証のためseedに転記しない。管理監督者採用では固定残業手当なし。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified",
+    "official_total_salary_floor": "unverified"
+  },
+  "location": "東京都港区麻布台1-3-1（国内フルリモート可、必要時は出社）",
+  "workstyle": "国内フルリモート可、出社日数指定なし。スーパーフレックス。障害時に当番順のオンコールあり。",
+  "responsibilities": [
+    "タクシーアプリGOの大規模データをBigQueryへ収集し、Dataflow・Pythonでデータパイプラインを設計・運用",
+    "AI学習バッチ・本番推論サービング・データプロダクト実行基盤の設計実装運用",
+    "社内のデータサイエンティスト向け実行環境・セキュリティ基盤の整備"
+  ],
+  "stack": [
+    "Python",
+    "Go",
+    "BigQuery",
+    "Dataflow",
+    "Dataform",
+    "Cloud Composer",
+    "Airflow",
+    "GKE",
+    "Kubeflow",
+    "Feast",
+    "AWS",
+    "Google Cloud",
+    "GitHub Actions"
+  ],
+  "scope_note": "所属はAI技術開発部データプラットフォームグループ。自社アプリの社内データ・ML実行基盤の開発運用が主務で、外部顧客伴走・受託・導入支援・商談主体との記載なし。必須条件に商用運用・Go/Python・Airflow・クラウド・3名以上のリード経験あり。",
+  "review_reason": "公式求人で正社員・自社データ/ML基盤・45時間分固定残業は確認したが、公式の総年収下限と基本給・固定残業手当の金額が不明。基本年収下限800万円以上を確定できない。",
+  "next_verification": [
+    "公式年収下限と月額基本給下限",
+    "45時間分固定残業手当の月額と保証賞与の有無",
+    "管理監督者と非管理監督者の給与レンジの区分"
+  ],
+  "sources": [
+    "https://hrmos.co/pages/goinc/jobs/9903627",
+    "https://herp.careers/careers/companies/goinc/jobs/h4-cmmaszm1h02mceq07pa7iymy5"
+  ]
+}

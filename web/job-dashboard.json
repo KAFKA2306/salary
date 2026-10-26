@@ -14,7 +14,7 @@
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 10,
-    "review_count": 6
+    "review_count": 7
   },
   "eligible": [
     {
@@ -412,6 +412,27 @@
     }
   ],
   "review": [
+    {
+      "job_id": "REVIEW-GO-DATA-ML-PLATFORM",
+      "company_name": "GO株式会社",
+      "title": "データエンジニア（MLエンジニア）／フルリモートOK",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": null,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 45,
+      "remote_mode": "full_remote",
+      "location": "Japan",
+      "source_url": "https://hrmos.co/pages/goinc/jobs/9903627",
+      "failed_gates": [],
+      "pending_gates": [
+        "公式求人の年収下限",
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
     {
       "job_id": "REVIEW-HERP-DATA-PLATFORM-ENGINEER",
       "company_name": "株式会社HERP",
