@@ -1,6 +1,6 @@
 {
   "status": "review",
-  "observed_at": "2026-10-09",
+  "observed_at": "2026-10-27",
   "job_id": "REVIEW-TIMEE-SENIOR-MLOPS",
   "company_name": "タイミー",
   "title": "シニアMLOpsエンジニア",
@@ -9,7 +9,7 @@
   "ownership_scope": "internal_data_platform",
   "known_compensation": {
     "annual_total_min_jpy": 11000000,
-    "annual_total_max_jpy": 15000000
+    "annual_total_max_jpy": 19000000
   },
   "hard_gate_status": {
     "permanent": "pass",
@@ -33,5 +33,10 @@
     "minimum monthly base salary",
     "fixed overtime/discretionary allowance",
     "guaranteed vs variable bonus"
+  ],
+  "compensation_recheck_note": "2026-10-27: HERP Careerの企業求人一覧にシニアMLOpsエンジニア年収1,100万〜1,900万円と掲載。従来記録の上限1,500万円から変更。企業公式HRMOS求人のテキスト表示では給与金額が欠落し、賞与年2回の変動とフルリモート可のみ確認。基本給下限は引き続き未検証。",
+  "sources": [
+    "https://hrmos.co/pages/timee/jobs/16822514041183191756",
+    "https://herp.careers/careers/companies/timee/jobs"
   ]
 }

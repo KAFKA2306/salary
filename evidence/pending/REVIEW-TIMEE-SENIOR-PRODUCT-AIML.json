@@ -1,0 +1,58 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-TIMEE-SENIOR-PRODUCT-AIML",
+  "company_name": "株式会社タイミー",
+  "title": "シニアプロダクトAI/MLエンジニア",
+  "official_job_url": "https://hrmos.co/pages/timee/jobs/16822514041183191931",
+  "listing_status": "open_on_employer_official_HRMOS_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 11000000,
+    "annual_total_max_jpy": 19000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "bonus": "年2回、個人評価により変動",
+    "notes": "HERP Careerの企業求人掲載に年収1,100万〜1,900万円と表示。企業公式HRMOS求人は給与欄の数値がテキスト取得では欠落し、年2回賞与を含むことのみ確認。基本給、固定残業代、賞与を除いた保証年収は未検証。総年収下限を基本年収下限と扱わない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区東新橋1-5-2 汐留シティセンター35階",
+  "workstyle": "国内フルリモート勤務可。フレックス、コアタイム11:00〜15:30。",
+  "responsibilities": [
+    "自社マッチング・Trust & Safety向けAI/MLモデルのプロダクト実装、評価、運用改善",
+    "Feature Store・Vertex AI Pipelines・推論APIを活用したモデル実装",
+    "LLMOps評価基盤、LLM as a Judge、モデル品質・コスト・遅延の改善"
+  ],
+  "stack": [
+    "Python",
+    "Google Cloud",
+    "BigQuery",
+    "dbt Cloud",
+    "Vertex AI",
+    "MLflow",
+    "LiteLLM",
+    "Terraform",
+    "GitHub"
+  ],
+  "scope_note": "既存の社内ML/LLM基盤を利用し自社プロダクトへ実装。社外顧客伴走、受託、コンサル、商談・導入支援は主業務ではない。既存シニアMLOps求人とは別職種。",
+  "review_reason": "年収総額下限1,100万円は賞与込み。固定残業代の有無・金額、基本月給・基本年収の下限が不明で、固定残業を除く基本年収800万円以上を証明できない。",
+  "next_verification": [
+    "基本月給・基本年収の下限と固定残業代の有無・金額",
+    "年2回賞与の保証部分と変動部分",
+    "リモート勤務の適用条件"
+  ],
+  "sources": [
+    "https://hrmos.co/pages/timee/jobs/16822514041183191931",
+    "https://herp.careers/careers/companies/timee/jobs/h4-cmomzzq1500bj2q0elrfd9dlq"
+  ]
+}
