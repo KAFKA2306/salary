@@ -14,7 +14,7 @@
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 10,
-    "review_count": 3
+    "review_count": 4
   },
   "eligible": [
     {
@@ -424,6 +424,26 @@
       "remote_mode": "hybrid",
       "location": "Tokyo",
       "source_url": "https://herp.careers/careers/companies/nikkei/jobs/H1WiO9mjDtb8",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-NOWCAST-DATA-AI-PLATFORM",
+      "company_name": "株式会社ナウキャスト（Finatextグループ）",
+      "title": "データAIプラットフォームエンジニア",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 10000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 40,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://herp.careers/v1/finatexthd/p9U6eu0-JgVR",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",

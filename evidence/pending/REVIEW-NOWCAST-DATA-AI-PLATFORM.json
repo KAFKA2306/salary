@@ -1,0 +1,60 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-26",
+  "job_id": "REVIEW-NOWCAST-DATA-AI-PLATFORM",
+  "company_name": "株式会社ナウキャスト（Finatextグループ）",
+  "listing_company": "株式会社Finatextホールディングス",
+  "title": "データAIプラットフォームエンジニア",
+  "official_job_url": "https://herp.careers/v1/finatexthd/p9U6eu0-JgVR",
+  "listing_status": "open_on_official_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 18000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 40,
+    "notes": "公式求人は年収1000万〜1800万円、固定残業40時間を含むと記載。月額基本給・固定残業代の金額は未公開。賞与の有無と保証額も未確認。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区九段北1-8-10 住友不動産九段ビル9F",
+  "workstyle": "hybrid; office/remote daily flexibility",
+  "responsibilities": [
+    "CTO直下AI+チームでグループ横断のデータ基盤・データマネジメントを構築",
+    "社内SaaS・DB・ドキュメントをMCP経由でLLMへ提供",
+    "セキュアなAI実行基盤・評価基盤・Gatewayの設計実装",
+    "社内ツールとAIエージェントの統合・ワークフローと評価パイプライン構築"
+  ],
+  "stack": [
+    "Python",
+    "dbt",
+    "Airflow",
+    "Snowflake",
+    "Terraform",
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "MCP",
+    "LLM"
+  ],
+  "scope_note": "求人の主担当は社内・グループ内基盤。MCPass/Finstage Coworkは外部向け展開も想定する自社製品だが、顧客伴走・受託・導入支援主体の記載なし。将来の業務比率は未確認。",
+  "review_reason": "年収下限1000万円には固定残業40時間分が含まれるが、基本給・固定残業手当の内訳が不明で基本年収下限800万円以上と断定できない。",
+  "next_verification": [
+    "minimum monthly base salary",
+    "fixed overtime allowance amount for the minimum annual salary",
+    "guaranteed bonus vs variable compensation",
+    "confirm external customer delivery is not a primary duty"
+  ],
+  "sources": [
+    "https://herp.careers/v1/finatexthd/p9U6eu0-JgVR"
+  ]
+}
