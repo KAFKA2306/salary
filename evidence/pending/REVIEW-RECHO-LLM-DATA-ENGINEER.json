@@ -1,0 +1,59 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-RECHO-LLM-DATA-ENGINEER",
+  "company_name": "株式会社Recho",
+  "title": "LLMデータエンジニア（シニア / 学習データ / 評価設計）",
+  "official_job_url": "https://herp.careers/v1/recho/IGRjOt08b5LT",
+  "listing_status": "open_on_employer_official_HERP_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年俸制1,000万〜2,000万円。専門業務型裁量労働制（みなし労働時間1日9時間）。基本給、固定残業手当・裁量労働手当の有無と金額は未掲載。年俸下限を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "unverified",
+    "outsourcing": "unverified",
+    "consulting": "unverified",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区麹町2-3-2 半蔵門PREX North（半蔵門WeWork）",
+  "workstyle": "出社推奨・一部リモート可。遠方からのフルリモートは相談可（保証なし）。専門業務型裁量労働制。",
+  "responsibilities": [
+    "通話ログ・業務システムのデータをクレンジング・匿名化・構造化し、LLM学習・評価データを設計",
+    "SFT・RL用合成データ、評価セット・ベンチマークを実装し品質を管理",
+    "20〜30案件に展開可能な再現性あるデータパイプラインと評価データの改善ループを構築"
+  ],
+  "stack": [
+    "Python",
+    "pandas",
+    "Polars",
+    "Spark",
+    "SQL",
+    "ETL",
+    "API/DB integration",
+    "LLM-as-a-Judge",
+    "TRL",
+    "verl"
+  ],
+  "scope_note": "R&D所属で共通の学習・評価データ構築基盤を作る実装職。顧客要件定義はデータPMが担当と明記。ただし案件ごとの顧客実データを扱い、顧客デリバリー企業でもあるため、外部顧客伴走・受託・コンサルが主務ではないかは未確定。ここを確認するまでeligibleにはしない。",
+  "review_reason": "年俸下限1,000万円だが基本給・固定残業代の内訳が不明で、基本年収800万円以上を証明できない。案件ごとの顧客業務データ処理が受託・顧客伴走主体かも追加確認。",
+  "next_verification": [
+    "年俸1,000万円の月額基本給・固定残業代・裁量労働手当の内訳",
+    "賞与や変動報酬が年俸に含まれるか",
+    "案件ごとの実データ整備が顧客伴走・受託主体でないか",
+    "掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/recho/IGRjOt08b5LT",
+    "https://herp.careers/careers/companies/recho/jobs/IGRjOt08b5LT"
+  ]
+}
