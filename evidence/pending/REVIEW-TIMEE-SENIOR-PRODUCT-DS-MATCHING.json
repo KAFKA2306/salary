@@ -1,0 +1,56 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-TIMEE-SENIOR-PRODUCT-DS-MATCHING",
+  "company_name": "株式会社タイミー",
+  "title": "シニアプロダクトデータサイエンティスト（Matching）",
+  "official_job_url": "https://hrmos.co/pages/timee/jobs/16822514041183191753",
+  "listing_status": "open_on_employer_official_HRMOS_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 11000000,
+    "annual_total_max_jpy": 19000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "企業公式HRMOSとHERP求人一覧は年収1100万〜1900万円。年2回の変動賞与を含む。基本給の月額・固定残業代の有無と内訳は公開求人で確認できず、総額下限を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区東新橋1-5-2 汐留シティセンター35階（国内フルリモート可）",
+  "workstyle": "フルリモート勤務可。フレックスタイム制、コアタイム11:00〜15:30。試用期間3か月。",
+  "responsibilities": [
+    "自社マッチングサービスの推薦・検索アルゴリズムと評価基盤を設計・実装",
+    "数理最適化・因果推論・LLM/基盤モデルを使いマッチング品質を改善",
+    "モデル開発からA/Bテスト、本番推論、継続学習、監視まで実装・運用"
+  ],
+  "stack": [
+    "Python",
+    "機械学習",
+    "推薦システム",
+    "検索",
+    "LLM",
+    "PEFT",
+    "因果推論",
+    "A/Bテスト"
+  ],
+  "scope_note": "自社スポットワークプラットフォームの推薦・マッチング改善が中心。外部顧客への個別受託開発、導入支援、コンサル、商談を主業務とする記載なし。",
+  "review_reason": "公式年収下限1100万円には変動賞与が含まれる。基本給と固定残業代の内訳が公開されず、固定残業代を除いた基本年収下限800万円以上を確認できない。",
+  "next_verification": [
+    "月額基本給の下限と固定残業代の有無・内訳",
+    "変動賞与を除く保証基本年収",
+    "求人掲載継続"
+  ],
+  "sources": [
+    "https://hrmos.co/pages/timee/jobs/16822514041183191753",
+    "https://herp.careers/careers/companies/timee/jobs/h4-cmhf0l7w502m0px070ia7b8cy"
+  ]
+}
