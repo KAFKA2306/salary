@@ -1,0 +1,54 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-26",
+  "job_id": "REVIEW-HERP-DATA-PLATFORM-ENGINEER",
+  "company_name": "株式会社HERP",
+  "title": "データエンジニア/分析基盤エンジニア_Development",
+  "official_job_url": "https://herp.careers/v1/herpinc/topyC6CeA8c5",
+  "listing_status": "listed_on_employer_official_HERP_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 8100000,
+    "annual_total_max_jpy": 12000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 30,
+    "notes": "年収810万〜1200万円に30時間分のみなし残業代を含む。基本給と固定残業代の金額は非公開。基本年収下限800万円以上は未確認。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都品川区西五反田1丁目2番10号 CIRCLES五反田3階",
+  "workstyle": "オフィスと在宅を選択可能。データチームはフルリモート選択者が多い。フルフレックス。",
+  "responsibilities": [
+    "自社複数プロダクト横断のデータ基盤設計・構築・運用",
+    "データ同期・配信、共通マスタ・データ定義、品質・ガバナンス",
+    "分析・機械学習活用を見据えた内製基盤"
+  ],
+  "stack": [
+    "Python",
+    "BigQuery",
+    "Metabase",
+    "Google Analytics",
+    "dbt",
+    "trocco"
+  ],
+  "scope_note": "主務は自社プラットフォームの内製。社内の事業開発・CSとの連携はあるが、外部顧客への伴走・受託・導入支援主体との記載なし。",
+  "review_reason": "固定残業30時間を含む年収下限810万円。内訳未公開のため基本年収下限800万円を満たすと断定できない。",
+  "next_verification": [
+    "minimum monthly base salary",
+    "fixed overtime allowance at minimum compensation",
+    "guaranteed vs variable bonus",
+    "official listing continuation"
+  ],
+  "sources": [
+    "https://herp.careers/v1/herpinc/topyC6CeA8c5"
+  ]
+}
