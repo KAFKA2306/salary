@@ -14,7 +14,7 @@
     "rejected_count": 2,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 10,
-    "review_count": 9
+    "review_count": 10
   },
   "eligible": [
     {
@@ -444,6 +444,26 @@
       "remote_mode": "full_remote",
       "location": "Tokyo",
       "source_url": "https://herp.careers/v1/herpinc/topyC6CeA8c5",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-HERP-MATCHING-DATA-ENGINEER",
+      "company_name": "株式会社HERP",
+      "title": "マッチングプラットフォーム データエンジニア（PP21）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 30,
+      "remote_mode": "full_remote",
+      "location": "Tokyo",
+      "source_url": "https://herp.careers/v1/herpinc/5KnRs4OLQwiM",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
