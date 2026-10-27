@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-FACILO-DATA-PLATFORM-ENGINEER",
+  "company_name": "株式会社Facilo",
+  "title": "Data Platform Engineer",
+  "official_job_url": "https://herp.careers/v1/facilo/VvvM0ceGacS-",
+  "listing_status": "open_on_employer_HERP_recruitment_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 6500000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 45,
+    "notes": "公式求人は年収650万〜1500万円、固定残業45時間/月と超過分別途支給を記載。月額基本給、固定残業代の金額、賞与・手当の内訳は未掲載。年収総額を基本年収とみなさない。年収下限650万円のため、基本年収800万円以上は証明できない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都中央区八重洲2-2-1 東京ミッドタウン八重洲7F。応募可能居住地は関東1都3県または関西2府4県（エンジニア系の例外）と記載。",
+  "workstyle": "フルリモート、コアタイムなしのフレックス、出社完全自由。居住地条件あり。",
+  "responsibilities": [
+    "自社不動産SaaSのSnowflakeデータ基盤の設計・運用とプロダクト横断データ統合",
+    "Python/SQL、AirflowによるETLパイプライン構築・データ品質管理",
+    "OpenAI/Geminiの本番機能開発、実験管理・MLOpsの改善"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "TypeScript",
+    "Snowflake",
+    "Amazon S3",
+    "AWS Glue",
+    "Apache Airflow",
+    "OpenAI API",
+    "Gemini API",
+    "LlamaIndex",
+    "OpenSearch",
+    "Elasticsearch",
+    "AWS",
+    "Terraform",
+    "Datadog"
+  ],
+  "scope_note": "自社の複数プロダクトと社内分析基盤が主務。CS・Salesと連携するが、外部顧客への個別導入支援・受託・コンサルを主業務とする記載なし。",
+  "review_reason": "基本給と固定残業代の金額が未掲載。年収下限650万円は基本年収800万円の証明にならないためeligibleへ昇格させない。",
+  "next_verification": [
+    "求人の最低等級の月額基本給・固定残業代額、賞与や諸手当の保証条件",
+    "関西圏からの勤務・採用可否の継続確認"
+  ],
+  "sources": [
+    "https://herp.careers/v1/facilo/VvvM0ceGacS-"
+  ]
+}
