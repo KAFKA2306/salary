@@ -1,0 +1,60 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-HERP-DATA-UTILIZATION-LEAD",
+  "company_name": "株式会社HERP",
+  "title": "データエンジニア／アナリスト_データ活用リード候補_Development",
+  "official_job_url": "https://herp.careers/careers/companies/herpinc/jobs/u3lAgxbNrqZX",
+  "listing_status": "listed_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 30,
+    "notes": "公式求人は年収800万〜1500万円、30時間分のみなし残業代を含むと明記。月額基本給、固定残業代の金額、保証賞与の内訳は未掲載。固定残業代を除く基本年収下限800万円は証明できない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都品川区西五反田1丁目2番10号 CIRCLES五反田3階。国内フルリモート可。",
+  "workstyle": "五反田オフィス出社と在宅を選択可能。フルリモート、コアタイムなしのフルフレックス。",
+  "responsibilities": [
+    "HERP社内のデータ活用ロードマップ策定、社内ニーズの整理",
+    "自社事業・プロダクトのデータ基盤・BI環境の改善、設計・構築・運用",
+    "データ起点の意思決定支援と将来のデータチーム構築"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "Google BigQuery",
+    "Metabase",
+    "dbt",
+    "trocco",
+    "AWS EKS",
+    "AWS S3",
+    "AWS Lambda",
+    "Terraform",
+    "GitHub Actions",
+    "Datadog"
+  ],
+  "scope_note": "社内データ活用の一人目の専任担当。外部顧客への個別導入支援・受託・コンサルを主業務とする記載なし。将来のチーム構築は含むが現時点で管理職専任ではない。",
+  "review_reason": "年収下限800万円に固定残業30時間分が含まれ、基本給の最低額は未掲載。基本年収下限800万円のhard gateを満たすと断定できない。",
+  "next_verification": [
+    "最低等級の月額基本給と30時間分の固定残業手当",
+    "賞与・手当の保証条件と基本年収下限",
+    "公式掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/herpinc/jobs/u3lAgxbNrqZX"
+  ],
+  "source_last_updated_at": "2026-10-05 10:35 JST"
+}
