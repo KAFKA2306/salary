@@ -1,0 +1,66 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-SYSLEA-AI-PLATFORM-INFERENCE-EVAL",
+  "company_name": "株式会社SYSLEA",
+  "title": "AI Platform Engineer（LLM推論・評価基盤担当）",
+  "official_job_url": "https://herp.careers/careers/companies/syslea/jobs/4sMXCQYdXibz",
+  "listing_status": "open_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 9900000,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "企業公式HERP採用ページに年俸990万円以上と記載。基本給と固定残業代の有無・金額・賞与の有無が明示されていないため、固定残業代を除く基本年収下限800万円以上は未証明。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_on_listed_duties",
+    "outsourcing": "pass_on_listed_duties",
+    "consulting": "pass_on_listed_duties",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都品川区西五反田2-23-1 ARZ五反田6階",
+  "workstyle": "フレックスタイム制（コアタイム10:00〜15:00）、所定労働時間8時間。リモート勤務可否は公式求人で未確認。正社員のほか契約社員・業務委託も募集するが、正社員枠あり。",
+  "responsibilities": [
+    "自社AI-Native CRM『Frictio』のLLM推論ゲートウェイ・モデルルーティング基盤の設計・実装",
+    "vLLMによるセルフホスト推論・推論コスト最適化・評価データ生成とCI回帰ゲートの構築",
+    "ジョブオーケストレーション、障害時リトライ、可観測性・トレース・品質指標の設計"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "Docker",
+    "Kubernetes",
+    "Terraform",
+    "Azure",
+    "AWS",
+    "GCP",
+    "vLLM",
+    "TensorRT-LLM",
+    "SGLang",
+    "Airflow",
+    "Dagster",
+    "Temporal",
+    "Argo",
+    "OpenTelemetry",
+    "Langfuse"
+  ],
+  "scope_note": "求人は『Product』部門で自社CRMのAI推論・評価・ジョブ基盤の実装を主務と明示。顧客向け導入支援・受託・商談を主務とする記載なし。",
+  "review_reason": "公式年俸下限990万円は確認できるが、月額基本給・固定残業代の有無と内訳が非開示で、基本年収下限800万円以上は証明できない。",
+  "next_verification": [
+    "月額基本給下限、固定残業代の有無・時間・金額、賞与・その他手当の内訳",
+    "勤務地・リモート条件",
+    "掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/syslea/jobs/4sMXCQYdXibz",
+    "https://herp.careers/v1/syslea/4sMXCQYdXibz"
+  ],
+  "verification_note": "2026-10-27に企業公式HERP採用ページで掲載、正社員募集、年俸下限、職務、技術、勤務地を確認。"
+}
