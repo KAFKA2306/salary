@@ -1,0 +1,59 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-STRACT-ML-SEARCH-RECOMMENDATION",
+  "company_name": "株式会社STRACT",
+  "title": "機械学習エンジニア",
+  "official_job_url": "https://herp.careers/v1/stract/V2V2b5xnp-ZO",
+  "listing_status": "listed_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は想定年収1,000万〜2,000万円のみ掲載。月額基本給、固定残業代の有無・時間数・金額、賞与・諸手当の内訳は未掲載。固定残業代を除く基本年収下限800万円は証明できない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区四番町4-19 CIRCLES市ヶ谷7F",
+  "workstyle": "原則週1日以上の出社、裁量労働制。日本語で流暢なビジネスコミュニケーションが必要。",
+  "responsibilities": [
+    "自社AIショッピングアプリPLUGの検索・推薦アルゴリズム（BM25、ANN、Learning-to-Rank）の設計・実装",
+    "特徴量・学習パイプライン、オンラインA/B実験、モデル推論サービングの最適化",
+    "MLOpsの監視・再学習・ロールバック、LLM/Embeddingによる検索・リランキングの本番適用"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "BigQuery",
+    "scikit-learn",
+    "TypeScript",
+    "Nest.js",
+    "AWS",
+    "AWS Glue",
+    "Elasticsearch",
+    "GitHub Actions",
+    "MLOps",
+    "LLM/Embedding"
+  ],
+  "scope_note": "自社PLUG製品の検索・推薦・ML基盤の実装が主業務。外部顧客向け受託開発、コンサル、商談、導入支援が主業務との記載なし。",
+  "review_reason": "公式年収下限1,000万円は総額であり、基本給・固定残業代・賞与の内訳が未掲載。基本年収下限800万円以上のhard gateは未証明。",
+  "next_verification": [
+    "公式の月額基本給下限と固定残業代の有無・金額・時間数",
+    "賞与・諸手当を除いた基本年収下限",
+    "掲載継続と業務範囲"
+  ],
+  "sources": [
+    "https://herp.careers/v1/stract/V2V2b5xnp-ZO"
+  ]
+}
