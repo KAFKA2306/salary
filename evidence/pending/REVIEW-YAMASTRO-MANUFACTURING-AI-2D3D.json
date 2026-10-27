@@ -1,0 +1,57 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-YAMASTRO-MANUFACTURING-AI-2D3D",
+  "company_name": "株式会社YAMASTRO",
+  "title": "製造AIエンジニア（2D図面×3DCAD）",
+  "official_job_url": "https://herp.careers/careers/companies/yamastro/jobs/S_hQVmJMWR6y",
+  "listing_status": "open_on_HERP_Career_employer_listing_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 13000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式掲載は想定年収1,000万〜1,300万円（応相談）。月額基本給、固定残業代の有無・内訳、賞与の有無・内訳は明記なし。総年収を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_on_listed_duties",
+    "outsourcing": "pass_on_listed_duties",
+    "consulting": "pass_on_listed_duties",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区三田3-5-27／自宅等からフルリモート、ただし開発状況に応じ月数回・数時間以下のオフィスでの議論あり",
+  "workstyle": "フルリモート主体。月数回の東京オフィス訪問想定。始業9:30、終業18:30（柔軟な調整を想定）。試用期間3か月。",
+  "responsibilities": [
+    "2D製造図面の寸法・公差・記号・注記等を抽出し構造化",
+    "3D CAD／STEPの幾何・位相情報を解析",
+    "2D図面と3D形状を対応付け、加工戦略AI向けデータを生成"
+  ],
+  "stack": [
+    "AI-OCR",
+    "画像認識",
+    "3D CAD",
+    "STEP",
+    "幾何・位相解析",
+    "OpenCascade（歓迎要件）",
+    "ローカル／オンプレミスAI（歓迎要件）"
+  ],
+  "scope_note": "自社の製造プロセス自動化プラットフォームに向けたAI・図面解析実装。掲載された担当業務には顧客商談、外部顧客伴走、個別受託、導入支援の主担当記載なし。会社全体の受託加工等の事業と当該職務は区別。",
+  "review_reason": "総年収下限1,000万円は確認できるが、基本給・固定残業代・賞与内訳が非公開で基本年収下限800万円以上を証明できない。大阪在住の場合、東京オフィス訪問の頻度・交通費条件も確認が必要。",
+  "next_verification": [
+    "基本給の月額下限、固定残業代の有無と金額、賞与内訳",
+    "月数回の東京オフィス訪問の必須性と交通費負担",
+    "3D CAD／STEP解析の必須経験に対する適合度",
+    "掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/yamastro/jobs/S_hQVmJMWR6y"
+  ],
+  "official_listing_last_updated": "2026-10-06 17:12 JST",
+  "verification_note": "2026-10-27にHERP Career掲載の企業求人情報を再確認。企業直営サイトの同一求人ページは未確認。"
+}

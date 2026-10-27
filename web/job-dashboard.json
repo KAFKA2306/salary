@@ -14,7 +14,7 @@
     "rejected_count": 3,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 9,
-    "review_count": 15
+    "review_count": 16
   },
   "eligible": [
     {
@@ -704,6 +704,27 @@
         "外部顧客伴走が主業務でないこと",
         "受託開発ではないこと",
         "コンサル業務が主業務でないこと",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-YAMASTRO-MANUFACTURING-AI-2D3D",
+      "company_name": "株式会社YAMASTRO",
+      "title": "製造AIエンジニア（2D図面×3DCAD）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 10000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "full_remote",
+      "location": "Japan / Tokyo office visits",
+      "source_url": "https://herp.careers/careers/companies/yamastro/jobs/S_hQVmJMWR6y",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "月数回の東京オフィス訪問条件",
         "求人条件の検証完了"
       ],
       "exit_entries": []
