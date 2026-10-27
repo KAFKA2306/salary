@@ -14,7 +14,7 @@
     "rejected_count": 3,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 9,
-    "review_count": 16
+    "review_count": 17
   },
   "eligible": [
     {
@@ -494,6 +494,26 @@
       "remote_mode": "remote",
       "location": "Tokyo",
       "source_url": "https://herp.careers/v1/kakehashiinc/019bd552-7b13-700c-ba08-4bed3228f0b6",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-MISUMI-AI-CONTEXT-GRAPH-DATA-ENGINEER",
+      "company_name": "株式会社ミスミ",
+      "title": "データエンジニア / AI×ものづくり統合体験を支えるContext Graph・データ基盤開発",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": null,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 30,
+      "remote_mode": "hybrid",
+      "location": "Tokyo",
+      "source_url": "https://hrmos.co/pages/misumi/jobs/01-TX-26-21-50-M",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",

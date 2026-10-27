@@ -1,0 +1,62 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-MISUMI-AI-CONTEXT-GRAPH-DATA-ENGINEER",
+  "company_name": "株式会社ミスミ",
+  "title": "データエンジニア / AI×ものづくり統合体験を支えるContext Graph・データ基盤開発",
+  "official_job_url": "https://hrmos.co/pages/misumi/jobs/01-TX-26-21-50-M",
+  "listing_status": "open_on_HRMOS_employer_listing_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": null,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 30,
+    "notes": "企業公式求人は給与欄に年収の金額を記載していない。固定残業代（月30時間相当）を含むと明記。賞与年2回。基本給下限・固定残業代の金額・賞与保証額は不明。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_on_listed_duties",
+    "outsourcing": "pass_on_listed_duties",
+    "consulting": "pass_on_listed_duties",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区九段南1-6-5 九段会館テラス（東京本社）",
+  "workstyle": "リモート可、週1日出社。フレックスタイム制、コアタイム11:00〜15:00。試用期間原則3か月、待遇変更なし。",
+  "responsibilities": [
+    "自社ものづくりECのAI/ML・AIエージェント向けBigQueryデータ基盤を新規設計・実装",
+    "3D CAD、BOM、商品・検索・購買行動などをContext Graphへ統合し、データ品質・リネージを整備",
+    "Airflow/dbt coreを用いたETL/ELTの自動化、AIエージェント向けAPI連携"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "BigQuery",
+    "dbt core",
+    "Airflow",
+    "Fivetran",
+    "GCP",
+    "AWS",
+    "Cloud Run",
+    "Terraform",
+    "GitHub Actions",
+    "Context Graph",
+    "PostgreSQL",
+    "Redis"
+  ],
+  "scope_note": "自社EC/ものづくりプロダクトの内製データ基盤。外部顧客への伴走・商談・受託開発・導入支援が主業務との記載はない。実装60%、自動化30%、技術検証10%。",
+  "review_reason": "企業公式求人に年収の数値がなく、月30時間分の固定残業代込みで賞与年2回のため、固定残業代と賞与を除く基本年収下限800万円以上を確認できない。総年収や一般的な給与レンジから推定しない。",
+  "next_verification": [
+    "企業公式の月額基本給下限と固定残業代の金額",
+    "賞与の保証額と年収下限",
+    "募集掲載継続と週1出社条件"
+  ],
+  "sources": [
+    "https://hrmos.co/pages/misumi/jobs/01-TX-26-21-50-M"
+  ],
+  "verification_note": "2026-10-27に株式会社ミスミのHRMOS公式求人で正社員・勤務地・技術・職務・固定残業30時間・賞与年2回・週1出社を確認。"
+}
