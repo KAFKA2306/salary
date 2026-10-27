@@ -1,0 +1,53 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-KURASHIRU-AI-PLATFORM-SRE",
+  "company_name": "クラシル株式会社",
+  "title": "AI Platform Engineer (SRE)（AI事業）",
+  "official_job_url": "https://herp.careers/careers/companies/kurashiru/jobs/3sRVGl8z1LTf",
+  "listing_status": "listed_on_HERP_Career_employer_listing_as_of_2026-10-28",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "求人掲載の想定年収下限は1,000万円。今回確認できた公開情報では基本給、固定残業代の有無・時間・金額、保証賞与の内訳を確証できないため、基本年収下限800万円以上とは判定しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "unverified",
+    "outsourcing": "unverified",
+    "consulting": "unverified",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区（掲載上の勤務地）",
+  "workstyle": "一部リモート可。出社頻度は未確認。",
+  "responsibilities": [
+    "自社新規プロダクト「Kurashiru AI OS」向けAIプラットフォームの信頼性・運用基盤開発",
+    "食品流通業界向けAIエージェント、AI-OCR、非構造化データ処理と長時間実行ワークフローの基盤",
+    "自社サービスのAI基盤・SREに関わる実装（具体的な担当比率は要確認）"
+  ],
+  "stack": [
+    "AI-OCR",
+    "AIエージェント",
+    "非構造化データパイプライン",
+    "Durable Workflow",
+    "SRE"
+  ],
+  "scope_note": "公式の求人紹介は自社のAI OS新規事業とAIプラットフォームの構築を示す。一方、食品メーカー・卸・小売向けの業務自動化事業であり、外部顧客への個別導入支援・受託・商談が主務かは未確認。公開記述だけでこれらをpassとみなさない。",
+  "review_reason": "年収1,000万円以上と掲載されるが、固定残業代を除く基本年収下限800万円以上を公式の給与内訳で証明できない。外部顧客対応の主従も未確定。",
+  "next_verification": [
+    "月額基本給下限、固定残業代の有無・時間・金額、保証賞与の公式内訳",
+    "外部顧客伴走・受託・コンサル・商談・導入支援が主業務でないこと",
+    "公式求人の掲載継続と正社員条件"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/kurashiru/jobs/3sRVGl8z1LTf",
+    "https://herp.careers/careers/companies/kurashiru/jobs?parent-job-role-ids=engineer"
+  ]
+}
