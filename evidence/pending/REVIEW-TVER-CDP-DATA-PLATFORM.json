@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-TVER-CDP-DATA-PLATFORM",
+  "company_name": "株式会社TVer",
+  "title": "バックエンドエンジニア（Customer Data Platform開発担当）",
+  "official_job_url": "https://herp.careers/v1/tver/UuDeaMOqD-9z",
+  "listing_status": "open_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": null,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "企業公式HERP採用ページは給与を『経験・能力・スキル等により相談のうえ決定』と記載し、総年収下限・月額基本給・固定残業代の有無と内訳を表示していない。基本年収800万円以上は証明できないためREVIEW。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_on_listed_duties",
+    "outsourcing": "pass_on_listed_duties",
+    "consulting": "pass_on_listed_duties",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified",
+    "official_total_salary_floor": "unverified"
+  },
+  "location": "東京都港区赤坂2-4-6 赤坂グリーンクロス20F（原則週2日までリモート相談可）",
+  "workstyle": "スーパーフレックス、標準労働時間7時間/日、リモート相談可（原則週2日まで）、試用期間3ヶ月（延長あり）",
+  "responsibilities": [
+    "自社TVerの次世代Customer Data Platformをゼロから設計・構築",
+    "行動ログ収集API、BigQuery→Cloud SpannerのReverse ETL、Spanner GraphのパーソナライズAPIを実装",
+    "AWS/GCP間データ統合とVertex AIによるAI/ML連携・本番サービス実装"
+  ],
+  "stack": [
+    "Go",
+    "Python",
+    "Google Cloud",
+    "AWS",
+    "Cloud Spanner",
+    "Spanner Graph",
+    "BigQuery",
+    "Vertex AI",
+    "Cloud Run",
+    "GKE",
+    "Terraform",
+    "gRPC"
+  ],
+  "scope_note": "TVerの自社配信サービスと社内データ活用に関するCDP・レコメンドAPIの設計実装が主務。求人に外部顧客への受託開発・導入支援・商談を主業務とする記載なし。求人名称のCustomerは視聴ユーザー向けデータ基盤を指し、外部顧客伴走職ではない。",
+  "review_reason": "公式給与金額・基本給・固定残業代の内訳が非開示で、固定残業代を除く基本年収下限800万円を確認できない。",
+  "next_verification": [
+    "公式総年収下限・月額基本給下限",
+    "固定残業代の有無・時間数・月額と保証賞与の有無",
+    "求人掲載の継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/tver/UuDeaMOqD-9z",
+    "https://herp.careers/careers/companies/tver/jobs/UuDeaMOqD-9z"
+  ]
+}
