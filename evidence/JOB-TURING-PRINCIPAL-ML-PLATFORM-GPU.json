@@ -1,0 +1,58 @@
+{
+  "evidence_id": "EVID-TURING-PRINCIPAL-ML-PLATFORM-20261027",
+  "job_id": "JOB-TURING-PRINCIPAL-ML-PLATFORM-GPU",
+  "observed_at": "2026-10-27",
+  "listing_status": "open_on_official_careers_page",
+  "job_url": "https://herp.careers/v1/turing/Ry28GcyJHwhQ",
+  "compensation_source_url": "https://herp.careers/v1/turing/Ry28GcyJHwhQ",
+  "employment_type": "正社員",
+  "compensation_scope": "プリンシパルエンジニア等級のみ。求人はシニア等級も併記し、シニアの基本年収下限は800万円未満。等級を混同しない。",
+  "compensation": {
+    "annual_salary_min_jpy": 15000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1250000,
+    "monthly_base_min_jpy": 952380,
+    "monthly_base_max_jpy": 1269843,
+    "base_salary_min_jpy": 11428560,
+    "base_salary_max_jpy": 15238116,
+    "monthly_fixed_overtime_min_jpy": 297620,
+    "monthly_fixed_overtime_max_jpy": 396827,
+    "fixed_overtime_annual_jpy": 3571440,
+    "fixed_overtime_hours": 40,
+    "notes": "公式プリンシパル等級の月額基本給952,380円×12=11,428,560円。固定残業手当297,620円/月を除外。賞与は算入しない。シニア等級の基本給634,925円/月（年7,619,100円）は対象外。"
+  },
+  "workstyle": "東京都大田区平和島6丁目1-1。フレックスタイム制（コア11:00〜15:00）。求人にリモート勤務制度の明記なし。",
+  "ownership": "自社の自動運転AI学習用GPUクラスタ、クラウド/オンプレSlurm、ネットワーク、ストレージ、学習ワークロード基盤の設計・構築・運用・最適化。",
+  "ownership_scope": "internal_data_platform",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "公式の職務は自社GPU計算基盤の開発・運用。顧客伴走・商談・導入支援・受託・コンサル主体との記載なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Linux",
+    "Python",
+    "Go",
+    "Shell",
+    "AWS",
+    "Google Cloud",
+    "Slurm",
+    "Kubernetes",
+    "Terraform",
+    "Ansible",
+    "GPU",
+    "RoCE v2",
+    "RDMA",
+    "CI/CD",
+    "PyTorch DDP"
+  ],
+  "caveats": [
+    "同一求人にはシニア等級（基本年収下限7,619,100円）も掲載。eligibleはプリンシパル等級の条件付き。",
+    "リモート勤務の明記なし。勤務地は東京都大田区平和島。",
+    "最終提示額は経験・スキルによる。"
+  ],
+  "verification": "2026-10-27 公式HERP求人を確認。プリンシパル等級の月額基本給、固定残業40時間の金額、正社員、勤務地、業務・技術を確認。",
+  "sources": [
+    "https://herp.careers/v1/turing/Ry28GcyJHwhQ",
+    "https://herp.careers/careers/companies/turing/jobs/Ry28GcyJHwhQ"
+  ]
+}
