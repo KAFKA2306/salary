@@ -1,0 +1,62 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-UPSIDER-CORPORATE-DX-AX-SYSTEMS",
+  "company_name": "株式会社UPSIDER",
+  "title": "Systems Engineer（Corporate DX/AX）",
+  "official_job_url": "https://herp.careers/v1/upsider/7CMgXs3uqRIJ",
+  "listing_status": "listed_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_ai",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": null,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人の年収目安は1,000万円〜だが、選考評価により下回る可能性がある。半期賞与あり。月額基本給、固定残業代の有無・時間・金額、保証賞与額は未掲載。固定残業代と変動賞与を除く基本年収下限800万円は未証明。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京オフィス：東京都港区六本木7-15-7 新六本木ビル。公式にフルリモートワークを明記。",
+  "workstyle": "正社員、フルフレックス、フルリモート。国内からの応募を想定し、海外居住の可否は未確認。",
+  "responsibilities": [
+    "社内Legal・Compliance・Risk・HR・Accounting向けAI業務システムの設計・実装・運用",
+    "規程・契約・意思決定履歴を構造化するデータ基盤、全社UPSIDER World Modelへの接続",
+    "LLM/RAG、根拠参照、評価データセット、監査証跡、アクセス制御の実装"
+  ],
+  "stack": [
+    "Python",
+    "Go",
+    "TypeScript",
+    "Google Cloud",
+    "BigQuery",
+    "Terraform",
+    "dbt",
+    "Dataform",
+    "FastAPI",
+    "Next.js",
+    "Claude",
+    "Gemini",
+    "Docker"
+  ],
+  "scope_note": "CTO室所属の社内コーポレート業務向けAI・データ基盤の初期実装担当。外部顧客への導入支援、受託、コンサル、商談を主業務とする記載なし。全社共通のUPSIDER World Model自体の開発ではなく、社内部門のシステムとデータ生成源を担当。",
+  "review_reason": "年収目安1,000万円以上と記載されるが選考評価による変動があり、基本給・固定残業代・賞与の内訳が未公開。基本年収下限800万円を一次資料で証明できない。",
+  "next_verification": [
+    "最低月額基本給、固定残業代の有無・時間・金額",
+    "半期賞与の保証条件と提示年収下限の扱い",
+    "公式求人の掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/upsider/7CMgXs3uqRIJ",
+    "https://herp.careers/careers/companies/upsider/jobs/7CMgXs3uqRIJ"
+  ],
+  "source_last_updated_at": "2026-10-15 14:31 JST"
+}
