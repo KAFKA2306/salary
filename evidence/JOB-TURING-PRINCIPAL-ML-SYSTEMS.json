@@ -1,0 +1,57 @@
+{
+  "evidence_id": "EVID-TURING-PRINCIPAL-ML-SYSTEMS-20261028",
+  "job_id": "JOB-TURING-PRINCIPAL-ML-SYSTEMS",
+  "observed_at": "2026-10-28",
+  "listing_status": "open_on_official_careers_page",
+  "job_url": "https://herp.careers/v1/turing/Uhh9Ng3OdHGO",
+  "compensation_source_url": "https://herp.careers/v1/turing/Uhh9Ng3OdHGO",
+  "employment_type": "正社員（full-time permanent）",
+  "compensation_scope": "プリンシパルエンジニア等級のみ。公式求人はEngineer、Senior Engineer、Principal Engineerの3等級を併記。プリンシパル等級の基本年収下限のみをeligible判定する。",
+  "compensation": {
+    "annual_salary_min_jpy": 15000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1250000,
+    "monthly_base_min_jpy": 952380,
+    "monthly_base_max_jpy": 1269843,
+    "base_salary_min_jpy": 11428560,
+    "base_salary_max_jpy": 15238116,
+    "monthly_fixed_overtime_min_jpy": 297620,
+    "monthly_fixed_overtime_max_jpy": 396827,
+    "fixed_overtime_annual_jpy": 3571440,
+    "fixed_overtime_hours": 40,
+    "notes": "公式プリンシパル等級の基本給952,380円/月×12=11,428,560円。固定残業手当297,620円/月×12=3,571,440円は除外。Senior等級の基本給634,925円/月（年7,619,100円）はeligibleではない。"
+  },
+  "workstyle": "東京都大田区平和島6-1-1、東京流通センター。フレックス（コア11:00〜15:00）。リモート可との記載なし。",
+  "ownership": "自社の自動運転ML開発を支えるデータプラットフォーム、分散システム、開発者基盤、学習・評価パイプラインを設計・実装・運用。ML研究者・エンジニア向け社内サービスの開発。",
+  "ownership_scope": "internal_data_platform",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "公式職務はTuring社内のML開発基盤。外部顧客伴走、受託開発、導入支援、コンサルを主業務とする記述なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Python",
+    "TypeScript",
+    "Go",
+    "SQL",
+    "Apache Spark",
+    "Terraform",
+    "AWS CDK",
+    "Kubernetes",
+    "HPC",
+    "GPU",
+    "PyTorch",
+    "Cloud / On-premises",
+    "Data pipelines",
+    "Distributed systems"
+  ],
+  "caveats": [
+    "同じ求人にはEngineer、Senior、Principal等級を併記。eligibleはPrincipal等級に限定し、応募者の等級・提示額は未確定。",
+    "Senior等級の基本年収下限7,619,100円は800万円未満。",
+    "勤務は平和島オフィスを前提とし、リモート勤務の記載なし。",
+    "職種名の『プリンシパル』は等級限定の候補名であり、公式求人タイトルはEN_3011_Software Engineer (Machine Learning Systems Engineer)。"
+  ],
+  "verification": "2026-10-28 公式HERPの募集ページを確認。掲載、正社員、日本勤務、3等級の基本給・固定残業内訳、職務、技術要件を確認。",
+  "sources": [
+    "https://herp.careers/v1/turing/Uhh9Ng3OdHGO"
+  ]
+}
