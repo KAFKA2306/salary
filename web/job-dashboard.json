@@ -10,7 +10,7 @@
     ]
   },
   "summary": {
-    "eligible_count": 13,
+    "eligible_count": 14,
     "rejected_count": 3,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
@@ -252,6 +252,33 @@
     },
     {
       "rank": 8,
+      "job_id": "JOB-TURING-PRINCIPAL-WORLD-MODEL",
+      "company_name": "Turing株式会社",
+      "title": "プリンシパルエンジニア（世界モデル・動画生成ML）",
+      "score": 87,
+      "base_salary_min_jpy": 11428560,
+      "base_salary_max_jpy": 15238116,
+      "total_salary_min_jpy": 15000000,
+      "fixed_overtime_annual_jpy": 3571440,
+      "fixed_overtime_hours": 40,
+      "remote_mode": "onsite",
+      "location": "Tokyo (Heiwajima)",
+      "source_url": "https://herp.careers/v1/turing/DtcNrslWC_VS",
+      "ownership_scope": "own_product",
+      "data_platform_depth": 4,
+      "implementation_ratio": 4,
+      "ai_production": 5,
+      "cross_company_scope": 4,
+      "career_fit": 5,
+      "manufacturing_bridge": 5,
+      "technical_ownership": 5,
+      "workstyle_fit": 2,
+      "short_term_sales_kpi": false,
+      "management_heavy": false,
+      "exit_entries": []
+    },
+    {
+      "rank": 9,
       "job_id": "JOB-MUFG-EMUTTO-DATA-PLATFORM",
       "company_name": "三菱UFJエムット銀行",
       "title": "データ基盤スペシャリスト",
@@ -278,7 +305,7 @@
       "exit_entries": []
     },
     {
-      "rank": 9,
+      "rank": 10,
       "job_id": "JOB-TURING-PRINCIPAL-EDGE-INFERENCE",
       "company_name": "Turing株式会社",
       "title": "プリンシパルエンジニア（エッジ推論・SoC最適化）",
@@ -305,7 +332,7 @@
       "exit_entries": []
     },
     {
-      "rank": 10,
+      "rank": 11,
       "job_id": "JOB-FINDY-AI-DATA-STRATEGY-LEAD",
       "company_name": "ファインディ",
       "title": "シニアテックリード_AI & Data Strategy",
@@ -332,7 +359,7 @@
       "exit_entries": []
     },
     {
-      "rank": 11,
+      "rank": 12,
       "job_id": "JOB-PAYPAYCARD-DSLEAD",
       "company_name": "PayPayカード",
       "title": "データサイエンティスト/リーダー候補（ビジネスグロース領域）",
@@ -359,7 +386,7 @@
       "exit_entries": []
     },
     {
-      "rank": 12,
+      "rank": 13,
       "job_id": "JOB-LEGALON-SDAE",
       "company_name": "LegalOn Technologies",
       "title": "Senior Data Analytics Engineer",
@@ -386,7 +413,7 @@
       "exit_entries": []
     },
     {
-      "rank": 13,
+      "rank": 14,
       "job_id": "JOB-MUFG-EMUTTO-AI-STRATEGY-LEAD",
       "company_name": "三菱UFJエムット銀行",
       "title": "AI戦略推進 / リードメンバー",
