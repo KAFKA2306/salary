@@ -1,0 +1,56 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-LUUP-DATA-ENGINEER",
+  "company_name": "株式会社Luup",
+  "title": "04：データエンジニア",
+  "official_job_url": "https://herp.careers/v1/luup/4aBjBHhtI39b",
+  "listing_status": "listed_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_data_platform",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 12000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年収800万〜1200万円のみ記載。基本給、固定残業代の有無・時間数・金額、賞与・手当内訳は未掲載。固定残業代を除く基本年収下限800万円を証明できない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都品川区西五反田8丁目9番5号 FORECAST五反田WEST 7階。現在は在宅勤務中心、月数回本社出社。",
+  "workstyle": "フレックスタイム。リモート相談可。月数回の東京本社出社が必要。",
+  "responsibilities": [
+    "アプリ・IoT・オペレーションデータの収集・統合基盤の設計・構築・運用",
+    "データモデリング、データパイプライン、データ品質・ガバナンスの実装",
+    "分析・プロダクト・MLを支えるデータ基盤およびMLOps基盤の構築",
+    "BI・社内データアクセス環境の設計・提供"
+  ],
+  "stack": [
+    "SQL",
+    "BigQuery",
+    "Snowflake",
+    "Airflow (歓迎)",
+    "dbt (歓迎)",
+    "Python (歓迎)",
+    "Terraform (歓迎)",
+    "MLOps (歓迎)"
+  ],
+  "scope_note": "自社モビリティサービスの全社データ基盤実装。外部顧客向け受託開発・コンサル・商談・導入支援を主業務とする記載なし。",
+  "review_reason": "公式の年収下限800万円は総額表示であり、固定残業代の有無・基本給内訳が未記載。基本年収下限800万円のhard gateは未証明。",
+  "next_verification": [
+    "最低月額基本給と固定残業代の有無・時間数・金額",
+    "賞与・手当の内訳と基本年収下限",
+    "公式求人の掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/luup/4aBjBHhtI39b"
+  ]
+}

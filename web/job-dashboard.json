@@ -14,7 +14,7 @@
     "rejected_count": 3,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
-    "review_count": 25
+    "review_count": 26
   },
   "eligible": [
     {
@@ -604,6 +604,26 @@
       "remote_mode": "remote",
       "location": "Tokyo",
       "source_url": "https://herp.careers/v1/kakehashiinc/019bd552-7b13-700c-ba08-4bed3228f0b6",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-LUUP-DATA-ENGINEER",
+      "company_name": "株式会社Luup",
+      "title": "04：データエンジニア",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "hybrid",
+      "location": "Tokyo (Gotanda; occasional office visits)",
+      "source_url": "https://herp.careers/v1/luup/4aBjBHhtI39b",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
