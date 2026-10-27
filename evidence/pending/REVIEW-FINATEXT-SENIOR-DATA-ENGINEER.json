@@ -1,0 +1,58 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-FINATEXT-SENIOR-DATA-ENGINEER",
+  "company_name": "株式会社ナウキャスト（Finatextグループ）",
+  "listing_company": "株式会社Finatextホールディングス",
+  "title": "シニアデータエンジニア",
+  "official_job_url": "https://herp.careers/careers/companies/finatexthd/jobs/KhEf95X_TKvD",
+  "listing_status": "open_on_official_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 40,
+    "notes": "公式求人は年収1,000万〜1,500万円、固定残業40時間を含むと記載。月額基本給・固定残業代の金額、賞与の保証額は未掲載。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "unverified",
+    "outsourcing": "unverified",
+    "consulting": "unverified",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区九段北1-8-10 住友不動産九段ビル9F",
+  "workstyle": "フルリモート可。固定みなし時間制・事業場外みなし労働制・役割経験により専門型裁量労働制を適用。",
+  "responsibilities": [
+    "データ基盤の設計・構築・運用、データ分析とプロダクト開発",
+    "自社プロダクトのデータパイプライン設計・構築・運用",
+    "生成AI導入における顧客支援、エンジニアのマネジメント・チームビルディングも職務に含む"
+  ],
+  "stack": [
+    "Python",
+    "dbt",
+    "Airflow",
+    "Snowflake",
+    "Redshift",
+    "Terraform",
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "OpenAI"
+  ],
+  "scope_note": "公式求人は自社プロダクトのデータ基盤と外部顧客への生成AI導入支援の両方を列挙。配属先は希望と経験を踏まえ決定。外部顧客伴走・受託・コンサル・マネジメントが主務でないと確認できないためeligibleにはしない。",
+  "review_reason": "固定残業40時間分を含む年収下限1,000万円から基本年収下限800万円以上を一次情報で証明できない。顧客導入支援の業務比率も未確定。",
+  "next_verification": [
+    "年収1,000万円時の月額基本給・固定残業代の公式内訳",
+    "賞与・変動報酬が年収下限に含まれるか",
+    "配属先と外部顧客への導入支援・受託・コンサル・管理業務の比率"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/finatexthd/jobs/KhEf95X_TKvD"
+  ]
+}
