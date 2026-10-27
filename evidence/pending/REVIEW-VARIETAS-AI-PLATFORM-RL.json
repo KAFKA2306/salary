@@ -1,0 +1,57 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-VARIETAS-AI-PLATFORM-RL",
+  "company_name": "株式会社VARIETAS",
+  "title": "AIエンジニア（基盤・強化学習）",
+  "official_job_url": "https://herp.careers/v1/varietas/bLK4JqyE4yD-",
+  "listing_status": "open_on_employer_HERP_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 12000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "企業公式採用ページは年収1,200万〜2,000万円を記載。月額基本給・固定残業代・賞与内訳は未記載。総年収を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "unresolved_persona_mentions_CxO",
+    "outsourcing": "pass_on_listed_duties",
+    "consulting": "pass_on_listed_duties",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都品川区上大崎2-15-19 BLOCKS MEGURO708",
+  "workstyle": "出社ベース、リモート可。フレックス（コアタイム11:00〜15:00）。試用期間あり。",
+  "responsibilities": [
+    "自社AI面接官のLLM推論パイプラインとAIモデル基盤の設計・開発・運用",
+    "強化学習・学習サイクルの設計、モデル評価と継続改善",
+    "公平性・アラインメント・説明可能性を担保するAI運用基盤の実装",
+    "研究知見を自社マルチエージェント基盤と製品に実装"
+  ],
+  "stack": [
+    "Python",
+    "LLM",
+    "NLP",
+    "RL/RLHF",
+    "MLOps",
+    "AI agents",
+    "Ontology"
+  ],
+  "scope_note": "列挙された職務は自社製品のAIモデル・学習基盤の開発。ただし『求める人物像』に顧客CxOとの戦略対話・共創、マネジメントが記載されているため、外部顧客伴走が主業務でないか未確定。eligibleにしない。",
+  "review_reason": "固定残業代を除く基本年収下限800万円を一次情報で証明できない。顧客伴走主体でないことも未確定。",
+  "next_verification": [
+    "基本給・固定残業代・賞与の下限内訳を公式資料で確認",
+    "顧客CxOとの対話・共創が実際の主業務か確認",
+    "掲載継続・出社頻度を確認"
+  ],
+  "sources": [
+    "https://herp.careers/v1/varietas/bLK4JqyE4yD-",
+    "https://herp.careers/careers/companies/varietas/jobs/bLK4JqyE4yD-"
+  ],
+  "verification_note": "2026-10-27に企業公式HERP採用ページで掲載、正社員、給与総額、職務、勤務地、技術を確認。"
+}

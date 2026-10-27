@@ -14,7 +14,7 @@
     "rejected_count": 3,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 9,
-    "review_count": 18
+    "review_count": 19
   },
   "eligible": [
     {
@@ -721,6 +721,27 @@
       "pending_gates": [
         "固定残業代を除く基本年収下限",
         "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-VARIETAS-AI-PLATFORM-RL",
+      "company_name": "株式会社VARIETAS",
+      "title": "AIエンジニア（基盤・強化学習）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 12000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "hybrid",
+      "location": "Tokyo (Meguro)",
+      "source_url": "https://herp.careers/v1/varietas/bLK4JqyE4yD-",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "外部顧客伴走が主業務でないこと",
         "求人条件の検証完了"
       ],
       "exit_entries": []
