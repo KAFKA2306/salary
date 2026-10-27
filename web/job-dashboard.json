@@ -14,7 +14,7 @@
     "rejected_count": 3,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 9,
-    "review_count": 20
+    "review_count": 21
   },
   "eligible": [
     {
@@ -637,6 +637,26 @@
       "remote_mode": "hybrid",
       "location": "Tokyo",
       "source_url": "https://herp.careers/v1/recho/FEJXzxJrE7bD",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-SYSLEA-AI-PLATFORM-INFERENCE-EVAL",
+      "company_name": "株式会社SYSLEA",
+      "title": "AI Platform Engineer（LLM推論・評価基盤担当）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 9900000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": null,
+      "location": "Tokyo",
+      "source_url": "https://herp.careers/v1/syslea/4sMXCQYdXibz",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
