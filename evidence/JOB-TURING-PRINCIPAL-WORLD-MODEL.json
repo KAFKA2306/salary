@@ -1,0 +1,60 @@
+{
+  "evidence_id": "EVID-TURING-PRINCIPAL-WORLD-MODEL-20261028",
+  "job_id": "JOB-TURING-PRINCIPAL-WORLD-MODEL",
+  "observed_at": "2026-10-28",
+  "listing_status": "open_on_official_careers_page",
+  "job_url": "https://herp.careers/v1/turing/DtcNrslWC_VS",
+  "compensation_source_url": "https://herp.careers/v1/turing/DtcNrslWC_VS",
+  "employment_type": "正社員",
+  "compensation_scope": "公式2015_Machine Learning Engineer（世界モデル／動画生成モデル開発）はEngineer、Senior Engineer、Principal Engineerの3等級を併記。eligibleはPrincipal Engineer等級に限定。",
+  "compensation": {
+    "annual_salary_min_jpy": 15000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1250000,
+    "monthly_base_min_jpy": 952380,
+    "monthly_base_max_jpy": 1269843,
+    "base_salary_min_jpy": 11428560,
+    "base_salary_max_jpy": 15238116,
+    "monthly_fixed_overtime_min_jpy": 297620,
+    "monthly_fixed_overtime_max_jpy": 396827,
+    "fixed_overtime_annual_jpy": 3571440,
+    "fixed_overtime_hours": 40,
+    "notes": "Principal等級の基本給952,380円/月×12=11,428,560円。みなし残業手当297,620円/月×12=3,571,440円は除外。Senior等級の基本年収下限7,619,100円は800万円未満。"
+  },
+  "workstyle": "東京都大田区平和島6-1-1、東京流通センター。フレックス（コア11:00〜15:00）。公式求人にリモート可の記載なし。",
+  "ownership": "自社の自動運転向けWorld Action Model、動画生成モデル、世界モデルの大規模学習、評価、蒸留、量子化、推論最適化、実車デプロイを実装。データパイプライン、実験管理、再現性・MLOps基盤も構築・改善。",
+  "ownership_scope": "own_product",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "自社自動運転AIのML開発職。外部顧客の導入支援、受託、コンサル、商談を主業務とする記述なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Python",
+    "PyTorch",
+    "Transformers",
+    "Lightning",
+    "Accelerate",
+    "DeepSpeed / FSDP",
+    "FlexAttention",
+    "Slurm",
+    "AWS",
+    "GCP",
+    "GPU cluster",
+    "Jetson",
+    "Linux",
+    "Video generation",
+    "World Action Model",
+    "MLOps"
+  ],
+  "caveats": [
+    "Principal Engineer等級のみ対象。採用等級・最終提示額は選考で決定。",
+    "公式職種名は2015_MLエンジニア / Machine Learning Engineer（自動運転 世界モデル／動画生成モデル開発）。",
+    "Senior等級の基本年収下限7,619,100円はeligible対象外。",
+    "勤務地は東京・平和島。リモート勤務可の明記なし。",
+    "既存Turing ML Systems・学習基盤性能最適化・GPUクラスタ・エッジ推論職とは別URL・別職務。"
+  ],
+  "verification": "2026-10-28 Turing公式HERP求人で掲載状態、正社員、日本勤務、等級別基本給とみなし残業代、仕事内容、勤務地、技術を照合。",
+  "sources": [
+    "https://herp.careers/v1/turing/DtcNrslWC_VS"
+  ]
+}
