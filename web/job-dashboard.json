@@ -718,13 +718,12 @@
       "fixed_overtime_annual_jpy": null,
       "fixed_overtime_hours": null,
       "remote_mode": "full_remote",
-      "location": "Japan / Tokyo office visits",
+      "location": "Japan (Tokyo occasional office meetings)",
       "source_url": "https://herp.careers/careers/companies/yamastro/jobs/S_hQVmJMWR6y",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
         "給与内訳の一次情報",
-        "月数回の東京オフィス訪問条件",
         "求人条件の検証完了"
       ],
       "exit_entries": []

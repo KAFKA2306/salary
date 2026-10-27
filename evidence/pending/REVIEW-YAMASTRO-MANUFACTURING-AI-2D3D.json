@@ -42,7 +42,7 @@
     "ローカル／オンプレミスAI（歓迎要件）"
   ],
   "scope_note": "自社の製造プロセス自動化プラットフォームに向けたAI・図面解析実装。掲載された担当業務には顧客商談、外部顧客伴走、個別受託、導入支援の主担当記載なし。会社全体の受託加工等の事業と当該職務は区別。",
-  "review_reason": "総年収下限1,000万円は確認できるが、基本給・固定残業代・賞与内訳が非公開で基本年収下限800万円以上を証明できない。大阪在住の場合、東京オフィス訪問の頻度・交通費条件も確認が必要。",
+  "review_reason": "総年収下限1,000万円は確認できるが、基本給・固定残業代・賞与内訳が非公開で基本年収下限800万円以上を証明できない。大阪在住の場合、東京オフィス訪問の頻度・交通費条件も確認が必要。 二次求人媒体の内訳は基本年収下限約739万円を示すため、条件未達の可能性が高いが企業公式の確認が必要。",
   "next_verification": [
     "基本給の月額下限、固定残業代の有無と金額、賞与内訳",
     "月数回の東京オフィス訪問の必須性と交通費負担",
@@ -53,5 +53,22 @@
     "https://herp.careers/careers/companies/yamastro/jobs/S_hQVmJMWR6y"
   ],
   "official_listing_last_updated": "2026-10-06 17:12 JST",
-  "verification_note": "2026-10-27にHERP Career掲載の企業求人情報を再確認。企業直営サイトの同一求人ページは未確認。"
+  "verification_note": "2026-10-27にHERP Career掲載の企業求人情報を再確認。企業直営サイトの同一求人ページは未確認。",
+  "secondary_reference_only": {
+    "recruit_agent": {
+      "url": "https://www.r-agent.com/viewjob/jk407b537a6445782d/",
+      "monthly_base_min_jpy": 615963,
+      "monthly_fixed_overtime_min_jpy": 217371,
+      "fixed_overtime_hours": 45,
+      "annual_base_min_jpy": 7391556
+    },
+    "doda": {
+      "url": "https://doda.jp/DodaFront/View/JobSearchDetail/j_jid__3016193652/",
+      "monthly_base_min_jpy": 616569,
+      "monthly_fixed_overtime_min_jpy": 216764,
+      "fixed_overtime_hours": 45,
+      "annual_base_min_jpy": 7398828
+    },
+    "note": "二次求人媒体2件は固定残業45時間込みと記載し、基本年収下限は約739万円で800万円未満。両媒体の月額に606円の差があり、企業公式の給与内訳ではないためeligible判定には採用しない。"
+  }
 }
