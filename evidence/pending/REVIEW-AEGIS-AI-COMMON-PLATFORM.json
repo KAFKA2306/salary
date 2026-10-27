@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-AEGIS-AI-COMMON-PLATFORM",
+  "company_name": "株式会社Aegis AI",
+  "title": "AIエンジニア（共通基盤のAI層）",
+  "official_job_url": "https://herp.careers/v1/aegisai/85AXw4RVoMR_",
+  "listing_status": "open_on_employer_HERP_careers_page_as_of_2026-10-27",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 9000000,
+    "annual_total_max_jpy": 13000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "企業公式採用ページに想定年収900万〜1300万円、賞与なしと明記。月額基本給・固定残業代の有無と金額は未掲載。年収下限を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_on_listed_duties",
+    "outsourcing": "pass_on_listed_duties",
+    "consulting": "pass_on_listed_duties",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "福岡県福岡市中央区天神1-11-1 / 東京都中央区日本橋茅場町2-2-5",
+  "workstyle": "企業公式ページは両拠点への出社を案内。HERP Career求人一覧は一部リモート可と表示。フルリモートは確認できない。フレックスタイム制、試用期間3か月（待遇変更なし）。",
+  "responsibilities": [
+    "自社Aegis Studio共通AI層のLLM・マルチエージェントオーケストレーション設計・実装",
+    "構造化出力・評価・回帰テスト・プロンプト/業務ロジック版管理",
+    "根拠文書のトレーサビリティ、文書構造化パイプライン、Evalsの本番品質改善"
+  ],
+  "stack": [
+    "Python",
+    "LLM API",
+    "RAG",
+    "AI agents",
+    "Evals",
+    "GCP",
+    "AWS",
+    "PostgreSQL",
+    "Supabase",
+    "GitHub",
+    "MCP (歓迎)"
+  ],
+  "scope_note": "研究開発チームが自社M&A OSと鉄道向けOSに共通するAI層を開発。求人の列挙業務には顧客への商談・導入支援・受託開発は主務として記載されていない。ただし企業は外部企業との共同開発を行うため担当範囲は継続確認。",
+  "review_reason": "賞与なしの想定年収下限900万円は公式確認できるが、固定残業代の有無・月額基本給の明示がなく、固定残業代を除く基本年収下限800万円以上を証明できない。",
+  "next_verification": [
+    "月額基本給下限と固定残業代・みなし残業の有無/金額",
+    "顧客共同開発と社内共通基盤の業務比率",
+    "リモート頻度・出社条件",
+    "掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/aegisai/85AXw4RVoMR_",
+    "https://herp.careers/careers/companies/aegisai/jobs/85AXw4RVoMR_"
+  ],
+  "verification_note": "2026-10-27に企業公式HERP採用ページで掲載、正社員、給与総額、賞与なし、職務、勤務地、技術を確認。"
+}

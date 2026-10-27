@@ -14,7 +14,7 @@
     "rejected_count": 3,
     "top_base_salary_min_jpy": 10000000,
     "remote_friendly_count": 9,
-    "review_count": 17
+    "review_count": 18
   },
   "eligible": [
     {
@@ -402,6 +402,26 @@
     }
   ],
   "review": [
+    {
+      "job_id": "REVIEW-AEGIS-AI-COMMON-PLATFORM",
+      "company_name": "株式会社Aegis AI",
+      "title": "AIエンジニア（共通基盤のAI層）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 9000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "hybrid",
+      "location": "Tokyo/Fukuoka",
+      "source_url": "https://herp.careers/v1/aegisai/85AXw4RVoMR_",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
     {
       "job_id": "REVIEW-BALLAS-AI-PLATFORM-BACKEND",
       "company_name": "株式会社BALLAS",
