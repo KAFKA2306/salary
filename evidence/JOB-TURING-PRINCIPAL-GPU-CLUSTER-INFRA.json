@@ -1,0 +1,61 @@
+{
+  "evidence_id": "EVID-TURING-PRINCIPAL-GPU-CLUSTER-INFRA-20261028",
+  "job_id": "JOB-TURING-PRINCIPAL-GPU-CLUSTER-INFRA",
+  "observed_at": "2026-10-28",
+  "listing_status": "open_on_official_careers_index",
+  "job_url": "https://herp.careers/v1/turing/4PjoWt5IWD5V",
+  "compensation_source_url": "https://herp.careers/v1/turing/4PjoWt5IWD5V",
+  "employment_type": "正社員",
+  "compensation_scope": "公式3041_インフラエンジニア（GPUクラスタ）のシニア／プリンシパル等級のうち、eligibleはPrincipal Engineer等級のみ。",
+  "compensation": {
+    "annual_salary_min_jpy": 15000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1250000,
+    "monthly_base_min_jpy": 952380,
+    "monthly_base_max_jpy": 1269843,
+    "base_salary_min_jpy": 11428560,
+    "base_salary_max_jpy": 15238116,
+    "monthly_fixed_overtime_min_jpy": 297620,
+    "monthly_fixed_overtime_max_jpy": 396827,
+    "fixed_overtime_annual_jpy": 3571440,
+    "fixed_overtime_hours": 40,
+    "notes": "Principal基本給952,380円/月×12=11,428,560円。固定残業代297,620円/月×12=3,571,440円を除外。Senior基本給下限634,925円/月×12=7,619,100円は対象外。"
+  },
+  "workstyle": "東京都大田区平和島6丁目1-1、平和島オフィス。フレックス（コア11:00〜15:00）。公式求人にリモート可の記載なし。",
+  "ownership": "自社の自動運転ML・世界モデル開発を支えるGPU計算クラスタの物理構成・ネットワーク・ストレージ・分散計算基盤を設計、構築、運用、最適化。AWS/Azure/GCPのGPU環境も対象。",
+  "ownership_scope": "internal_data_platform",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "自社GPU学習計算基盤の設計・構築・運用が主業務。外部顧客への商談・導入支援・受託・コンサル主体の記載なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Linux",
+    "AWS",
+    "Azure",
+    "Google Cloud",
+    "GPU Cluster",
+    "HPC",
+    "CUDA",
+    "InfiniBand",
+    "RoCE v2",
+    "Lustre",
+    "BeeGFS",
+    "GPFS",
+    "Ansible",
+    "Terraform",
+    "NVLink",
+    "GPU Direct RDMA",
+    "Distributed Systems"
+  ],
+  "caveats": [
+    "Principal Engineer等級のみeligible。採用等級・最終提示額は経験・スキルによる。",
+    "Senior Engineer等級の基本年収下限は7,619,100円で800万円未満。",
+    "3040_インフラエンジニア・プラットフォーム開発（既存JOB-TURING-PRINCIPAL-ML-PLATFORM-GPU）とは別の公式求人コード3041・URL。3041は物理GPUクラスタ／ネットワーク／ストレージ構築が中心、3040はML Platform/SRE・クラスタ運用自動化が中心。職務領域は重複するため応募時には実際の配属差を確認。",
+    "リモート勤務の明記なし。勤務地は東京・平和島。"
+  ],
+  "verification": "2026-10-28 公式HERPのTuring求人一覧と3041求人を確認。正社員、日本勤務、Principal等級の給与内訳、固定残業40時間、GPUクラスタ業務・技術を確認。",
+  "sources": [
+    "https://herp.careers/v1/turing/4PjoWt5IWD5V",
+    "https://herp.careers/v1/turing/requisition-groups/c30c8a52-1a83-41de-b18d-8b03691043c2"
+  ]
+}

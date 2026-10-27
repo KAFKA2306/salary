@@ -10,7 +10,7 @@
     ]
   },
   "summary": {
-    "eligible_count": 15,
+    "eligible_count": 16,
     "rejected_count": 3,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
@@ -360,6 +360,33 @@
     },
     {
       "rank": 12,
+      "job_id": "JOB-TURING-PRINCIPAL-GPU-CLUSTER-INFRA",
+      "company_name": "Turing株式会社",
+      "title": "プリンシパルエンジニア（GPUクラスタ構築・インフラ）",
+      "score": 84,
+      "base_salary_min_jpy": 11428560,
+      "base_salary_max_jpy": 15238116,
+      "total_salary_min_jpy": 15000000,
+      "fixed_overtime_annual_jpy": 3571440,
+      "fixed_overtime_hours": 40,
+      "remote_mode": "onsite",
+      "location": "Tokyo (Heiwajima)",
+      "source_url": "https://herp.careers/v1/turing/4PjoWt5IWD5V",
+      "ownership_scope": "internal_data_platform",
+      "data_platform_depth": 5,
+      "implementation_ratio": 4,
+      "ai_production": 5,
+      "cross_company_scope": 4,
+      "career_fit": 4,
+      "manufacturing_bridge": 5,
+      "technical_ownership": 5,
+      "workstyle_fit": 2,
+      "short_term_sales_kpi": false,
+      "management_heavy": false,
+      "exit_entries": []
+    },
+    {
+      "rank": 13,
       "job_id": "JOB-FINDY-AI-DATA-STRATEGY-LEAD",
       "company_name": "ファインディ",
       "title": "シニアテックリード_AI & Data Strategy",
@@ -386,7 +413,7 @@
       "exit_entries": []
     },
     {
-      "rank": 13,
+      "rank": 14,
       "job_id": "JOB-PAYPAYCARD-DSLEAD",
       "company_name": "PayPayカード",
       "title": "データサイエンティスト/リーダー候補（ビジネスグロース領域）",
@@ -413,7 +440,7 @@
       "exit_entries": []
     },
     {
-      "rank": 14,
+      "rank": 15,
       "job_id": "JOB-LEGALON-SDAE",
       "company_name": "LegalOn Technologies",
       "title": "Senior Data Analytics Engineer",
@@ -440,7 +467,7 @@
       "exit_entries": []
     },
     {
-      "rank": 15,
+      "rank": 16,
       "job_id": "JOB-MUFG-EMUTTO-AI-STRATEGY-LEAD",
       "company_name": "三菱UFJエムット銀行",
       "title": "AI戦略推進 / リードメンバー",
