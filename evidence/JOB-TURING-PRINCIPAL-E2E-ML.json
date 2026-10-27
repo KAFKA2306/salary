@@ -1,0 +1,59 @@
+{
+  "evidence_id": "EVID-TURING-PRINCIPAL-E2E-ML-20261028",
+  "job_id": "JOB-TURING-PRINCIPAL-E2E-ML",
+  "observed_at": "2026-10-28",
+  "listing_status": "open_on_official_careers_index",
+  "job_url": "https://herp.careers/v1/turing/oMZZ-LyQ683f",
+  "compensation_source_url": "https://herp.careers/v1/turing/oMZZ-LyQ683f",
+  "employment_type": "正社員",
+  "compensation_scope": "公式2010_MLエンジニア / Machine Learning Engineer（End-to-End自動運転モデル開発）のEngineer、Senior Engineer、Principal Engineerの3等級のうち、eligibleはPrincipal Engineer等級のみ。",
+  "compensation": {
+    "annual_salary_min_jpy": 15000000,
+    "annual_salary_max_jpy": 20000000,
+    "monthly_total_min_jpy": 1250000,
+    "monthly_base_min_jpy": 952380,
+    "monthly_base_max_jpy": 1269843,
+    "base_salary_min_jpy": 11428560,
+    "base_salary_max_jpy": 15238116,
+    "monthly_fixed_overtime_min_jpy": 297620,
+    "monthly_fixed_overtime_max_jpy": 396827,
+    "fixed_overtime_annual_jpy": 3571440,
+    "fixed_overtime_hours": 40,
+    "notes": "Principal基本給952,380円/月×12=11,428,560円。みなし残業297,620円/月×12=3,571,440円を除外。Senior基本給下限634,925円/月×12=7,619,100円は対象外。"
+  },
+  "workstyle": "東京都大田区平和島6-1-1、東京流通センター。フレックス（コア11:00〜15:00）。公式求人にリモート可の記載なし。",
+  "ownership": "自社End-to-End自動運転モデルの実装、データ収集方針、データセット作成・品質改善、オートラベリング、カメラ・センサーキャリブレーション、学習アルゴリズム実装・高速化、実車での評価・実験管理。",
+  "ownership_scope": "own_product",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "自社の自動運転AIモデルの開発職。外部顧客伴走・導入支援・受託・コンサル・商談主体の記述なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "Python",
+    "PyTorch",
+    "OpenCV",
+    "MMDetection",
+    "ONNX",
+    "TensorRT",
+    "Slurm",
+    "AWS",
+    "Databricks",
+    "Jetson",
+    "Linux",
+    "Computer Vision",
+    "E2E Autonomous Driving",
+    "MLOps"
+  ],
+  "caveats": [
+    "Principal Engineer等級のみeligible。採用等級・最終提示額は選考で決定。",
+    "Senior Engineer等級の基本年収下限7,619,100円は800万円未満。",
+    "公式職種名は2010_MLエンジニア / Machine Learning Engineer（End-to-End自動運転モデル開発）。",
+    "東京・平和島オフィス勤務。リモート可の明記なし。",
+    "既存2015_世界モデル／動画生成ML職や3011_ML Systems職とは別URL・別業務。"
+  ],
+  "verification": "2026-10-28 公式HERPのTuring求人一覧『a. MLエンジニア』に掲載中であること、公式2010求人の正社員、日本勤務、3等級の給与内訳、職務、技術を確認。",
+  "sources": [
+    "https://herp.careers/v1/turing/oMZZ-LyQ683f",
+    "https://herp.careers/v1/turing/requisition-groups/c6d6bb6b-90ba-4357-af82-e1d06a22df4f"
+  ]
+}
