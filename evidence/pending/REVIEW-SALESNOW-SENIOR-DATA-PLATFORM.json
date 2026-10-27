@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-27",
+  "job_id": "REVIEW-SALESNOW-SENIOR-DATA-PLATFORM",
+  "company_name": "株式会社SalesNow",
+  "title": "シニアデータエンジニア",
+  "official_job_url": "https://herp.careers/v1/salesnow0801/01995ac5-ac6f-7551-b377-c36958a44a36",
+  "listing_status": "open_on_official_careers_page",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人の年収レンジは800万〜1,500万円。基本給、固定残業代の有無・金額、保証賞与額が明示されていない。総年収を基本年収とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都渋谷区桜丘町1-4 渋谷サクラステージSHIBUYAタワー7F（フルリモート可、日本国内。東京近郊は月1回出社推奨、地方は年1〜2回全社イベント）",
+  "workstyle": "フルリモート、フルフレックスタイム制（コアタイムなし）、正社員",
+  "responsibilities": [
+    "自社企業データ基盤（80億レコード）のアーキテクチャ設計・運用、収集・名寄せ・品質管理",
+    "Databricks/Sparkのデータ処理、Airflowパイプライン、OpenSearchの検索基盤を設計・改善",
+    "LLMによるデータ品質判定、技術選定、レビュー・メンタリング"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "Scala",
+    "AWS",
+    "GCP",
+    "Databricks",
+    "Apache Spark",
+    "Delta Lake",
+    "Airflow",
+    "PostgreSQL",
+    "Elasticsearch",
+    "OpenSearch",
+    "Terraform",
+    "Amazon Bedrock",
+    "Azure OpenAI"
+  ],
+  "scope_note": "企業全体には営業コンサルティング・顧客向けデータ基盤構築・営業BPOがあるが、この求人は開発(Product)の自社データ基盤技術リード。顧客窓口はコンサルタントとアカウントマネジメント担当で、求人の主業務は基盤設計・実装と記載。",
+  "review_reason": "公式年収下限800万円のうち、固定残業代・諸手当・賞与を除く基本年収下限が確認できないためeligibleにしない。",
+  "next_verification": [
+    "年収800万円時の月額基本給、固定残業代の有無・時間・金額、賞与の保証額",
+    "データチームに外部顧客向け受託・導入支援・コンサルが主務として割り当てられないことの継続確認"
+  ],
+  "sources": [
+    "https://herp.careers/v1/salesnow0801/01995ac5-ac6f-7551-b377-c36958a44a36"
+  ]
+}
