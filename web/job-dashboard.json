@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
-    "review_count": 32
+    "review_count": 33
   },
   "eligible": [
     {
@@ -820,6 +820,26 @@
       "remote_mode": "remote",
       "location": "Tokyo",
       "source_url": "https://herp.careers/v1/kakehashiinc/019bd552-7b13-700c-ba08-4bed3228f0b6",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-KAKEHASHI-GENAI-ML-ENGINEER",
+      "company_name": "株式会社カケハシ",
+      "title": "【生成AI】機械学習エンジニア",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "hybrid",
+      "location": "Tokyo (Minato/Nishishimbashi)",
+      "source_url": "https://herp.careers/v1/kakehashiinc/019bd552-8092-700c-ba0c-02c73fd1a664",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
