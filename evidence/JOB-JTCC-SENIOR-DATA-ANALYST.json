@@ -1,0 +1,56 @@
+{
+  "evidence_id": "EVID-JTCC-SENIOR-DATA-ANALYST-20261028",
+  "job_id": "JOB-JTCC-SENIOR-DATA-ANALYST",
+  "observed_at": "2026-10-28",
+  "listing_status": "open_on_official_careers_index",
+  "company_name": "株式会社日本トレカセンター",
+  "official_title": "〖正社員〗シニアデータアナリスト",
+  "job_url": "https://herp.careers/v1/jtcc/jN5z48AuOjAn",
+  "compensation_source_url": "https://herp.careers/v1/jtcc/jN5z48AuOjAn",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 13000000,
+    "annual_salary_max_jpy": 21000000,
+    "monthly_total_min_jpy": 1083333,
+    "monthly_total_max_jpy": 1750000,
+    "monthly_base_min_jpy": 877637,
+    "monthly_base_max_jpy": 1417722,
+    "base_salary_min_jpy": 10531644,
+    "base_salary_max_jpy": 17012664,
+    "monthly_fixed_overtime_min_jpy": 205696,
+    "monthly_fixed_overtime_max_jpy": 332278,
+    "fixed_overtime_annual_jpy": 2468352,
+    "fixed_overtime_hours": 30,
+    "notes": "企業公式HERP /v1/jtcc の月額基本給877,637円×12=10,531,644円。固定残業代205,696円×12=2,468,352円を除外。月給合計1,083,333円、端数のため年収表記13,000,000円と月額×12に4円差。賞与は基本給に算入しない。"
+  },
+  "workstyle": "東京本社（東京都中央区日本橋大伝馬町13-7）。原則出社。9:30〜18:30。HERP企業求人ページに一部リモート可と表示されるが、企業公式/v1/jtccの就業条件は原則出社を優先。",
+  "ownership": "社内BI/アナリティクス機能の立ち上げ、SQL/BigQueryによる分析、データモデル・指標・ダッシュボードの設計実装、AI協働のETL・レポート自動化、施策評価の仕組み化。",
+  "ownership_scope": "internal_data_platform",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "社内のPM・グロース・営業・オペレーション・経営との分析連携が中心。外部顧客への導入支援・コンサル・受託・商談主体の記載なし。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "stack": [
+    "SQL",
+    "BigQuery",
+    "BI",
+    "ETL",
+    "Data Modeling",
+    "Claude",
+    "ChatGPT",
+    "MCP tools",
+    "dbt (preferred)"
+  ],
+  "caveats": [
+    "企業公式/v1/jtccの基本給877,637円・固定残業代205,696円を採用。HERPキャリア横断掲載では基本給890,500円・固定残業代192,833円と異なるため、求人元の最新企業ページを優先。両者とも総月額1,083,333円であり、基本年収下限800万円判定は変わらない。",
+    "分析・レポーティング・社内事業部門との協働の比重が高い。MLOps/AIモデルの本番運用を主務とする求人ではない。",
+    "原則東京オフィス出社。dbtは歓迎経験であり必須の現行技術スタックと断定しない。",
+    "短期KPIをモニタリングするが、本人が外部顧客向け営業目標を負うとは記載されていない。"
+  ],
+  "verification": "2026-10-28 企業公式HERP求人一覧で掲載継続、企業公式求人で正社員、月額基本給・固定残業30時間、社内分析業務、勤務地、技術を確認。",
+  "sources": [
+    "https://herp.careers/v1/jtcc/jN5z48AuOjAn",
+    "https://herp.careers/v1/jtcc",
+    "https://herp.careers/careers/companies/jtcc/jobs/jN5z48AuOjAn"
+  ]
+}
