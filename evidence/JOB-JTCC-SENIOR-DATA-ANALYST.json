@@ -7,7 +7,7 @@
   "official_title": "〖正社員〗シニアデータアナリスト",
   "job_url": "https://herp.careers/v1/jtcc/jN5z48AuOjAn",
   "compensation_source_url": "https://herp.careers/v1/jtcc/jN5z48AuOjAn",
-  "employment_type": "正社員",
+  "employment_type": "業務委託契約から開始（正社員登用は未保証）",
   "compensation": {
     "annual_salary_min_jpy": 13000000,
     "annual_salary_max_jpy": 21000000,
@@ -23,7 +23,7 @@
     "fixed_overtime_hours": 30,
     "notes": "企業公式HERP /v1/jtcc の月額基本給877,637円×12=10,531,644円。固定残業代205,696円×12=2,468,352円を除外。月給合計1,083,333円、端数のため年収表記13,000,000円と月額×12に4円差。賞与は基本給に算入しない。"
   },
-  "workstyle": "東京本社（東京都中央区日本橋大伝馬町13-7）。原則出社。9:30〜18:30。HERP企業求人ページに一部リモート可と表示されるが、企業公式/v1/jtccの就業条件は原則出社を優先。",
+  "workstyle": "企業公式/v1/jtccは業務委託期間の作業場所を東京都千代田区と明記。原則出社。9:30〜18:30は正社員時の勤務条件。HERP横断ページには東京本社・一部リモート可の表示あり。",
   "ownership": "社内BI/アナリティクス機能の立ち上げ、SQL/BigQueryによる分析、データモデル・指標・ダッシュボードの設計実装、AI協働のETL・レポート自動化、施策評価の仕組み化。",
   "ownership_scope": "internal_data_platform",
   "customer_facing_primary": false,
@@ -42,15 +42,25 @@
     "dbt (preferred)"
   ],
   "caveats": [
+    "2026-10-28企業公式/v1/jtcc求人本文の冒頭・中段に「原則業務委託契約から参画、正社員移行は双方合意で検討、登用は約束しない」と明記。見出し・雇用形態欄の「正社員」より契約開始条件を優先し、正社員限定ゲートでFAILに変更。",
     "企業公式/v1/jtccの基本給877,637円・固定残業代205,696円を採用。HERPキャリア横断掲載では基本給890,500円・固定残業代192,833円と異なるため、求人元の最新企業ページを優先。両者とも総月額1,083,333円であり、基本年収下限800万円判定は変わらない。",
     "分析・レポーティング・社内事業部門との協働の比重が高い。MLOps/AIモデルの本番運用を主務とする求人ではない。",
     "原則東京オフィス出社。dbtは歓迎経験であり必須の現行技術スタックと断定しない。",
     "短期KPIをモニタリングするが、本人が外部顧客向け営業目標を負うとは記載されていない。"
   ],
-  "verification": "2026-10-28 企業公式HERP求人一覧で掲載継続、企業公式求人で正社員、月額基本給・固定残業30時間、社内分析業務、勤務地、技術を確認。",
+  "verification": "2026-10-28企業公式/v1/jtcc求人を再確認。掲載中。冒頭・中段に業務委託開始、正社員登用非保証、3か月契約・月額162万円以上（税別）の記載を確認。従前の正社員確定判定を撤回。給与内訳は正社員移行時の提示額として維持し、業務委託報酬と混同しない。",
   "sources": [
     "https://herp.careers/v1/jtcc/jN5z48AuOjAn",
     "https://herp.careers/v1/jtcc",
     "https://herp.careers/careers/companies/jtcc/jobs/jN5z48AuOjAn"
-  ]
+  ],
+  "effective_initial_employment_type": "contract",
+  "official_job_header_employment_type": "正社員",
+  "contract_to_permanent_terms": {
+    "initial_contract": "準委任・3か月（以後更新または正社員登用を検討）",
+    "conversion_guaranteed": false,
+    "monthly_contract_fee_min_jpy_ex_tax": 1620000,
+    "monthly_hours": "140〜180時間",
+    "official_source": "https://herp.careers/v1/jtcc/jN5z48AuOjAn"
+  }
 }
