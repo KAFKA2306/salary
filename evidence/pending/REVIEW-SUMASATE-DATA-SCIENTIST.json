@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-29",
+  "job_id": "REVIEW-SUMASATE-DATA-SCIENTIST",
+  "company_name": "スマサテ株式会社",
+  "title": "Data Scientist（データサイエンティスト）",
+  "official_job_url": "https://herp.careers/v1/sumasate/smhV8CTU7Si4",
+  "listing_status": "open_on_employer_HERP_page_2026-10-29",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 45,
+    "notes": "公式求人は年収800万〜1500万円、月45時間分のみなし残業代込み。基本給・固定残業代の月額内訳が非公開。総年収下限800万円を基本年収として扱わない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass",
+    "outsourcing": "pass",
+    "consulting": "pass",
+    "base_salary_excluding_fixed_overtime": "unverified"
+  },
+  "location": "東京都品川区上大崎3-3-1 自転車総合ビル8F（目黒）",
+  "workstyle": "正社員、フルフレックス。原則月曜日出社、火〜金はリモート可。試用期間3か月。",
+  "responsibilities": [
+    "自社AI SaaSの賃料査定・価格・利回り予測モデルの設計・開発・本番実装",
+    "画像認識・OCR・シミュレーションのアルゴリズム開発",
+    "FastAPIによる推論API実装、モデル精度監視・最適化",
+    "将来計画としてMLOps/LLMOps基盤の立ち上げ（既存実装と混同しない）"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "TypeScript",
+    "PyTorch",
+    "scikit-learn",
+    "Hugging Face Transformers",
+    "FastAPI",
+    "MySQL",
+    "ClickHouse",
+    "AWS",
+    "Google Cloud",
+    "Docker",
+    "GitHub Actions"
+  ],
+  "scope_note": "求人は自社SaaSのモデル設計・API実装が中心。外部顧客伴走・受託・コンサル・商談・導入支援が主務との記載なし。",
+  "review_reason": "公式年収下限800万円は固定残業45時間分込み。基本給・固定残業代の金額が非公開で、基本年収800万円以上を証明できない。",
+  "next_verification": [
+    "月額基本給下限と月45時間の固定残業代の金額",
+    "賞与・諸手当が年収レンジに含まれるか",
+    "求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/v1/sumasate/smhV8CTU7Si4",
+    "https://herp.careers/careers/companies/sumasate/jobs/smhV8CTU7Si4"
+  ]
+}

@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 10,
-    "review_count": 37
+    "review_count": 38
   },
   "eligible": [
     {
@@ -1174,6 +1174,26 @@
       "remote_mode": "hybrid",
       "location": "Tokyo (Ichigaya)",
       "source_url": "https://herp.careers/v1/stract/V2V2b5xnp-ZO",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-SUMASATE-DATA-SCIENTIST",
+      "company_name": "スマサテ株式会社",
+      "title": "Data Scientist（データサイエンティスト）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 45,
+      "remote_mode": "hybrid",
+      "location": "Tokyo (Shinagawa/Meguro)",
+      "source_url": "https://herp.careers/v1/sumasate/smhV8CTU7Si4",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
