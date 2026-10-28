@@ -1,0 +1,63 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-29",
+  "job_id": "REVIEW-LEGALSCAPE-AI-ENGINEER",
+  "company_name": "株式会社Legalscape",
+  "title": "【Pd】AIエンジニア",
+  "official_job_url": "https://herp.careers/v1/legalscape14/qktV4G2LIpih",
+  "listing_status": "open_on_employer_HERP_page_2026-10-29",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年収800万〜1500万円、SOあり、賞与は支給する場合あり。月額基本給、固定残業代の有無・金額、年収に含まれる賞与・手当内訳は明記なし。総年収下限を基本年収下限と認定しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_own_legal_ai_product",
+    "customer_facing_primary": "pass_product_implementation_primary",
+    "outsourcing": "pass_no_customer_delivery_primary_in_role",
+    "consulting": "pass_no_consulting_primary_in_role",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都文京区向丘2-3-10 東大前HiRAKU GATE 8階",
+  "workstyle": "正社員。フルフレックス。週1〜2回出社・週3〜4回リモートを基本とするハイブリッド勤務。試用期間6か月。",
+  "responsibilities": [
+    "自社法務AIプロダクトにLLM・検索・独自法情報データを組み合わせたRAGとAIエージェントを設計・実装・最適化",
+    "AI機能の精度・品質を定量評価する評価基盤を構築・改善",
+    "PdM・弁護士等のドメイン専門家と連携し、プロダクト機能の検証・実装を進める"
+  ],
+  "stack": [
+    "Python",
+    "TypeScript",
+    "Google Cloud",
+    "Microsoft Azure",
+    "GPT",
+    "Gemini",
+    "Claude",
+    "LangSmith",
+    "LangChain",
+    "LangGraph",
+    "Transformers",
+    "Elasticsearch",
+    "Pinecone",
+    "GitHub"
+  ],
+  "scope_note": "公式職務記述は自社AIリサーチプラットフォームの設計・実装・評価が中心。外部顧客へのコンサル・導入支援・受託開発が主務との記載なし。企業顧客向けの自社SaaSであることと外部顧客伴走を混同しない。",
+  "review_reason": "公式年収下限800万円は確認できるが、基本給・固定残業代・賞与の内訳が公式にないため、基本年収下限800万円以上を証明できない。",
+  "next_verification": [
+    "月額基本給下限と固定残業代の有無・金額",
+    "賞与が年収レンジに含まれるか、下限時の保証額",
+    "自社プロダクト実装と外部顧客支援の業務比率",
+    "求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/v1/legalscape14/qktV4G2LIpih",
+    "https://herp.careers/careers/companies/legalscape14/jobs/qktV4G2LIpih"
+  ]
+}
