@@ -1,0 +1,55 @@
+{
+  "evidence_id": "EVID-THINCA-LLM-ML-ENGINEER-20261029",
+  "job_id": "JOB-THINCA-LLM-ML-ENGINEER",
+  "observed_at": "2026-10-29",
+  "job_url": "https://herp.careers/v1/thinca/vlgjvxZgRKgg",
+  "compensation_source_url": "https://herp.careers/v1/thinca/vlgjvxZgRKgg",
+  "listing_status": "open_on_employer_HERP_page_2026-10-29",
+  "employment_type": "正社員",
+  "compensation": {
+    "annual_salary_min_jpy": 10000000,
+    "annual_salary_max_jpy": null,
+    "monthly_total_min_jpy": 833000,
+    "monthly_base_min_jpy": 720025,
+    "monthly_base_max_jpy": null,
+    "base_salary_min_jpy": 8640300,
+    "base_salary_max_jpy": null,
+    "monthly_fixed_overtime_min_jpy": 112975,
+    "fixed_overtime_annual_jpy": 1355700,
+    "fixed_overtime_hours": 20,
+    "bonus": "公式求人に賞与の記載なし。基本年収計算に賞与は算入しない。",
+    "notes": "公式の基本給下限720,025円/月×12=8,640,300円/年。固定残業手当112,975円/月×12=1,355,700円/年を基本年収に算入しない。月給合計833,000円×12=9,996,000円と公表想定年収1,000万円以上の差4,000円は求人の丸めと扱い、基本給の算定値を優先する。"
+  },
+  "workstyle": "東京・大阪・福岡の希望拠点、転勤なし。週3日以上出社のハイブリッド勤務、原則9:00〜18:00、出社時フレックス可。試用期間3か月（条件変更なし）。",
+  "ownership": "自社のコミュニケーションデータを用いた独自LLM・自社AIプロダクトの学習基盤、事前学習、分散学習、データパイプライン、評価・ファインチューニングの設計・実装。",
+  "ownership_scope": "own_product",
+  "customer_facing_primary": false,
+  "customer_facing_basis": "求人の主務は自社LLMアーキテクチャ・分散学習・データパイプラインの実装。クライアント対応部署との連携は勤務時間の説明にあるが、顧客伴走・受託・導入支援・商談が職務の主体との記載はない。",
+  "outsourcing_primary": false,
+  "consulting_primary": false,
+  "responsibilities": [
+    "自社LLMのアーキテクチャ設計、GPUクラスタでの事前学習実行・管理",
+    "DeepSpeed/Megatron-LM/FSDP等による分散学習の効率化、CUDA最適化",
+    "テラバイト規模の学習データのフィルタリング、トークナイズ、クリーニング",
+    "モデル評価、ファインチューニング、SFT/RLHFによる品質改善"
+  ],
+  "stack": [
+    "Python",
+    "PyTorch",
+    "TensorFlow",
+    "Transformer",
+    "CUDA",
+    "DeepSpeed",
+    "Megatron-LM",
+    "FSDP",
+    "distributed GPU training",
+    "data pipelines",
+    "SFT",
+    "RLHF"
+  ],
+  "verification": "2026-10-29 企業公式HERP求人およびHERP Career掲載の給与内訳・雇用形態・職務・勤務地を確認。求人最終更新2026-08-19。",
+  "sources": [
+    "https://herp.careers/v1/thinca/vlgjvxZgRKgg",
+    "https://herp.careers/careers/companies/thinca/jobs/vlgjvxZgRKgg"
+  ]
+}
