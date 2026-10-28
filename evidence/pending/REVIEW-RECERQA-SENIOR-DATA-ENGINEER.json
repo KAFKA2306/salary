@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-RECERQA-SENIOR-DATA-ENGINEER",
+  "company_name": "株式会社リチェルカ",
+  "title": "ProductDiv.（正社員）：シニアデータエンジニア",
+  "official_job_url": "https://herp.careers/v1/recerqa/4ef6dN6BO8dx",
+  "listing_status": "open_on_employer_HERP_recruitment_page_2026-10-28",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 45,
+    "notes": "企業公式HERP求人は想定年収800万〜1500万円、月45時間の固定残業代制と超過分別途支給を明記。月額基本給・固定残業代の金額、保証賞与内訳は非掲載。総額下限800万円を基本給下限と誤認しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_based_on_primary_responsibilities",
+    "outsourcing": "pass_based_on_primary_responsibilities",
+    "consulting": "pass_based_on_primary_responsibilities",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区芝浦4-11-17 中野スプリングビル6F（田町駅徒歩6分）",
+  "workstyle": "基本出社。10:00〜19:00、試用期間6ヶ月。正社員は期間の定めなし。",
+  "responsibilities": [
+    "自社Agentic ERP『RECERQA』の受発注データ基盤のアーキテクチャ設計・構築・運用",
+    "生成AIを活用するデータパイプライン（ETL/ELT）の設計・実装",
+    "データ品質の管理・モニタリング体制の構築"
+  ],
+  "stack": [
+    "Python",
+    "SQL",
+    "BigQuery",
+    "Redshift",
+    "Snowflake",
+    "dbt",
+    "Airflow",
+    "Prefect",
+    "Dagster",
+    "AWS",
+    "Docker",
+    "Terraform",
+    "Datadog"
+  ],
+  "stack_note": "公式求人では想定技術領域と記載。全ツールの現行導入を保証しない。",
+  "scope_note": "自社プロダクトのデータ基盤構築が主務。顧客・社内関係者との協働経験は必須だが、外部顧客への導入支援・受託・コンサルを主業務とする記載はない。",
+  "review_reason": "想定年収の下限800万円は45時間分の固定残業代を含む。基本年収下限800万円以上を公式情報から確認できないためeligibleへ昇格しない。",
+  "next_verification": [
+    "下限等級の月額基本給と固定残業代額、賞与・手当の保証条件",
+    "外部顧客導入支援が主務に含まれないことの継続確認"
+  ],
+  "sources": [
+    "https://herp.careers/v1/recerqa/4ef6dN6BO8dx",
+    "https://herp.careers/careers/companies/recerqa/jobs/4ef6dN6BO8dx"
+  ]
+}
