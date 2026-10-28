@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 10,
-    "review_count": 36
+    "review_count": 37
   },
   "eligible": [
     {
@@ -729,6 +729,29 @@
         "固定残業代を除く基本年収下限",
         "給与内訳の一次情報",
         "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-FINATEXT-AI-FULL-CYCLE",
+      "company_name": "株式会社ナウキャスト（Finatextグループ）",
+      "title": "AIフルサイクルエンジニア",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 9000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 40,
+      "remote_mode": "full_remote",
+      "location": "Japan (full remote; Tokyo office)",
+      "source_url": "https://herp.careers/careers/companies/finatexthd/jobs/8WJ5JIB97QCB",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "外部顧客伴走が主業務でないこと",
+        "受託開発ではないこと",
+        "コンサル業務が主業務でないこと",
+        "配属先・求人条件の検証完了"
       ],
       "exit_entries": []
     },

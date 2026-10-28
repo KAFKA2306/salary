@@ -1,0 +1,60 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-29",
+  "job_id": "REVIEW-FINATEXT-AI-FULL-CYCLE",
+  "company_name": "株式会社ナウキャスト（Finatextグループ）",
+  "title": "AIフルサイクルエンジニア",
+  "official_job_url": "https://herp.careers/careers/companies/finatexthd/jobs/8WJ5JIB97QCB",
+  "listing_status": "open_on_employer_HERP_Career_page_2026-10-29",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product_or_data_ai_solution_assignment_pending",
+  "known_compensation": {
+    "annual_total_min_jpy": 9000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 40,
+    "notes": "公式求人の想定年収は900万〜1500万円。固定残業40時間を含むが、月額基本給・固定残業手当額・賞与内訳は未記載。総年収900万円を基本年収として扱わない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pending_assignment_between_own_data_ai_products_and_customer_solution",
+    "customer_facing_primary": "unverified",
+    "outsourcing": "unverified_by_assignment",
+    "consulting": "unverified_by_assignment",
+    "base_salary_excluding_fixed_overtime": "unverified"
+  },
+  "location": "東京都千代田区九段北1-8-10（東京本社）、国内フルリモート可",
+  "workstyle": "正社員、フルリモート可。固定みなし時間制等、みなし8時間、固定残業40時間を含む。配属先は経験・希望により決定。",
+  "responsibilities": [
+    "Financial Research: 決算・オルタナティブデータのLLM抽出、ETL・AI-readyデータ基盤の設計・実装",
+    "Data AI Service: 不動産向け自社AIプロダクトの実装、データパイプライン、LLMOps・品質監視",
+    "Data AI Solution: MCPass/Finstage Coworkなど自社基盤と顧客向け生成AIソリューションの開発（顧客案件主体となる可能性あり）"
+  ],
+  "stack": [
+    "Python",
+    "dbt",
+    "Airflow",
+    "Snowflake",
+    "Redshift",
+    "Terraform",
+    "Vue.js",
+    "React",
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "OpenAI",
+    "LLMOps",
+    "MCP"
+  ],
+  "scope_note": "公式求人は複数ユニット配属を前提とし、Financial ResearchとData AI Serviceは自社データ・プロダクト実装が明確。一方、Data AI Solutionは外部顧客への個別開発・導入支援が含まれ得る。顧客伴走・受託・コンサル主体ではない配属を公式情報で確定できるまでeligibleにしない。",
+  "review_reason": "想定年収下限900万円に固定残業40時間分が含まれるが内訳が非公開。基本年収下限800万円以上を証明できず、配属による外部顧客業務比率も未確定。",
+  "next_verification": [
+    "月額基本給下限、固定残業手当の月額、賞与内訳の公式情報",
+    "自社データ・AIプロダクトの実装主体となる配属先と外部顧客対応比率",
+    "求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/finatexthd/jobs/8WJ5JIB97QCB"
+  ]
+}
