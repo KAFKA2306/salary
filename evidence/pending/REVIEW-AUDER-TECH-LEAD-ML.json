@@ -1,0 +1,58 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-AUDER-TECH-LEAD-ML",
+  "company_name": "AUDER株式会社",
+  "title": "Tech Lead, Machine Learning",
+  "official_job_url": "https://herp.careers/v1/auder/fhYRGCSIWmY4",
+  "listing_status": "open_on_employer_HERP_recruitment_page_2026-10-28",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年俸制1000万〜1500万円と記載。月額基本給、固定残業代の有無・金額は非掲載。年俸額全額を固定残業代除外後の基本年収とは認定しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_own_saas_ml_product",
+    "customer_facing_primary": "pass_own_product_implementation",
+    "outsourcing": "pass_own_product",
+    "consulting": "pass_role_primary_own_product_despite_company_consulting_business",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区虎ノ門二丁目2番1号 住友不動産虎ノ門タワー17階 Room9",
+  "workstyle": "本社勤務、週2日まで在宅可。フレックスタイム制（コア10:00〜16:00）、試用期間3か月。",
+  "responsibilities": [
+    "自社物流SaaSの機械学習・データプロダクトの設計・実装、モデル開発・推論運用",
+    "MLパイプライン/データパイプラインの自動テスト、品質・ドリフト監視、前処理・推論最適化",
+    "技術選定、Feature Store/オンライン推論/モニタリングのアーキテクチャ設計、コードレビュー"
+  ],
+  "stack": [
+    "Python",
+    "LLM",
+    "Feature Store",
+    "Feast",
+    "MLflow",
+    "Airflow",
+    "ML pipelines",
+    "Cloud ML systems",
+    "Online/Batch Inference"
+  ],
+  "scope_note": "企業にはコンサルティング事業もあるが、当該職種の主業務は自社SaaSのML実装。顧客業務の理解・現場訪問の可能性はあるため、主業務の外部顧客伴走化がないか継続確認。",
+  "review_reason": "年俸制1000万円以上でも固定残業代の有無・金額と基本給内訳が公式に記載されず、固定残業代除外後の基本年収下限800万円以上を確認できない。",
+  "next_verification": [
+    "年俸下限1000万円に含まれる固定残業代の有無・時間・金額",
+    "固定残業代を除く最低保証基本年収",
+    "自社SaaS実装と顧客別導入支援・コンサルの職務比率",
+    "求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/v1/auder/fhYRGCSIWmY4",
+    "https://herp.careers/v1/auder"
+  ]
+}
