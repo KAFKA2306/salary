@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
-    "review_count": 30
+    "review_count": 31
   },
   "eligible": [
     {
@@ -1123,6 +1123,26 @@
       "remote_mode": "full_remote",
       "location": "Tokyo",
       "source_url": "https://hrmos.co/pages/timee/jobs/16822514041183191753",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-TRIAL-FINANCE-DATA-PLATFORM-LEAD",
+      "company_name": "株式会社トライアルテクノロジー",
+      "title": "Finance_リードエンジニア（会計データ基盤刷新）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": null,
+      "location": "Tokyo (Minato/Tamachi)",
+      "source_url": "https://herp.careers/v1/rai20181101/lGFux42f_s9E",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
