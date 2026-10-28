@@ -1,0 +1,61 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-29",
+  "job_id": "REVIEW-XICA-AI-PLATFORM-SRE",
+  "company_name": "株式会社サイカ",
+  "title": "シニアソフトウェアエンジニア（SRE / Platform Engineering）",
+  "official_job_url": "https://herp.careers/careers/companies/xica/jobs/hSgNDeH1M9fb",
+  "listing_status": "listed_on_HERP_Career_2026-10-29_employer_direct_posting_not_confirmed",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_ai",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": 30,
+    "notes": "HERP Career求人に年俸1000万〜1500万円、12分割、固定残業30時間超過分は別途支給と記載。基本給と固定残業手当の月額内訳は不明。業績賞与の有無・下限保証への算入も未確定。総年収を基本年収として扱わない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_internal_ai_agent_platform_and_own_product",
+    "customer_facing_primary": "pass_internal_developer_platform_primary",
+    "outsourcing": "pass_no_customer_delivery_primary_in_role",
+    "consulting": "pass_role_is_internal_platform_not_consulting",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_employer_direct_posting": "unverified"
+  },
+  "location": "東京都港区六本木3-1-1 六本木ティーキューブ14F",
+  "workstyle": "正社員、フレックス、リモート週2〜4日程度（部門による）。試用期間3か月。",
+  "responsibilities": [
+    "AIエージェント・LLMアプリケーションの共通評価基盤・開発運用基盤を設計・実装",
+    "社内開発チーム向けCI/CD、Kubernetes/ECS、IaC、可観測性、SLI/SLO、インシデント対応を改善",
+    "開発者ポータルや内部ツールを整備し、AI/MLワークロードと社内プラットフォームの信頼性を高める"
+  ],
+  "stack": [
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "Kubernetes",
+    "ECS",
+    "Terraform",
+    "AWS CDK",
+    "CI/CD",
+    "SLI/SLO",
+    "Observability",
+    "AI agents",
+    "LLM",
+    "ML pipelines"
+  ],
+  "scope_note": "会社全体にはデータサイエンス・コンサルティング事業があるが、本職の主務は社内開発者基盤と自社AIプロダクトの信頼性・評価基盤。求人に顧客障害時の連携経験要件はあるため、外部顧客対応が主務に変わらないことを継続確認する。",
+  "review_reason": "年収下限1000万円は確認できるが、固定残業30時間分を除く月額基本給が未記載で、基本年収下限800万円以上を証明できない。HERP Career掲載は確認したが、企業直営応募ページの掲載継続は未確認。",
+  "next_verification": [
+    "月額基本給下限と固定残業30時間分の金額",
+    "年俸と業績賞与の内訳・保証額",
+    "企業直営採用ページの掲載状態",
+    "自社基盤開発と外部顧客対応の業務比率"
+  ],
+  "sources": [
+    "https://herp.careers/careers/companies/xica/jobs/hSgNDeH1M9fb"
+  ]
+}

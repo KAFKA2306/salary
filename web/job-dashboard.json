@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 10,
-    "review_count": 39
+    "review_count": 40
   },
   "eligible": [
     {
@@ -1422,6 +1422,26 @@
         "外部顧客伴走が主業務でないこと",
         "受託開発ではないこと",
         "コンサル業務が主業務でないこと",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-XICA-AI-PLATFORM-SRE",
+      "company_name": "株式会社サイカ",
+      "title": "シニアソフトウェアエンジニア（SRE / Platform Engineering）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 10000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": 30,
+      "remote_mode": "hybrid",
+      "location": "Tokyo (Minato/Roppongi)",
+      "source_url": "https://herp.careers/careers/companies/xica/jobs/hSgNDeH1M9fb",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
         "求人条件の検証完了"
       ],
       "exit_entries": []
