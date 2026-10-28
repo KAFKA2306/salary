@@ -1,0 +1,63 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-KAKEHASHI-GENAI-ML-ENGINEER",
+  "company_name": "株式会社カケハシ",
+  "title": "【生成AI】機械学習エンジニア",
+  "official_job_url": "https://herp.careers/v1/kakehashiinc/019bd552-8092-700c-ba0c-02c73fd1a664",
+  "listing_status": "open_on_employer_HERP_recruitment_page_2026-10-28",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年収800万〜1500万円。基本給、固定残業代の有無・金額、賞与内訳の記載がない。専門業務型裁量労働制（1日みなし10時間15分）だが、年収総額を基本給とは認定しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_own_genai_saas_product",
+    "customer_facing_primary": "pass_product_implementation_primary",
+    "outsourcing": "pass_no_outsourcing_primary",
+    "consulting": "pass_no_consulting_primary",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区西新橋2-8-6 住友不動産日比谷ビル5F",
+  "workstyle": "リモートワーク可、専門業務型裁量労働制（1日みなし10時間15分）、副業可（事前申請制）。",
+  "responsibilities": [
+    "自社薬局向けSaaS群への生成AI・LLM機能の設計、実装、評価、改善",
+    "音声認識・自然言語処理の実験、モデル品質・速度・コスト・セキュリティ評価",
+    "実験基盤の設計・実装、プロダクト利用状況のデータ分析"
+  ],
+  "stack": [
+    "Python",
+    "TypeScript",
+    "React",
+    "Hono",
+    "AWS Glue",
+    "AWS Athena",
+    "AWS SageMaker",
+    "AWS ECS Fargate",
+    "AWS CDK",
+    "Azure OpenAI Service",
+    "Google Cloud Vertex AI",
+    "Databricks",
+    "OpenAI",
+    "Gemini",
+    "Amazon Bedrock Claude"
+  ],
+  "scope_note": "公式職務は自社薬局向けSaaSと生成AI研究開発チーム内の実装。外部顧客の導入支援・受託・コンサルが主業務との記載なし。",
+  "review_reason": "想定年収下限800万円は基本年収下限ではない。固定残業代・基本給の内訳が公式に非掲載で、固定残業代を除く基本年収下限800万円以上を確認できない。",
+  "next_verification": [
+    "基本給・固定残業代・賞与の公式内訳",
+    "固定残業代を除く最低保証基本年収が800万円以上か",
+    "求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/v1/kakehashiinc/019bd552-8092-700c-ba0c-02c73fd1a664",
+    "https://herp.careers/careers/companies/kakehashiinc/jobs/019bd552-8092-700c-ba0c-02c73fd1a664"
+  ]
+}
