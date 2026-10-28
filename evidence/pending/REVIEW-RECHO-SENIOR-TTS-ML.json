@@ -1,0 +1,59 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-29",
+  "job_id": "REVIEW-RECHO-SENIOR-TTS-ML",
+  "company_name": "株式会社Recho",
+  "title": "音声AIエンジニア（シニア／音声合成／TTS）",
+  "official_job_url": "https://herp.careers/v1/recho/RYMJg8W8Nj3v",
+  "listing_status": "open_on_employer_HERP_page_2026-10-29",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年俸1,000万〜2,000万円。月額基本給、固定残業代の有無・金額、賞与の内訳は明示されていない。専門業務型裁量労働制（1日みなし9時間）との記載は基本給の証明ではない。年俸下限を基本年収下限と認定しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_own_tts_ai_product",
+    "customer_facing_primary": "pass_tts_model_and_data_implementation_primary",
+    "outsourcing": "pass_no_customer_delivery_primary_in_role",
+    "consulting": "pass_no_consulting_primary_in_role",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区麹町2-3-2 半蔵門PREX North（半蔵門WeWork）",
+  "workstyle": "原則半蔵門オフィス、ハイブリッド（一部リモート可、遠方・海外居住者は相談可）。専門業務型裁量労働制（1日みなし9時間）。正社員選考過程に有償1〜2日トライアル業務委託あり（入社後の雇用形態は正社員）。",
+  "responsibilities": [
+    "自社Recho AI Voice Platformの音声合成（TTS）モデルを研究開発・学習・改善し、本番プロダクトの品質・遅延を最適化",
+    "音声データの収集・選定・前処理・アライメント・ラベリングパイプラインと品質基準を設計",
+    "MOS等の主観・客観評価セットを設計・運用し、推論チームと本番導入を連携",
+    "PM・案件側の要望を技術課題に翻訳してロードマップを策定。顧客別導入支援・商談が主務との記載なし"
+  ],
+  "stack": [
+    "Python",
+    "PyTorch",
+    "LLM-based TTS",
+    "Audio Codec",
+    "Flow Matching",
+    "Diffusion",
+    "Vocoder",
+    "MOS evaluation",
+    "audio data pipelines"
+  ],
+  "scope_note": "企業としては顧客へのAI導入・運用支援も行うが、この職種の主務は自社TTSモデルと音声データ・評価基盤の実装。PM・案件側との要件すり合わせあり。顧客伴走・導入支援が主務に変われば除外を再判定。",
+  "review_reason": "年俸1,000万円下限は確認できるが、基本給・固定残業代の内訳が公式にないため基本年収800万円以上を立証できずeligibleにしない。",
+  "next_verification": [
+    "年俸下限時の月額基本給・固定残業代の有無と金額・賞与内訳",
+    "固定残業代を除く基本年収下限800万円以上の公式確認",
+    "自社TTSモデル実装と顧客案件支援の実際の比率",
+    "求人掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/recho/RYMJg8W8Nj3v",
+    "https://herp.careers/careers/companies/recho/jobs/RYMJg8W8Nj3v"
+  ]
+}
