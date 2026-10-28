@@ -1,0 +1,55 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-STRACT-INTERNAL-FDE",
+  "company_name": "株式会社STRACT",
+  "title": "社内FDE（Forward Deployed Engineer）",
+  "official_job_url": "https://herp.careers/v1/stract/qlWvycAYl2bV",
+  "listing_status": "open_on_employer_HERP_page_2026-10-28",
+  "employment_type": "permanent",
+  "ownership_scope": "internal_ai",
+  "known_compensation": {
+    "annual_total_min_jpy": 10000000,
+    "annual_total_max_jpy": 15000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式年収1,000万〜1,500万円。月額基本給・固定残業代の有無と金額・賞与内訳は未記載。基本年収下限800万円は未証明。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_internal_ai",
+    "customer_facing_primary": "unverified_customer_proposal_support_explicitly_as_needed",
+    "outsourcing": "pass_internal_operations",
+    "consulting": "pass_internal_operations",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都千代田区四番町4-19 CIRCLES市ヶ谷7F",
+  "workstyle": "原則出社、個別事情・天候時は相談可。試用期間3ヶ月。",
+  "responsibilities": [
+    "社内ビジネス部門・コーポレート部門の業務を調査し、AIを使う業務自動化ツール・社内システムを設計・実装・運用",
+    "LLM・AIエージェントを利用した定型業務・情報処理の自動化、現場での継続改善",
+    "必要に応じて顧客とのコミュニケーションやビジネス部門の提案設計の技術支援"
+  ],
+  "stack": [
+    "LLM API",
+    "AI agents",
+    "RAG (歓迎)",
+    "GAS (歓迎)",
+    "Zapier (歓迎)",
+    "n8n (歓迎)",
+    "Web applications (language unspecified)"
+  ],
+  "scope_note": "求人の主務は社内業務のAI自動化・改善だが、顧客とのコミュニケーションおよび商談提案の技術支援も明記。必要に応じてとされており、主務でないことの定量的確証がないためREVIEW。外部顧客伴走・商談主体なら除外。",
+  "review_reason": "給与内訳が公式にないため固定残業代を除く基本年収800万円以上を証明できない。顧客対応・商談支援の実際の業務比率も未確認。",
+  "next_verification": [
+    "年収下限1,000万円の基本給・固定残業代・賞与の公式内訳",
+    "顧客対応・商談支援の業務比率が主務でないこと",
+    "求人掲載継続"
+  ],
+  "sources": [
+    "https://herp.careers/v1/stract/qlWvycAYl2bV",
+    "https://herp.careers/careers/companies/stract/jobs/qlWvycAYl2bV"
+  ]
+}

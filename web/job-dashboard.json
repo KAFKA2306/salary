@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
-    "review_count": 34
+    "review_count": 35
   },
   "eligible": [
     {
@@ -1067,6 +1067,27 @@
       "pending_gates": [
         "固定残業代を除く基本年収下限",
         "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-STRACT-INTERNAL-FDE",
+      "company_name": "株式会社STRACT",
+      "title": "社内FDE（Forward Deployed Engineer）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 10000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "onsite",
+      "location": "Tokyo (Chiyoda/Ichigaya)",
+      "source_url": "https://herp.careers/v1/stract/qlWvycAYl2bV",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "外部顧客伴走が主業務でないこと",
         "求人条件の検証完了"
       ],
       "exit_entries": []
