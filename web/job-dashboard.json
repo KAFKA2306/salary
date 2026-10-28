@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 9,
-    "review_count": 29
+    "review_count": 30
   },
   "eligible": [
     {
@@ -844,6 +844,27 @@
       "pending_gates": [
         "固定残業代を除く基本年収下限",
         "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-NEWMO-ML-E2E-AUTONOMY",
+      "company_name": "newmo株式会社",
+      "title": "Machine Learning エンジニア（End-to-End自動運転モデル開発）",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 8000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "onsite",
+      "location": "Tokyo (Heiwajima)",
+      "source_url": "https://herp.careers/v1/newmo/FuAKBIlBxoMw",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "正社員直接入社条件の継続確認",
         "求人条件の検証完了"
       ],
       "exit_entries": []

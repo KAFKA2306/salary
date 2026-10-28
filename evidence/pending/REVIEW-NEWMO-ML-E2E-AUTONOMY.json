@@ -1,0 +1,58 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-NEWMO-ML-E2E-AUTONOMY",
+  "company_name": "newmo株式会社",
+  "title": "01_101 Machine Learning エンジニア (End-to-End モデル開発) ／ 自動運転開発室｜東京",
+  "official_job_url": "https://herp.careers/v1/newmo/FuAKBIlBxoMw",
+  "listing_status": "open_on_employer_HERP_recruitment_page_2026-10-28",
+  "employment_type": "permanent_or_contract_option",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 8000000,
+    "annual_total_max_jpy": 20000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "企業公式HERP求人は年収800万〜2000万円を記載。月額基本給、固定残業代の有無・金額、保証賞与内訳は非掲載。年収下限800万円を基本年収下限とみなさない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass_option_explicitly_listed_not_contract_first",
+    "ownership": "pass",
+    "customer_facing_primary": "pass_based_on_own_autonomous_vehicle_ml_development",
+    "outsourcing": "pass_based_on_primary_responsibilities",
+    "consulting": "pass_based_on_primary_responsibilities",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都大田区平和島6丁目1番1号 東京流通センターA棟2F AE-2-7-2",
+  "workstyle": "原則週5日出社。裁量労働制またはフレックス（コアタイム11:00〜14:00）。試用期間3ヶ月。公式は正社員または業務委託を選択肢として明記し、業務委託先行を必須とは記載しない。",
+  "responsibilities": [
+    "自社自動運転タクシー向けEnd-to-End機械学習モデルの設計・開発",
+    "カメラ画像・LiDAR等センサ入力からの経路計画と車両制御モデル実装",
+    "オフライン・シミュレーター評価、エッジ最適化、実車での性能検証"
+  ],
+  "stack": [
+    "Python",
+    "C++",
+    "PyTorch",
+    "TensorFlow",
+    "GPU",
+    "カメラ",
+    "LiDAR",
+    "TensorRT（歓迎）",
+    "強化学習（歓迎）",
+    "VLA（関連領域）"
+  ],
+  "scope_note": "自社newmo Autonomyの内製ML開発が主務。外部顧客への導入支援、受託、コンサル、商談を主務とする記載はない。技術スタックの一部は歓迎条件・関連領域であり現行採用を保証しない。",
+  "review_reason": "公式想定年収800万〜2000万円の固定残業代・基本給・賞与内訳が未掲載で、固定残業代を除く基本年収下限800万円を確認できないためeligibleにはしない。",
+  "next_verification": [
+    "下限等級の月額基本給・固定残業代有無/額・賞与保証内訳",
+    "正社員での直接入社が可能で、業務委託先行が必須でないことの継続確認",
+    "公式求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/v1/newmo/FuAKBIlBxoMw",
+    "https://herp.careers/v1/newmo"
+  ]
+}
