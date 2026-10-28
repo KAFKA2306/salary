@@ -1,0 +1,64 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-28",
+  "job_id": "REVIEW-KAKEHASHI-GENAI-RD-SWE",
+  "company_name": "株式会社カケハシ",
+  "title": "【生成AI研究開発】ソフトウェアエンジニア",
+  "official_job_url": "https://herp.careers/v1/kakehashiinc/0k8isE8PjcZd",
+  "listing_status": "open_on_employer_HERP_recruitment_page_2026-10-28",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 9000000,
+    "annual_total_max_jpy": 14000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "公式求人は年収900万〜1400万円と記載。基本給、固定残業代の有無・金額、賞与内訳は非掲載。専門業務型裁量労働制（1日みなし10時間15分）を記載。年収総額を基本年収とは認定しない。"
+  },
+  "hard_gate_status": {
+    "permanent": "pass",
+    "ownership": "pass_own_genai_saas_product",
+    "customer_facing_primary": "pass_own_product_implementation_primary_customer_cocreation_secondary",
+    "outsourcing": "pass_no_outsourcing_primary",
+    "consulting": "pass_no_consulting_primary",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "東京都港区西新橋2-8-6 住友不動産日比谷ビル5F",
+  "workstyle": "一部リモート可。専門業務型裁量労働制（1日みなし10時間15分）。副業可（事前申請制）。",
+  "responsibilities": [
+    "自社薬局向けSaaSの生成AI機能・音声薬歴生成機能の設計・実装・評価・運用",
+    "RAG、AIエージェント、モデル選定、プロンプト・評価基盤、品質・安全性対策",
+    "React/TypeScript、Hono/PythonによるAPI・UI・バッチの実装",
+    "クラウドアーキテクチャとDatabricks等のデータパイプライン、推論コスト・遅延の最適化"
+  ],
+  "stack": [
+    "TypeScript",
+    "Python",
+    "React",
+    "Hono",
+    "AWS Athena",
+    "AWS ECS Fargate",
+    "AWS CDK",
+    "AWS Bedrock",
+    "Azure OpenAI Service",
+    "Google Cloud Vertex AI",
+    "Databricks",
+    "OpenAI",
+    "Gemini",
+    "Claude"
+  ],
+  "scope_note": "自社Musubi等の生成AIプロダクト実装が主務。医療領域の顧客との共創活動への参加は明記されているが、顧客別導入支援・受託・コンサルが主務とは記載されていない。業務比率が変われば再判定。",
+  "review_reason": "公式年収下限900万円は固定残業代を除いた基本年収下限の証拠ではない。給与内訳が公式に記載されていないためeligibleにしない。",
+  "next_verification": [
+    "年収下限900万円時の月額基本給・固定残業代の有無と金額・賞与内訳",
+    "固定残業代を除く基本年収下限800万円以上の公式確認",
+    "顧客共創活動と自社実装の業務比率",
+    "求人の継続掲載"
+  ],
+  "sources": [
+    "https://herp.careers/v1/kakehashiinc/0k8isE8PjcZd",
+    "https://herp.careers/careers/companies/kakehashiinc/jobs/0k8isE8PjcZd"
+  ]
+}
