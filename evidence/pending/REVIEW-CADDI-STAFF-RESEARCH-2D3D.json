@@ -1,0 +1,67 @@
+{
+  "status": "review",
+  "observed_at": "2026-10-29",
+  "job_id": "REVIEW-CADDI-STAFF-RESEARCH-2D3D",
+  "company_name": "キャディ株式会社",
+  "title": "Staff Research Engineer, 2D/3D Vision & Multimodal Understanding",
+  "official_job_url": "https://open.talentio.com/r/1/c/caddi-jp-recruit/pages/122524",
+  "listing_status": "listed_on_CADDi_corporate_careers_2026-10-29; individual Talentio page content inaccessible",
+  "employment_type": "permanent",
+  "ownership_scope": "own_product",
+  "known_compensation": {
+    "annual_total_min_jpy": 12000000,
+    "annual_total_max_jpy": 25000000,
+    "base_salary_min_jpy": null,
+    "fixed_overtime_annual_jpy": null,
+    "fixed_overtime_hours": null,
+    "notes": "年収1200万〜2500万円と固定残業代なしは二次求人媒体の情報。企業公式の個別求人本文は取得できず、公式の給与下限、基本給、固定残業代、賞与内訳は未確認。二次媒体の数字を公式の基本給証明として使わない。"
+  },
+  "hard_gate_status": {
+    "permanent": "secondary_source_only",
+    "ownership": "pass_own_AI_product_R_and_D",
+    "customer_facing_primary": "pass_no_direct_customer_delivery_in_listed_role",
+    "outsourcing": "pass_no_outsourcing_primary_in_listed_role",
+    "consulting": "pass_no_consulting_primary_in_listed_role",
+    "base_salary_excluding_fixed_overtime": "unverified",
+    "current_public_salary_breakdown": "unverified"
+  },
+  "location": "日本（企業公式採用一覧はJapan、二次媒体は東京都台東区浅草橋）",
+  "workstyle": "リモート可否と勤務条件は企業公式個別求人で未確認。",
+  "responsibilities": [
+    "自社製造業AIデータプラットフォーム向け図面・3D CAD・テキストのマルチモーダル理解技術を研究・実装",
+    "2D/3D Vision、幾何形状解析、実データ評価とプロトタイプ実装",
+    "自社製品に展開する要素技術を研究し、研究成果の実装・検証を主導"
+  ],
+  "stack": [
+    "Python",
+    "2D/3D Vision",
+    "Multimodal ML",
+    "NLP",
+    "GPU",
+    "Docker",
+    "Git",
+    "CI/CD",
+    "Google Cloud",
+    "Rust",
+    "TypeScript"
+  ],
+  "scope_note": "公式採用一覧に同職種が2026-10-29時点で掲載。研究・製品開発が主務とみられ、顧客導入支援や受託を主務とする証拠はない。二次媒体情報は一次確認前の暫定情報。",
+  "review_reason": "公式採用一覧に職種掲載あり。二次媒体は正社員、年俸1200万〜2500万円、固定残業代なしと記載するが、公式の基本給・固定残業代・賞与内訳と雇用条件を確認できないためeligibleではなくREVIEW。",
+  "next_verification": [
+    "企業公式Talentio個別求人の雇用形態、年収下限、基本給、固定残業代、賞与の全文",
+    "固定残業代を除く基本年収下限800万円以上の一次確認",
+    "勤務地・リモート条件",
+    "顧客個別PoCと自社製品研究開発の比率"
+  ],
+  "sources": [
+    "https://caddi.com/ja-jp/careers/open-positions/",
+    "https://open.talentio.com/r/1/c/caddi-jp-recruit/pages/122524"
+  ],
+  "secondary_reference_only": {
+    "url": "https://next.rikunabi.com/viewjob/jk6279a065dd27b348/",
+    "annual_total_min_jpy": 12000000,
+    "annual_total_max_jpy": 25000000,
+    "reported_fixed_overtime": "none",
+    "note": "人材紹介会社MyVisionによる二次求人。公式の給与証拠ではない。"
+  }
+}

@@ -14,7 +14,7 @@
     "rejected_count": 5,
     "top_base_salary_min_jpy": 11428560,
     "remote_friendly_count": 10,
-    "review_count": 40
+    "review_count": 41
   },
   "eligible": [
     {
@@ -704,6 +704,26 @@
       "remote_mode": "hybrid",
       "location": "Tokyo/Osaka",
       "source_url": "https://herp.careers/v1/ballas/dWRRuVFUDsmm",
+      "failed_gates": [],
+      "pending_gates": [
+        "固定残業代を除く基本年収下限",
+        "給与内訳の一次情報",
+        "求人条件の検証完了"
+      ],
+      "exit_entries": []
+    },
+    {
+      "job_id": "REVIEW-CADDI-STAFF-RESEARCH-2D3D",
+      "company_name": "キャディ株式会社",
+      "title": "Staff Research Engineer, 2D/3D Vision & Multimodal Understanding",
+      "base_salary_min_jpy": null,
+      "base_salary_max_jpy": null,
+      "total_salary_min_jpy": 12000000,
+      "fixed_overtime_annual_jpy": null,
+      "fixed_overtime_hours": null,
+      "remote_mode": "unknown",
+      "location": "Japan (Tokyo details unverified)",
+      "source_url": "https://open.talentio.com/r/1/c/caddi-jp-recruit/pages/122524",
       "failed_gates": [],
       "pending_gates": [
         "固定残業代を除く基本年収下限",
