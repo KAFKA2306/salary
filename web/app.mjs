@@ -11,6 +11,7 @@ const ownership = {
 };
 
 function man(value) {
+  if (value === null || value === undefined || value === '' || !Number.isFinite(Number(value))) return '未確認';
   return `${Math.round(Number(value) / 10000).toLocaleString('ja-JP')}万円`;
 }
 
