@@ -45,7 +45,7 @@ def build_decision_trace(gate_rows, ranking, source_hash: str, policy_hash: str)
         gates = {}
         for key in GATES:
             value = row[key]
-            if value not in (True, False, None):
+            if value is not True and value is not False and value is not None:
                 raise ValueError(f"invalid gate result for {job_id}: {key}={value!r}")
             gates[key] = "PASS" if value is True else "FAIL" if value is False else "UNKNOWN"
         failures = sorted(key for key, value in gates.items() if value == "FAIL")
@@ -58,7 +58,9 @@ def build_decision_trace(gate_rows, ranking, source_hash: str, policy_hash: str)
             status = "REVIEW"
         else:
             status = "PASS"
-        if bool(row.get("eligible")) != (status == "PASS"):
+        if type(row.get("eligible")) is not bool:
+            raise ValueError(f"invalid dbt eligibility for {job_id}: {row.get('eligible')!r}")
+        if row["eligible"] != (status == "PASS"):
             raise ValueError(f"dbt eligibility conflicts with explicit gates for {job_id}")
         is_ranked = job_id in rank_by_job
         if is_ranked != (status == "PASS"):

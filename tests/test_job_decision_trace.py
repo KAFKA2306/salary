@@ -22,6 +22,13 @@ class DecisionTraceTests(unittest.TestCase):
         self.assertEqual(item["rank"], 1)
         self.assertEqual(result["summary"]["pass"], 1)
 
+    def test_non_boolean_dbt_values_fail_closed(self):
+        for invalid in (1, 0, "false", None):
+            with self.subTest(eligible=invalid), self.assertRaises(ValueError):
+                self.build([example(eligible=invalid)], [{"job_id": "JOB-ONE", "rank": 1}])
+            with self.subTest(gate=invalid), self.assertRaises(ValueError):
+                self.build([example(gate_permanent=invalid)], [{"job_id": "JOB-ONE", "rank": 1}])
+
     # The FAIL/REVIEW precedence and illegal-publication combinations
     # are exhaustively checked against Lean in check_lean_decision_bridge.py.
 
