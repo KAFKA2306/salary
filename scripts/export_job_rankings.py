@@ -117,6 +117,18 @@ def main() -> int:
         file_sha256(ROOT / "seeds" / "job_candidates.csv"),
         file_sha256(ROOT / "ontology" / "job_search.yml"),
     )
+    # Fail before replacing any published artifact if dbt ranks disagree with
+    # the evidence-bound decisions. The post-write read-back remains below.
+    proposed_export = {row["job_id"]: int(row["rank"]) for row in ranking}
+    if len(proposed_export) != len(ranking):
+        raise ValueError("duplicate job IDs in dbt ranking")
+    build_operation_star(
+        decision_trace, before_local_export, proposed_export,
+        run_id="preflight",
+        executed_at_utc=datetime.now(timezone.utc).isoformat(),
+        actor="preflight",
+    )
+
     TRACE_OUT.write_text(
         json.dumps(decision_trace, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
